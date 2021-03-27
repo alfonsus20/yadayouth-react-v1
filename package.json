@@ -2,7 +2,7 @@
   "name": "yadayouth",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://alfonsus20.github.io/yadayouth",
+  "homepage": ".",
   "dependencies": {
     "@craco/craco": "^6.1.1",
     "@tailwindcss/typography": "^0.4.0",
