@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <Container
       bgColor="blue"
-      additional="flex flex-row flex-wrap justify-around text-white text-lg"
+      additional="flex flex-row flex-wrap justify-around text-white text-lg "
       padding = '3% 7%'
     >
       <div className="flex flex-col w-full sm:w-6/12 my-8">

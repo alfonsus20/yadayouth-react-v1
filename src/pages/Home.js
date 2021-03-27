@@ -15,8 +15,6 @@ const Home = () => {
   return (
     <div>
       <Container id="main" px={56} py={24} >
-        {/* <div className="absolute top-52 -left-40 w-56 h-2/4 border-orange border-4 rounded-lg"></div>
-        <div className="absolute top-52 -right-40 w-56 h-2/4 border-orange border-4 rounded-lg"></div> */}
         <div className="relative ">
           <h2 className="text-6xl text-blue mt-28 md:mt-24 text-center md:text-left">Welcome To Yada Youth!</h2>
           <h3 className="text-4xl text-orange text-center md:text-left my-4 md:my-0">
@@ -42,7 +40,7 @@ const Home = () => {
       </Container>
       <Container additional="relative" bgColor="yellow">
         <div className="flex flex-col-reverse lg:flex-row justify-center items-center text-2xl relative lg:left-20">
-          <div className="bg-blue-light px-10 py-10 mb-4 lg:mb-0 rounded-2xl w-10/12 lg:w-7/12 pr-16 border-white border-4">
+          <div className="bg-blue-light px-10 py-10 mb-4 lg:mb-0 rounded-2xl w-10/12 lg:w-7/12 lg:pr-40 border-white border-4">
             <h4 className="text-yellow mt-4 lg:mt-0">
               Yada Youth means the heighest form of commitment towards the youth
             </h4>
@@ -55,7 +53,7 @@ const Home = () => {
           </div>
           <img
             src={YadaYouthMainLogoImg}
-            className="relative top-12 lg:right-20 lg:top-0 w-80 lg:w-108"
+            className="relative top-12 lg:right-40 lg:top-0 w-80 lg:w-120"
           />
         </div>
       </Container>
@@ -67,7 +65,7 @@ const Home = () => {
           Yada Youth provides volunteer opportunities, community services, and
           development programs to help educate, feed, and empower the youth.
         </p>
-        <div className="flex flex-wrap justify-between w-full text-center  ">
+        <div className="flex flex-wrap justify-between w-full text-center">
           <Card
             image={DonationImg}
             title="Open Donations"
