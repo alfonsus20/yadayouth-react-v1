@@ -1,0 +1,26 @@
+.star {
+  position: absolute;
+  top: -40%;
+  right: 25%;
+}
+
+.star2 {
+  position: absolute;
+  top: 0%;
+  right: 28%;
+  width: 45px;
+  height: 45px;
+}
+
+.mainlogo {
+  position: relative;
+  right: 80px;
+  width: 400px;
+  height: auto;
+}
+/* 
+@media screen and (max-width: 932px) {
+  .mainlogo {
+    width: 300px;
+  }
+} */
