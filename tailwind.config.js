@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
@@ -12,6 +14,7 @@ module.exports = {
       borderRadius: {
         "lg": "1rem",
         "2xl": "2rem",
+        "3xl" : "3rem"
       },
       screens:{
         "slg" : "932px" 
@@ -32,7 +35,8 @@ module.exports = {
       gray: {
         DEFAULT: "#dbdbdb",
       },
-      white: "#FFFFFF",
+      white: colors.white,
+      black: colors.black
     },
   },
   variants: {

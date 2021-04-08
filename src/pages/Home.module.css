@@ -1,26 +1,35 @@
-.star {
+.blueShapeLeft {
   position: absolute;
-  top: -40%;
-  right: 25%;
+  top: 18%;
+  right: 15%;
 }
 
-.star2 {
+.blueShapeRight {
   position: absolute;
-  top: 0%;
-  right: 28%;
-  width: 45px;
-  height: 45px;
+  top: 18%;
+  left: 15%;
 }
 
-.mainlogo {
-  position: relative;
-  right: 80px;
-  width: 400px;
-  height: auto;
+.diamondLeft {
+  position: absolute;
+  top: 30%;
+  right: 10%;
 }
-/* 
-@media screen and (max-width: 932px) {
-  .mainlogo {
-    width: 300px;
-  }
-} */
+
+.diamondRight {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+
+.yellowShapeLeft {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+}
+
+.yellowShapeRight {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}

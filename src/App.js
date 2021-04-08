@@ -1,14 +1,15 @@
-import "./App.css";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar/Navbar";
+import Donate from "./pages/Donate";
 
 const App = () => {
   return (
     <Router className="App">
-      <Navbar/>
+      <Navbar />
       <Switch>
-        <Route path = '' component = {Home}/>
+        <Route path="/" component={Home} exact />
+        <Route path="/donate" component={Donate} exact />
       </Switch>
     </Router>
   );
