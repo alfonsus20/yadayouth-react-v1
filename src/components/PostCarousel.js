@@ -1,19 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Slider from "react-slick";
-import axios from "axios";
 import Feed1 from "../assets/feed-1.png";
 import Feed2 from "../assets/feed-2.png";
 import Feed3 from "../assets/feed-3.png";
 
 const PostCarousel = () => {
-  const [posts, setPosts] = useState([]);
-  //   useEffect(() => {
-  //     const data = axios.get("https://www.instagram.com/yadayouth.id/?__a=1", {
-  //       headers: { "Access-Control-Allow-Origin": "*" },
-  //     });
-  //     console.log(data);
-  //   }, []);
-
   const settings = {
     dots: true,
     infinite: true,
@@ -42,28 +33,22 @@ const PostCarousel = () => {
     <div>
       <Slider {...settings}>
         <div className= 'p-2 outline-none'>
-          <img src={Feed1} />
+          <img src={Feed1}  alt='feed'/>
         </div>
         <div className= 'p-4 outline-none'>
-          <img src={Feed3} />
+          <img src={Feed3} alt='feed' />
         </div>
         <div className= 'p-4 outline-none'>
-          <img src={Feed2} />
+          <img src={Feed2}  alt='feed'/>
         </div>
         <div className= 'p-4 outline-none'>
-          <img src={Feed1} />
+          <img src={Feed1}  alt='feed'/>
         </div>
         <div className= 'p-4 outline-none'>
-          <img src={Feed3} />
+          <img src={Feed3}  alt='feed'/>
         </div>
         <div className= 'p-4 outline-none'>
-          <img src={Feed2} />
-        </div>
-        <div className= 'p-4 outline-none'>
-          <img src={Feed2} className="mx-auto" />
-        </div>
-        <div className= 'p-4 outline-none'>
-          <img src={Feed3} className="mx-auto" />
+          <img src={Feed2}  alt='feed'/>
         </div>
       </Slider>
     </div>

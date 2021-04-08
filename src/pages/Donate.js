@@ -6,11 +6,19 @@ import MandiriLogo from "../assets/mandiri.png";
 import BNILogo from "../assets/bni.png";
 import { DONATION_GOALS } from "../utils/constants";
 import DonationCard from "../components/DonationCard";
-import Button from "../components/Button"
+import Button from "../components/Button";
+import { scroller } from "react-scroll";
+import { useLocation} from 'react-router-dom'
 
 const Donate = () => {
+  const location = useLocation();
   useEffect(() => {
     document.title = "Donate";
+    scroller.scrollTo(location.hash.replace("#", ""), {
+      duration: 500,
+      smooth: "easeInOut",
+      offset: -90,
+    });
   });
   return (
     <>
@@ -29,9 +37,10 @@ const Donate = () => {
             <img
               src={DonationImg}
               className="w-80 h-auto hidden md:absolute md:-right-3/4 md:-bottom-1/2 md:block"
+              alt='donation'
             />
           </p>
-          <img src={DonationImg} className="mx-auto mb-12 md:hidden" />
+          <img src={DonationImg} className="mx-auto mb-12 md:hidden" alt='donation'/>
         </div>
       </Container>
       <Container center bgColor="yellow" padding="8% 7% 6% 7%" id="how">
@@ -42,14 +51,14 @@ const Donate = () => {
           <div className="text-black flex flex-col lg:flex-row">
             <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:block space-y-4 sm:space-y-0">
               <div className="flex flex-col text-center sm:text-left space-y-4 sm:space-y-0 sm:flex-row sm:space-x-4">
-                <img src={BNILogo} className="w-36 h-10 mx-auto" />
+                <img src={BNILogo} className="w-36 h-10 mx-auto" alt='bni-logo' />
                 <div>
                   <strong>0842396708</strong>
                   <br /> a/n Yakina Athiyyah D.
                 </div>
               </div>
               <div className="flex flex-col text-center sm:text-left space-y-4 sm:space-y-0 sm:flex-row sm:space-x-4">
-                <img src={MandiriLogo} className="w-36 h-10 mx-auto" />
+                <img src={MandiriLogo} className="w-36 h-10 mx-auto" alt='mandiri-logo' />
                 <div>
                   <strong>0842396708</strong>
                   <br /> a/n Yakina Athiyyah D.

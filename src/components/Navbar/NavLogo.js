@@ -1,9 +1,10 @@
+  
 import React from "react";
 import YadaYouthLogo from '../../assets/yadayouthmainlogo.png'
 
 const NavLogo = ({toggleMenu, menu}) => {
   return (
-    <div className = 'flex flex-row items-center'>
+    <div className = 'flex flex-row items-center bg-blue p-4'>
       <img src={YadaYouthLogo} alt="yada-youth-logo" className='w-20' />
       <i onClick = {()=>toggleMenu(!menu)} className="fas fa-bars text-2xl ml-auto block md:hidden"></i>
     </div>

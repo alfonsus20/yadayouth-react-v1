@@ -14,7 +14,7 @@ import Arrow from "../assets/arrow.png";
 import YellowDiamondShape from "../assets/yellowdiamondshape.png";
 import styles from "./Home.module.css";
 import { useLocation } from "react-router-dom";
-import { animateScroll as scroll, Element, Link, scroller } from "react-scroll";
+import { animateScroll as scroll, scroller } from "react-scroll";
 
 const Home = () => {
   const location = useLocation();
@@ -52,7 +52,7 @@ const Home = () => {
             <img
               src={LandingPageImg}
               alt="Landing Page"
-              className="object-cover w-10/12 md:ml-auto"
+              className="object-cover w-10/12  md:ml-auto"
             />
           </div>
         </div>
@@ -60,7 +60,7 @@ const Home = () => {
           <img
             src={Arrow}
             alt="Arrow"
-            className="mx-auto cursor-pointer"
+            className="mx-auto cursor-pointer my-4"
             onClick={() =>
               scroller.scrollTo("about", { smooth: "easeInOut", duration: 500 })
             }

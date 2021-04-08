@@ -30,3 +30,7 @@ body {
   width: 20px;
   height: 20px;
 }
+
+.mobile{
+  height: calc(100vh - 4rem);
+}

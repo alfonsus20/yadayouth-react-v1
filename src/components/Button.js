@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ArrowWhite from "../assets/arrow-white.png";
 import { animateScroll as scroll } from "react-scroll";
 
-const Button = ({ path, text, bgColor, width, color, scrollUp, ...rest }) => {
+const Button = ({ path, text, bgColor, width, color, scrollUp, px, py , borderColor, borderWidth, rounded,  ...rest }) => {
   if (scrollUp) {
     return (
       <div
@@ -15,9 +15,9 @@ const Button = ({ path, text, bgColor, width, color, scrollUp, ...rest }) => {
     );
   }
   return (
-    <Link to={`/${path}`}>
+    <Link to={`${path}`}>
       <div
-        className={`bg-${bgColor} w-${width} text-${color} text-xl mt-4 px-3 py-2 rounded-lg`}
+        className={`bg-${bgColor} w-${width} text-${color} text-xl mt-4 px-${px} py-${py} rounded-${rounded} border-${borderWidth} border-${borderColor}`}
         {...rest}
       >
         {text}
@@ -25,5 +25,11 @@ const Button = ({ path, text, bgColor, width, color, scrollUp, ...rest }) => {
     </Link>
   );
 };
+
+Button.defaultProps = {
+    px : 3,
+    py: 2,
+    rounded : 'lg'
+}
 
 export default Button;

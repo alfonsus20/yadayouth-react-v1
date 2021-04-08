@@ -17,7 +17,7 @@ const Footer = () => {
         <p>yadayouth.id</p>
         <p className="text-3xl">Yada Youth Indonesia</p>
         <p className="text-base">Empowering Children of Tomorrow</p>
-        <p>Copyright @2021</p>
+        <p>Copyright &copy; 2021</p>
       </div>
       <div className="flex flex-col w-6/12 sm:w-3/12 justify-between my-8">
         <h3 className="font-bold">Navigation</h3>
