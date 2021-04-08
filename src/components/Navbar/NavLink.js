@@ -17,7 +17,7 @@ const NavLink = ({ text, pathname, hash, mobile, toggleMenu }) => {
     <LinkScroll
       className="p-4 text-xl cursor-pointer"
       to={hash}
-      offset={-90}
+      offset={-88}
       smooth
       duration={500}
       hashSpy
