@@ -21,9 +21,9 @@ const Navbar = () => {
       className={`flex flex-col md:flex-row text-white fixed bg-white md:bg-blue py-0 px-0 md:px-24 w-full z-10 h-auto`}
     >
       <NavLogo toggleMenu={toggleMenu} menu={menu} />
-      <NavList menu={menu} mobile = {width <= 768}/>
+      <NavList menu={menu} mobile = {width <= 768} toggleMenu={toggleMenu} />
     </header>
   );
 };
 
-export default Navbar;
+export default Navbar

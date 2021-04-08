@@ -2,7 +2,7 @@ import React from "react";
 import { Link as LinkScroll } from "react-scroll";
 import { Link, useLocation } from "react-router-dom";
 
-const NavLink = ({ text, pathname, hash }) => {
+const NavLink = ({ text, pathname, hash, mobile, toggleMenu }) => {
   const location = useLocation();
 
   if (location.pathname !== pathname) {
@@ -21,6 +21,7 @@ const NavLink = ({ text, pathname, hash }) => {
       smooth
       duration={500}
       hashSpy
+      onClick={() => toggleMenu(!mobile)}
     >
       {text}
     </LinkScroll>
