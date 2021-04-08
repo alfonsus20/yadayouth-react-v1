@@ -32,5 +32,6 @@ body {
 }
 
 .mobile{
-  height: calc(100vh - 4rem);
+  height: calc(100vh - 5.5rem);
+  top: 5.5rem;
 }

@@ -14,7 +14,7 @@ const NavList = ({ menu, mobile }) => {
   };
   return (
     <motion.ul
-      className={`flex md:flex flex-col w-full md:w-auto justify-around items-center ${mobile && 'mobile'} md:h-auto md:flex-row mx-auto md:mr-0 text-center md:text-center absolute md:relative bg-blue mt-24 md:mt-0`}
+      className={`flex md:flex flex-col w-full md:w-auto justify-around items-center ${mobile && 'mobile'} md:h-auto md:flex-row mx-auto md:mr-0 text-center md:text-center absolute md:relative bg-blue md:mt-0`}
       variants={variants}
       animate={menu ? "visible" : "hidden"}
       transition = {{x: {type: 'spring', stiffness : 0}}}
