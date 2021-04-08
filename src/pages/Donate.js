@@ -6,17 +6,15 @@ import MandiriLogo from "../assets/mandiri.png";
 import BNILogo from "../assets/bni.png";
 import { DONATION_GOALS } from "../utils/constants";
 import DonationCard from "../components/DonationCard";
-import Helmet from "react-helmet";
+import Button from "../components/Button"
 
 const Donate = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    document.title = "Donate";
   });
   return (
     <>
-      <Helmet>
-        <title>Donate</title>
-      </Helmet>
+      <Button scrollUp />
       <Container center additional="text-blue" bgColor="yellow" id="donate">
         <h1 className="text-4xl font-bold mt-28 md:mt-24">
           We Need YOU to Help The Children Of Tomorrow!
@@ -36,29 +34,29 @@ const Donate = () => {
           <img src={DonationImg} className="mx-auto mb-12 md:hidden" />
         </div>
       </Container>
-      <Container center bgColor="yellow" padding="8% 7% 6% 7%">
-        <div className="py-12 px-16 border-4 border-orange rounded-3xl w-9/12 bg-white">
+      <Container center bgColor="yellow" padding="8% 7% 6% 7%" id="how">
+        <div className="py-12 px-8 sm:px-16 border-4 border-orange rounded-3xl w-full sm:w-9/12 bg-white text-lg">
           <h2 className="text-center text-4xl text-blue mb-12 font-bold">
             How To Donate?
           </h2>
-          <div className="text-black flex flex-row">
-            <div className="w-1/2">
-              <div className="flex flex-row space-x-4">
-                <img src={BNILogo} className="w-36 h-10" />
+          <div className="text-black flex flex-col lg:flex-row">
+            <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:block space-y-4 sm:space-y-0">
+              <div className="flex flex-col text-center sm:text-left space-y-4 sm:space-y-0 sm:flex-row sm:space-x-4">
+                <img src={BNILogo} className="w-36 h-10 mx-auto" />
                 <div>
                   <strong>0842396708</strong>
                   <br /> a/n Yakina Athiyyah D.
                 </div>
               </div>
-              <div className="flex flex-row space-x-4">
-                <img src={MandiriLogo} className="w-36 h-10" />
+              <div className="flex flex-col text-center sm:text-left space-y-4 sm:space-y-0 sm:flex-row sm:space-x-4">
+                <img src={MandiriLogo} className="w-36 h-10 mx-auto" />
                 <div>
                   <strong>0842396708</strong>
                   <br /> a/n Yakina Athiyyah D.
                 </div>
               </div>
             </div>
-            <div className="w-1/2">
+            <div className="w-full lg:w-1/2 mt-8 lg:mt-0">
               Please <strong>add a Rp1</strong> to the donation (Ex: for 50k
               donation please make it Rp50.001 and/or add the description “yada
               youth donation” in the description/notes to help us calculate the

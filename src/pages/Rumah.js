@@ -16,30 +16,23 @@ import styles from "./Home.module.css";
 import { useLocation } from "react-router-dom";
 import { animateScroll as scroll, Element, Link, scroller } from "react-scroll";
 
-const Home = () => {
-  const location = useLocation();
+const Rumah = () => {
   useEffect(() => {
     document.title = "Yada Youth";
-    scroller.scrollTo(location.hash.replace("#", ""), {
-      duration: 500,
-      smooth: "easeInOut",
-      offset: -90,
-    });
+    scroller.scrollTo("contacts", { duration: 500, smooth: "easeInOut" });
   });
   return (
     <div className="relative">
       <Button scrollUp />
-      <Container id="home" padding="6% 7% 4% 7%">
+      <Container id="Rumah" padding="6% 7% 4% 7%">
         <div className="relative">
           <h2 className="text-6xl text-blue mt-28 md:mt-24 text-center md:text-left">
             Welcome To Yada Youth!
-            <button onClick={() => scroll.scrollTo("serv")}></button>
+            <button onClick={scroll.scrollTo("serv")}></button>
           </h2>
           <h3 className="text-4xl text-orange text-center md:text-left my-4 md:my-0">
             EMPOWERING CHILDREN OF TOMORROW
           </h3>
-          {/* <img src="./star.png" className = {styles.star} />
-          <img src="./star.png" className = {styles.star2} /> */}
         </div>
         <div className="flex flex-col-reverse md:flex-row md:mt-16">
           <div className="w-full md:w-6/12 flex justify-center items-center md:justify-start md:items-start">
@@ -178,4 +171,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Rumah;
