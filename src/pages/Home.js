@@ -62,7 +62,7 @@ const Home = () => {
             alt="Arrow"
             className="mx-auto cursor-pointer my-4"
             onClick={() =>
-              scroller.scrollTo("about", { smooth: "easeInOut", duration: 500 })
+              scroller.scrollTo("about", { smooth: "easeInOut", duration: 500 , offset : -90})
             }
           />
         </div>
