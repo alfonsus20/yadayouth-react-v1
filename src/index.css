@@ -5,13 +5,47 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 @font-face {
-  font-family: "Gotham";
-  src: url("./GothamMedium.ttf");
+  font-family: "Gotham Medium";
+  src: url("./assets/fonts/GothamMedium.ttf");
+}
+
+@font-face {
+  font-family: "Gotham Bold";
+  src: url("./assets/fonts/Gotham-Bold.otf");
+}
+
+@font-face {
+  font-family: "Gotham Book";
+  src: url("./assets/fonts/GothamBook.ttf");
+}
+
+@font-face {
+  font-family: "Gotham Light";
+  src: url("./assets/fonts/Gotham-Light.otf");
 }
 
 body {
-  font-family: "Gotham";
+  font-family: "Gotham Medium";
 }
+
+/* Fonts */
+.font-light{
+  font-family: "Gotham Light";
+}
+
+.font-book{
+  font-family: "Gotham Book";
+}
+
+.font-medium{
+  font-family: "Gotham Medium";
+}
+
+.font-bold{
+  font-family: "Gotham Bold";
+  font-weight: 400;
+}
+
 
 @media screen and (max-width: 1024px) {
   html {
@@ -34,4 +68,8 @@ body {
 .mobile{
   height: calc(100vh - 5.5rem);
   top: 5.5rem;
+}
+
+.min-h-screen{
+  min-height: calc(100vh - 122px);
 }

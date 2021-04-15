@@ -7,10 +7,10 @@ const Button = ({ path, text, bgColor, width, color, scrollUp, px, py , borderCo
   if (scrollUp) {
     return (
       <div
-        className="fixed bottom-12 right-16 p-4 bg-blue z-10 border-8 border-white shadow-2xl cursor-pointer    "
-        onClick={() => scroll.scrollToTop({duration: 500})} style={{borderRadius: 25}}
+        className="fixed bottom-12 right-16 w-16 h-16 bg-blue z-10 border-white shadow-2xl cursor-pointer grid place-items-center"
+        onClick={() => scroll.scrollToTop({duration: 500})} style={{borderWidth : 5, borderRadius: 25}}
       >
-        <img src={ArrowWhite} className="w-4 h-4" alt="arrow-white" />
+        <img src={ArrowWhite} className="w-6 h-6" alt="arrow-white" />
       </div>
     );
   }

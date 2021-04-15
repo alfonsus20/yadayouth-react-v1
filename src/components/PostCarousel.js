@@ -11,6 +11,8 @@ const PostCarousel = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
+    autoplay: true,
+    autoplayspeed : 2000,
     responsive: [
       {
         breakpoint: 1204,

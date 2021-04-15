@@ -23,15 +23,15 @@ const Home = () => {
     scroller.scrollTo(location.hash.replace("#", ""), {
       duration: 500,
       smooth: "easeInOut",
-      offset: -90,
+      offset: -96,
     });
   });
   return (
     <div className="relative">
       <Button scrollUp />
-      <Container id="home" padding="6% 7% 4% 7%">
+      <Container id="home" padding="4% 4% 3% 4%" screen>
         <div className="relative">
-          <h2 className="text-6xl text-blue mt-28 md:mt-24 text-center md:text-left">
+          <h2 className="text-6xl text-blue text-center md:text-left font-bold">
             Welcome To Yada Youth!
             <button onClick={() => scroll.scrollTo("serv")}></button>
           </h2>
@@ -43,7 +43,7 @@ const Home = () => {
         </div>
         <div className="flex flex-col-reverse md:flex-row md:mt-16">
           <div className="w-full md:w-6/12 flex justify-center items-center md:justify-start md:items-start">
-            <div className="bg-yellow rounded-2xl px-4 py-3 text-2xl text-blue w-10/12 lg:w-80">
+            <div className="bg-yellow rounded-2xl px-4 py-3 text-2xl text-blue w-auto md:w-112 leading-tight">
               We provide community services where all profits will go to the
               children of Indonesia
             </div>
@@ -60,9 +60,9 @@ const Home = () => {
           <img
             src={Arrow}
             alt="Arrow"
-            className="mx-auto cursor-pointer my-4"
+            className="mx-auto cursor-pointer"
             onClick={() =>
-              scroller.scrollTo("about", { smooth: "easeInOut", duration: 500 , offset : -90})
+              scroller.scrollTo("about", { smooth: "easeInOut", duration: 500 , offset : -96})
             }
           />
         </div>
@@ -73,7 +73,7 @@ const Home = () => {
             <h4 className="text-yellow mt-4 lg:mt-0">
               Yada Youth means the heighest form of commitment towards the youth
             </h4>
-            <p className="text-white">
+            <p className="text-white font-book mt-4">
               We are a non-profit organization that aims to focus to on the
               empowerment of Indonesian children and young people living in
               poverty through a collective effort to minimize the systemic
@@ -95,7 +95,7 @@ const Home = () => {
           color="white"
           borderColor="white"
         />
-        <p className="text-center text-xl w-full md:w-6/12 mt-4 ">
+        <p className="text-center text-xl w-full md:w-6/12 mt-4 font-book">
           Yada Youth provides volunteer opportunities, community services, and
           development programs to help educate, feed, and empower the youth.
         </p>
@@ -125,7 +125,7 @@ const Home = () => {
       <Container center bgColor="orange">
         <div className="bg-yellow px-4 md:px-16 py-10 rounded-2xl w-10/12 md:w-8/12 border-white border-4 flex flex-col justify-center items-center">
           <h2 className="text-2xl font-bold">HOW TO DONATE</h2>
-          <p className="text-xl my-2">
+          <p className="text-xl my-2 font-book">
             Yada Youth would like to inform you on several future plans,
             including development programs in villages and slums around
             Indonesia. In accordance to that, Yada Youth Indonesia invites you
@@ -165,8 +165,9 @@ const Home = () => {
           color="blue"
           bgColor="white"
           borderColor="orange"
+          width = {84}
         />
-        <p className="text-center text-xl w-6/12 mt-4 ">
+        <p className="text-center text-xl w-6/12 mt-4 font-book">
           Follow Us at @yadayouth.id
         </p>
         <div className="px-10 py-10 rounded-2xl w-11/12 border-white border-4">

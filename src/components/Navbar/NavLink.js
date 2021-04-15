@@ -7,7 +7,7 @@ const NavLink = ({ text, pathname, hash, mobile, toggleMenu }) => {
 
   if (location.pathname !== pathname) {
     return (
-      <Link className="p-4 text-xl cursor-pointer" to={{ pathname, hash }}>
+      <Link className="px-4 text-xl cursor-pointer" to={{ pathname, hash }}>
         {text}
       </Link>
     );

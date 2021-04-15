@@ -1,24 +1,33 @@
-const colors = require('tailwindcss/colors')
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      minHeight: {
+        "0": "0",
+        "1/4": "25%",
+        "1/2": "50%",
+        "3/5" : "60%",
+        "3/4": "75%",
+        "full": "100%",
+      },
       spacing: {
-        '108' : '27rem',
-        '112': '28rem',
-        '116': '29rem',
-        '120': '30rem',
+        84: "21rem",
+        108: "27rem",
+        112: "28rem",
+        116: "29rem",
+        120: "30rem",
       },
       borderRadius: {
-        "lg": "1rem",
+        lg: "1rem",
         "2xl": "2rem",
-        "3xl" : "3rem"
+        "3xl": "3rem",
       },
-      screens:{
-        "slg" : "932px" 
-      }
+      screens: {
+        slg: "932px",
+      },
     },
     colors: {
       blue: {
@@ -36,7 +45,7 @@ module.exports = {
         DEFAULT: "#dbdbdb",
       },
       white: colors.white,
-      black: colors.black
+      black: colors.black,
     },
   },
   variants: {
