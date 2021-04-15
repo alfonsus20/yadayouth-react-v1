@@ -71,5 +71,9 @@ body {
 }
 
 .min-h-screen{
-  min-height: calc(100vh - 122px);
+  /* min-height: calc(100vh - 122px);   */
+  min-height: calc(var(--vh, 1vh) * 100 - 122px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }

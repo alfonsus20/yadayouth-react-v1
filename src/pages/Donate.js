@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import DonationImg from "../assets/donation.png";
 import Container from "../components/Container";
-import Footer from "../components/Footer/Footer";
 import MandiriLogo from "../assets/mandiri.png";
 import BNILogo from "../assets/bni.png";
 import { DONATION_GOALS } from "../utils/constants";
@@ -81,7 +80,6 @@ const Donate = () => {
           })}
         </div>
       </Container>
-      <Footer />
     </>
   );
 };

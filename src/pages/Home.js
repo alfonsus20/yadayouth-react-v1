@@ -3,7 +3,6 @@ import Container from "../components/Container";
 import LandingPageImg from "../assets/landingpage.png";
 import YadaYouthMainLogoImg from "../assets/yadayouthmainlogo.png";
 import Card from "../components/Card";
-import Footer from "../components/Footer/Footer";
 import Button from "../components/Button";
 import PostCarousel from "../components/PostCarousel";
 import Title from "../components/Title";
@@ -29,7 +28,7 @@ const Home = () => {
   return (
     <div className="relative">
       <Button scrollUp />
-      <Container id="home" padding="4% 4% 3% 4%" screen>
+      <Container id="home" padding="4% 4% 2% 4%" screen>
         <div className="relative">
           <h2 className="text-6xl text-blue text-center md:text-left font-bold">
             Welcome To Yada Youth!
@@ -62,7 +61,11 @@ const Home = () => {
             alt="Arrow"
             className="mx-auto cursor-pointer"
             onClick={() =>
-              scroller.scrollTo("about", { smooth: "easeInOut", duration: 500 , offset : -96})
+              scroller.scrollTo("about", {
+                smooth: "easeInOut",
+                duration: 500,
+                offset: -96,
+              })
             }
           />
         </div>
@@ -136,6 +139,7 @@ const Home = () => {
             bgColor="blue-light"
             color="yellow"
             width="72"
+            path="/donate#donate"
           />
           <img
             src={YellowDiamondShape}
@@ -165,7 +169,7 @@ const Home = () => {
           color="blue"
           bgColor="white"
           borderColor="orange"
-          width = {84}
+          width={84}
         />
         <p className="text-center text-xl w-6/12 mt-4 font-book">
           Follow Us at @yadayouth.id
@@ -174,7 +178,6 @@ const Home = () => {
           <PostCarousel />
         </div>
       </Container>
-      <Footer />
     </div>
   );
 };
