@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Container from "../Container";
 import YadaYouthMainLogo from "../../assets/yadayouthmainlogo.png";
 import { MENUS, SOCMED } from "../../utils/constants";
 import FooterLink from "./FooterLink";
-import useWindowDimensions from "../../utils/window-dimension";
 
 const Footer = () => {
   return (
