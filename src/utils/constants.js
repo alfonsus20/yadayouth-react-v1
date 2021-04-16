@@ -3,21 +3,21 @@ import WebinarsImg from "../assets/webinars.png";
 import CommServImg from "../assets/comm_serv.png";
 
 export const MENUS = [
-  { name: "Home", pathname: "/", hash: "home" },
-  { name: "About", pathname: "/", hash: "about" },
-  { name: "Services", pathname: "/", hash: "services" },
-  { name: "Donate", pathname: "/donate", hash: "donate" },
-  { name: "Contact", pathname: "/", hash: "contacts" },
+  { name: "Home", pathname: "/", hash: "home" , socmed : false},
+  { name: "About", pathname: "/", hash: "about" , socmed : false},
+  { name: "Services", pathname: "/", hash: "services" , socmed : false},
+  { name: "Donate", pathname: "/donate", hash: "donate" , socmed : false},
+  { name: "Contact", pathname: "/", hash: "contacts", socmed : false },
 ];
 
 export const SOCMED = [
-  { name: "yadayouth.id", link: "", icon: "fa fa-instagram" },
+  { name: "yadayouth.id", link: "https://www.instagram.com/yadayouth.id/", icon: "fa fa-instagram" , socmed: true},
   {
     name: "company/yada-youth",
-    link: "",
-    icon: "fa fa-linkedin",
+    link: "https://www.linkedin.com/company/yada-youth/",
+    icon: "fa fa-linkedin", socmed: true
   },
-  { name: "yadayouth.id", link: "", icon: "fab fa-tiktok" },
+  { name: "yadayouth.id", link: "https://www.tiktok.com/@yadayouth.id?", icon: "fab fa-tiktok" , socmed: true},
 ];
 
 export const CARD_CONTENTS = [

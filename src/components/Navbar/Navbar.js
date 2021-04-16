@@ -8,7 +8,7 @@ const Navbar = ({menu, toggleMenu, mobile}) => {
       className={`flex flex-col md:flex-row text-white sticky top-0 bg-blue md:px-12 z-10`}
     >
       <NavLogo toggleMenu={toggleMenu} menu={menu} />
-      <NavList menu={menu} mobile={mobile} toggleMenu={toggleMenu} />
+      <NavList menu={menu} mobile={mobile} toggleMenu={toggleMenu}  />
     </header>
   );
 };

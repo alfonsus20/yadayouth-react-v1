@@ -43,8 +43,9 @@ const Footer = () => {
             <FooterLink
               key={id}
               icon={socmed.icon}
-              link={socmed.link}
+              pathname={socmed.link}
               text={socmed.name}
+              socmed = {socmed.socmed}
             />
           ))}
         </dl>
