@@ -11,7 +11,6 @@ const PostCarousel = () => {
         "https://yadayouth-backend.vercel.app/api/instagram/"
       );
       setPosts(data.data);
-      console.log(data);
     } catch (e) {
       console.log(e);
     }
@@ -51,7 +50,7 @@ const PostCarousel = () => {
     <div>
       <Slider {...settings}>
         {posts.map((post) => (
-          <div key={post.id} className="p-8 outline-none">
+          <div key={post.id} className="md:p-2 lg:p-4 outline-none">
             <a href={post.permalink} target='blank'>
               <img src={post.media_url} alt="feed" />
             </a>

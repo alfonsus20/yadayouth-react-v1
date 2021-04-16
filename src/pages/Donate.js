@@ -18,7 +18,7 @@ const Donate = () => {
       smooth: "easeInOut",
       offset: -112,
     });
-  });
+  }, [location]);
   return (
     <>
       <Button scrollUp />

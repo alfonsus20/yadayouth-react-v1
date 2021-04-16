@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
 @font-face {
@@ -29,23 +29,22 @@ body {
 }
 
 /* Fonts */
-.font-light{
+.font-light {
   font-family: "Gotham Light";
 }
 
-.font-book{
+.font-book {
   font-family: "Gotham Book";
 }
 
-.font-medium{
+.font-medium {
   font-family: "Gotham Medium";
 }
 
-.font-bold{
+.font-bold {
   font-family: "Gotham Bold";
   font-weight: 400;
 }
-
 
 @media screen and (max-width: 1024px) {
   html {
@@ -59,18 +58,18 @@ body {
   }
 }
 
-.slick-dots button::before{
-  color: #FF4C2E!important;
+.slick-dots button::before {
+  color: #ff4c2e !important;
   width: 20px;
   height: 20px;
 }
 
-.mobile{
-  height: calc(100vh - 5.5rem);
+.mobile {
+  height: calc(var(--vh, 1vh) * 100 - 5.5rem);
   top: 5.5rem;
 }
 
-.min-h-screen{
+.min-h-screen {
   /* min-height: calc(100vh - 122px);   */
   min-height: calc(var(--vh, 1vh) * 100 - 122px);
   display: flex;

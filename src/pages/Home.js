@@ -24,11 +24,11 @@ const Home = () => {
       smooth: "easeInOut",
       offset: -96,
     });
-  });
+  },[location]);
   return (
     <div className="relative">
       <Button scrollUp />
-      <Container id="home" padding="4% 4% 2% 4%" screen>
+      <Container id="home" padding="4%" screen>
         <div className="relative">
           <h2 className="text-6xl text-blue text-center md:text-left font-bold">
             Welcome To Yada Youth!
@@ -55,11 +55,11 @@ const Home = () => {
             />
           </div>
         </div>
-        <div className="mt-4">
+        <div className="" style = {{paddingBottom : '2rem', paddingTop : '2rem'}}>
           <img
             src={Arrow}
             alt="Arrow"
-            className="mx-auto cursor-pointer"
+            className="cursor-pointer mx-auto"
             onClick={() =>
               scroller.scrollTo("about", {
                 smooth: "easeInOut",
