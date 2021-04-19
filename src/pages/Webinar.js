@@ -10,18 +10,22 @@ import BlueShape from "../assets/blueshape.png";
 import WhiteShape from "../assets/whiteshape.png";
 import WhiteDiamondShape from "../assets/whitediamondshape.png";
 import classes from "./Webinar.module.css";
+import {useLocation} from 'react-router-dom'
 
 const Webinar = () => {
+  const location = useLocation();
+
   useEffect(() => {
+    document.title = 'Webinar'
     scroll.scrollToTop({duration: 500});
-  });
+  },[location.pathname]);
 
   return (
     <div>
       <Button scrollUp />
       <Container screen additional={classes.hero}>
         <div className="flex flex-col md:flex-row">
-          <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start">
+          <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left">
             <h1 className="text-6xl text-white">Yada Talks 2021</h1>
             <h2 className="text-3xl my-2 text-white">
               May 2<sup>nd</sup>, 2021

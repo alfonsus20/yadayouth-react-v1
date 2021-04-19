@@ -4,18 +4,21 @@ import Container from "../components/Container";
 import webinarpic from "../assets/webinar.png";
 import classes from "./RegisterWebinar.module.css";
 import { animateScroll as scroll } from "react-scroll";
+import { useLocation } from "react-router-dom";
 
 const RegisterWebinar = () => {
-  useEffect(() => {
-    scroll.scrollToTop({ duration: 500 });
-  });
+  const location = useLocation();
 
+  useEffect(() => {
+    document.title = "Register Webinar";
+    scroll.scrollToTop({ duration: 500 });
+  },[location.pathname]);
+  
   return (
     <div>
       <Button scrollUp />
       <Container
         additional={`flex flex-col md:flex-row ${classes.hero}`}
-        padding="3% 7%"
       >
         <div className="flex flex-col justify-center w-full md:w-1/2 text-center md:text-left">
           <h1 className="text-6xl text-blue">Yada Talks 2021</h1>

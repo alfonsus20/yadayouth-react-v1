@@ -10,10 +10,12 @@ import { animateScroll as scroll } from "react-scroll";
 import { useLocation } from "react-router-dom";
 
 const Donate = () => {
+  const location = useLocation();
   useEffect(() => {
     document.title = "Donate";
     scroll.scrollToTop({ duration: 500 });
-  });
+  }, [location.pathname]);
+
   return (
     <>
       <Button scrollUp />
