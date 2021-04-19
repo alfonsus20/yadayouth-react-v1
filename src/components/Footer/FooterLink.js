@@ -7,7 +7,7 @@ const FooterLink = ({ icon, text, pathname, hash, socmed }) => {
 
   if (socmed) {
     return (
-      <a href={pathname} className="font-book cursor-pointer" target='blank'>
+      <a href={pathname} className="font-book cursor-pointer" target="blank">
         {icon && (
           <>
             <i className={icon}></i>&nbsp;
@@ -39,7 +39,6 @@ const FooterLink = ({ icon, text, pathname, hash, socmed }) => {
         activeClass="active"
         className="font-book cursor-pointer"
         to={hash}
-        hashSpy
         offset={-96}
         smooth
         duration={500}

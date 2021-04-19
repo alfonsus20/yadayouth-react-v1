@@ -6,11 +6,11 @@ import YadaYouthMainLogo from "../assets/yadayouthmainlogo.png";
 
 const NotFound = () => {
   return (
-    <Container additional="h-screen" center>
+    <Container center screen>
       <div className="flex flex-col justify-center items-center text-center">
         <img
           src={YadaYouthMainLogo}
-          className="w-24 my-8"
+          className="w-24 mb-8"
           alt="yada-youth-logo"
         />
         <img src={NotFoundImg} alt="not-found" />

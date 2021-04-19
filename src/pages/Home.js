@@ -22,13 +22,13 @@ const Home = () => {
     scroller.scrollTo(location.hash.replace("#", ""), {
       duration: 500,
       smooth: "easeInOut",
-      offset: -96,
+      offset: -112,
     });
-  },[location]);
+  }, [location]);
   return (
     <div className="relative">
       <Button scrollUp />
-      <Container id="home" padding="4%" screen>
+      <Container padding="4%" screen id="home">
         <div className="relative">
           <h2 className="text-6xl text-blue text-center md:text-left font-bold">
             Welcome To Yada Youth!
@@ -55,7 +55,7 @@ const Home = () => {
             />
           </div>
         </div>
-        <div className="" style = {{paddingBottom : '2rem', paddingTop : '2rem'}}>
+        <div className="" style={{ paddingBottom: "2rem", paddingTop: "2rem" }}>
           <img
             src={Arrow}
             alt="Arrow"
