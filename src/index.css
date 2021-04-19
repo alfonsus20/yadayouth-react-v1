@@ -76,3 +76,7 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+
+.active{
+  color: #ff4c2e;
+}

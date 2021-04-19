@@ -1,12 +1,16 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Button from "../components/Button";
 import Container from "../components/Container";
 import NotFoundImg from "../assets/not-found.png";
 import YadaYouthMainLogo from "../assets/yadayouthmainlogo.png";
 
 const NotFound = () => {
+  useEffect(()=>{
+    document.title = 'Not Found'
+  })
+
   return (
-    <Container center screen>
+    <Container center screen padding='3% 7% 4% 7%'>
       <div className="flex flex-col justify-center items-center text-center">
         <img
           src={YadaYouthMainLogo}
@@ -25,7 +29,7 @@ const NotFound = () => {
             text="Go Home"
             bgColor="blue"
             color="white"
-            path="/"
+            path="/#home"
             px = {8}
             borderWidth={4}
             borderColor="blue"

@@ -18,6 +18,7 @@ const NavLink = ({ text, pathname, hash, mobile, toggleMenu }) => {
   return (
     <LinkScroll
       activeClass = 'active'
+      spy
       className="px-4 text-xl cursor-pointer"
       to={hash}
       onClick={() => toggleMenu(!mobile)}
