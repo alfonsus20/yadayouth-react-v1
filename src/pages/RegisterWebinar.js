@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Button from "../components/Button";
 import Container from "../components/Container";
-import webinarpic from "../assets/webinar.png";
 import classes from "./RegisterWebinar.module.css";
 import { animateScroll as scroll } from "react-scroll";
 import { useLocation } from "react-router-dom";
@@ -13,7 +12,7 @@ const RegisterWebinar = () => {
     document.title = "Register Webinar";
     scroll.scrollToTop({ duration: 500 });
   },[location.pathname]);
-  
+
   return (
     <div>
       <Button scrollUp />
@@ -31,7 +30,7 @@ const RegisterWebinar = () => {
         </div>
         <div className=" w-full md:w-1/2">
           <img
-            src={webinarpic}
+            src={`${process.env.PUBLIC_URL}/webinar.png`}
             className="mx-auto md:ml-auto md:mr-0 w-full md:w-8/12"
           />
         </div>
