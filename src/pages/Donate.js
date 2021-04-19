@@ -7,7 +7,7 @@ import { DONATION_GOALS } from "../utils/constants";
 import DonationCard from "../components/DonationCard";
 import Button from "../components/Button";
 import { scroller } from "react-scroll";
-import { useLocation} from 'react-router-dom'
+import { useLocation } from "react-router-dom";
 
 const Donate = () => {
   const location = useLocation();
@@ -22,7 +22,13 @@ const Donate = () => {
   return (
     <>
       <Button scrollUp />
-      <Container center additional="text-blue" bgColor="yellow" id="donate" screen>
+      <Container
+        center
+        additional="text-blue"
+        bgColor="yellow"
+        id="donate"
+        screen
+      >
         <h1 className="text-4xl font-bold">
           We Need YOU to Help The Children Of Tomorrow!
         </h1>
@@ -36,10 +42,14 @@ const Donate = () => {
             <img
               src={DonationImg}
               className="w-80 h-auto hidden md:absolute md:-right-3/4 md:-bottom-1/2 md:block"
-              alt='donation'
+              alt="donation"
             />
           </p>
-          <img src={DonationImg} className="mx-auto mb-12 md:hidden" alt='donation'/>
+          <img
+            src={DonationImg}
+            className="mx-auto mb-12 md:hidden"
+            alt="donation"
+          />
         </div>
       </Container>
       <Container center bgColor="yellow" id="how">
@@ -50,14 +60,14 @@ const Donate = () => {
           <div className="text-black flex flex-col lg:flex-row space-x-4">
             <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:block space-y-4 sm:space-y-0">
               <div className="flex flex-col text-center justify-center items-center sm:text-left space-y-4 sm:space-y-0 sm:flex-row sm:space-x-8 ">
-                <img src={BNILogo} className="w-auto" alt='bni-logo' />
+                <img src={BNILogo} className="w-auto" alt="bni-logo" />
                 <div>
                   <strong>0842396708</strong>
                   <br /> a/n Yakina Athiyyah D.
                 </div>
               </div>
               <div className="flex flex-col text-center justify-center items-center  sm:text-left space-y-4 sm:space-y-0 sm:flex-row sm:space-x-8 ">
-                <img src={MandiriLogo} className="w-auto" alt='mandiri-logo' />
+                <img src={MandiriLogo} className="w-auto" alt="mandiri-logo" />
                 <div>
                   <strong>0842396708</strong>
                   <br /> a/n Yakina Athiyyah D.
@@ -74,6 +84,9 @@ const Donate = () => {
         </div>
       </Container>
       <Container padding="6% 15%">
+        <h2 className="text-center text-4xl text-blue mb-8 font-bold">
+          All the funds raised will be used for:
+        </h2>
         <div className="flex flex-wrap flex-row">
           {DONATION_GOALS.map((goal, idx) => {
             return <DonationCard key={idx} goal={goal} idx={idx} />;

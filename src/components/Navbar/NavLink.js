@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
-import { HashLink } from "react-router-hash-link";
 
 const NavLink = ({ text, pathname, hash, mobile, toggleMenu }) => {
   const location = useLocation();
@@ -16,13 +15,6 @@ const NavLink = ({ text, pathname, hash, mobile, toggleMenu }) => {
       </Link>
     );
   }
-
-  const scrollWidthOffset = (el) => {
-    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    const yOffset = -96;
-    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
-  };
-
   return (
     <LinkScroll
       activeClass = 'active'
@@ -35,9 +27,6 @@ const NavLink = ({ text, pathname, hash, mobile, toggleMenu }) => {
     >
       {text}
     </LinkScroll>
-    // <HashLink to={{ pathname, hash }} smooth scroll={el=>scrollWidthOffset(el)}>
-    //   {text}
-    // </HashLink>
   );
 };
 
