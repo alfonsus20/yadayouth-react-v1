@@ -11,14 +11,12 @@ const RegisterWebinar = () => {
   useEffect(() => {
     document.title = "Register Webinar";
     scroll.scrollToTop({ duration: 500 });
-  },[location.pathname]);
+  }, [location.pathname]);
 
   return (
     <div>
       <Button scrollUp />
-      <Container
-        additional={`flex flex-col md:flex-row ${classes.hero}`}
-      >
+      <div className={`flex flex-col md:flex-row ${classes.hero}`}>
         <div className="flex flex-col justify-center w-full md:w-1/2 text-center md:text-left">
           <h1 className="text-6xl text-blue">Yada Talks 2021</h1>
           <p className="text-2xl text-orange mt-4 text-center md:text-left">
@@ -30,11 +28,11 @@ const RegisterWebinar = () => {
         </div>
         <div className=" w-full md:w-1/2">
           <img
-            src={`${process.env.PUBLIC_URL}/webinar.png`}
+            src="/webinar.png"
             className="mx-auto md:ml-auto md:mr-0 w-full md:w-8/12"
           />
         </div>
-      </Container>
+      </div>
       <Container padding="3% 0%">
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSda15McXJBsqsxaN84rezu3ElGNPs0pKTsQ7nS9Uj2_HiOaJQ/viewform?embedded=true"
