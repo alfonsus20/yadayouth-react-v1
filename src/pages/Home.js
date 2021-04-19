@@ -22,7 +22,7 @@ const Home = () => {
     scroller.scrollTo(location.hash.replace("#", ""), {
       duration: 500,
       smooth: "easeInOut",
-      offset: -112,
+      offset: -77,
     });
   }, [location]);
   return (
@@ -110,6 +110,7 @@ const Home = () => {
                 image={cardContent.image}
                 title={cardContent.title}
                 body={cardContent.body}
+                link = {cardContent.link}
               />
             );
           })}

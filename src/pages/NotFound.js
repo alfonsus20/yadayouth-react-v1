@@ -1,16 +1,18 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import Button from "../components/Button";
 import Container from "../components/Container";
 import NotFoundImg from "../assets/not-found.png";
 import YadaYouthMainLogo from "../assets/yadayouthmainlogo.png";
+import { animateScroll as scroll } from "react-scroll";
 
 const NotFound = () => {
-  useEffect(()=>{
-    document.title = 'Not Found'
-  })
+  useEffect(() => {
+    document.title = "Not Found";
+    scroll.scrollToTop({ duration: 500 });
+  });
 
   return (
-    <Container center screen padding='3% 7% 4% 7%'>
+    <Container center screen padding="3% 7% 4% 7%" id="not-found">
       <div className="flex flex-col justify-center items-center text-center">
         <img
           src={YadaYouthMainLogo}
@@ -22,7 +24,7 @@ const NotFound = () => {
           The page is unknown or does not exist
         </h1>
         <p className="text-3xl text-orange font-bold">
-          Sorry about that, but the page you looking for is avaliable
+          Sorry about that, but the page you looking for is unavalaible
         </p>
         <div className="flex flex-row mt-4 space-x-4">
           <Button
@@ -30,7 +32,7 @@ const NotFound = () => {
             bgColor="blue"
             color="white"
             path="/#home"
-            px = {8}
+            px={8}
             borderWidth={4}
             borderColor="blue"
             rounded="full"
@@ -40,7 +42,7 @@ const NotFound = () => {
             bgColor="white"
             color="blue"
             path="/#contacts"
-            px = {8}
+            px={8}
             borderWidth={4}
             borderColor="blue"
             rounded="full"

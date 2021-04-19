@@ -17,7 +17,7 @@ const Button = ({ path, text, bgColor, width, color, scrollUp, px, py , borderCo
   return (
     <Link to={`${path}`}>
       <div
-        className={`bg-${bgColor} w-${width} text-${color} text-xl mt-4 px-${px} py-${py} rounded-${rounded} border-${borderWidth} border-${borderColor}`}
+        className={`bg-${bgColor} w-${width} text-center text-${color} text-xl mt-4 px-${px} py-${py} rounded-${rounded} border-${borderWidth} border-${borderColor}`}
         {...rest}
       >
         {text}

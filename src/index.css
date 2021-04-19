@@ -65,13 +65,13 @@ body {
 }
 
 .mobile {
-  height: calc(var(--vh, 1vh) * 100 - 5.5rem);
-  top: 5.5rem;
+  height: calc(var(--vh, 1vh) * 100 - 6rem);
+  top: 6rem;
 }
 
 .min-h-screen {
   /* min-height: calc(100vh - 122px);   */
-  min-height: calc(var(--vh, 1vh) * 100 - 122px);
+  min-height: calc(var(--vh, 1vh) * 100 - 6rem);
   display: flex;
   justify-content: center;
   flex-direction: column;

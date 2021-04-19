@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const NavLogo = ({ toggleMenu, menu }) => {
   return (
-    <div className="flex flex-row items-center bg-blue p-4">
+    <div className="flex flex-row items-center bg-blue">
       <Link to="/#home">
         <img src={YadaYouthLogo} alt="yada-youth-logo" className="w-20" />
       </Link>

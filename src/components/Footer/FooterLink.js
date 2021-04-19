@@ -39,7 +39,7 @@ const FooterLink = ({ icon, text, pathname, hash, socmed }) => {
         activeClass="active"
         className="font-book cursor-pointer"
         to={hash}
-        offset={-96}
+        offset={-77}
         smooth
         duration={500}
       >

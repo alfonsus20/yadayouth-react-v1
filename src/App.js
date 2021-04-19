@@ -6,6 +6,8 @@ import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer/Footer";
 import useWindowDimensions from "./utils/window-dimension";
 import { useState, useEffect } from "react";
+import Webinar from "./pages/Webinar";
+import RegisterWebinar from "./pages/RegisterWebinar";
 
 const App = () => {
   const [menu, toggleMenu] = useState(false);
@@ -26,6 +28,8 @@ const App = () => {
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/donate" component={Donate} exact />
+        <Route path="/webinar" component={Webinar} exact />
+        <Route path="/webinar/register" component={RegisterWebinar} exact />
         <Route path="*" component={NotFound} />
       </Switch>
       <Footer menu={menu} toggleMenu={toggleMenu} mobile = {width <= 768}/>

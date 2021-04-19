@@ -22,7 +22,7 @@ const NavLink = ({ text, pathname, hash, mobile, toggleMenu }) => {
       className="px-4 text-xl cursor-pointer"
       to={hash}
       onClick={() => toggleMenu(!mobile)}
-      offset = {-96}
+      offset = {-77}
       smooth
       duration={500}
     >

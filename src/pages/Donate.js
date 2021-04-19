@@ -16,7 +16,7 @@ const Donate = () => {
     scroller.scrollTo(location.hash.replace("#", ""), {
       duration: 500,
       smooth: "easeInOut",
-      offset: -112,
+      offset: -96,
     });
   }, [location]);
   return (

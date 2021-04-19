@@ -1,0 +1,57 @@
+.hero {
+  background-image: url("../assets/gradient_1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.points li {
+  padding-left: 12px;
+}
+
+.points li::before {
+  content: "-";
+}
+
+.blueShapeLeft {
+  position: absolute;
+  top: 18%;
+  right: 15%;
+}
+
+.blueShapeRight {
+  position: absolute;
+  top: 18%;
+  left: 15%;
+}
+
+.diamondLeft {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+}
+
+.diamondRight {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+
+.whiteShapeLeft {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+}
+
+.whiteShapeRight {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+
+.register {
+  background-image: url("../assets/gradient_2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 70% 50%;
+}
