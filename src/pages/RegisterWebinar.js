@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "../components/Button";
 import Container from "../components/Container";
 import webinarpic from "../assets/webinar.png";
 import classes from "./RegisterWebinar.module.css";
+import { animateScroll as scroll } from "react-scroll";
 
 const RegisterWebinar = () => {
+  useEffect(() => {
+    scroll.scrollToTop({ duration: 500 });
+  });
+
   return (
     <div>
       <Button scrollUp />
@@ -28,7 +33,7 @@ const RegisterWebinar = () => {
           />
         </div>
       </Container>
-      <Container padding='3% 7%'>
+      <Container padding="3% 0%">
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSda15McXJBsqsxaN84rezu3ElGNPs0pKTsQ7nS9Uj2_HiOaJQ/viewform?embedded=true"
           width="100%"

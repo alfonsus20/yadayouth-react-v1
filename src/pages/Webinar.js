@@ -13,7 +13,7 @@ import classes from "./Webinar.module.css";
 
 const Webinar = () => {
   useEffect(() => {
-    // scroll.scrollToTop({duration: 500});
+    scroll.scrollToTop({duration: 500});
   });
 
   return (

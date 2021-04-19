@@ -6,19 +6,14 @@ import BNILogo from "../assets/bni.png";
 import { DONATION_GOALS } from "../utils/constants";
 import DonationCard from "../components/DonationCard";
 import Button from "../components/Button";
-import { scroller } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 import { useLocation } from "react-router-dom";
 
 const Donate = () => {
-  const location = useLocation();
   useEffect(() => {
     document.title = "Donate";
-    scroller.scrollTo(location.hash.replace("#", ""), {
-      duration: 500,
-      smooth: "easeInOut",
-      offset: -96,
-    });
-  }, [location]);
+    scroll.scrollToTop({ duration: 500 });
+  });
   return (
     <>
       <Button scrollUp />
