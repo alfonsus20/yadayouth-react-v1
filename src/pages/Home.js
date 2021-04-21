@@ -58,7 +58,7 @@ const Home = () => {
               scroller.scrollTo("about", {
                 smooth: "easeInOut",
                 duration: 500,
-                offset: -96,
+                offset: -77,
               })
             }
           />
