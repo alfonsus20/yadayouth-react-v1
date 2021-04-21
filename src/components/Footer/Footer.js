@@ -1,6 +1,5 @@
 import React from "react";
 import Container from "../Container";
-import YadaYouthMainLogo from "../../assets/yadayouthmainlogo.png";
 import { MENUS, SOCMED } from "../../utils/constants";
 import FooterLink from "./FooterLink";
 
@@ -14,7 +13,7 @@ const Footer = () => {
     >
       <div className="flex flex-col w-full sm:w-6/12 my-8">
         <img
-          src={YadaYouthMainLogo}
+          src="pictures/yadayouthmainlogo.png"
           alt="Yada Youth Main Logo"
           className="w-24"
         />

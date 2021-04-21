@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import Button from "../components/Button";
 import Container from "../components/Container";
-import NotFoundImg from "../assets/not-found.png";
-import YadaYouthMainLogo from "../assets/yadayouthmainlogo.png";
 import { animateScroll as scroll } from "react-scroll";
 
 const NotFound = () => {
@@ -15,11 +13,11 @@ const NotFound = () => {
     <Container center screen padding="3% 7% 4% 7%" id="not-found">
       <div className="flex flex-col justify-center items-center text-center">
         <img
-          src={YadaYouthMainLogo}
+          src="pictures/yadayouthmainlogo.png"
           className="w-24 mb-8"
           alt="yada-youth-logo"
         />
-        <img src={NotFoundImg} alt="not-found" />
+        <img src="pictures/not-found.png" alt="not-found" />
         <h1 className="text-4xl text-blue font-bold my-8">
           The page is unknown or does not exist
         </h1>

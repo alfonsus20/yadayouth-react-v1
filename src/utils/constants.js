@@ -1,8 +1,3 @@
-import DonationImg from "../assets/donation.png";
-import WebinarsImg from "../assets/webinars.png";
-import CommServImg from "../assets/comm_serv.png";
-import speakerImg from "../assets/speakerone.png";
-
 export const MENUS = [
   { name: "Home", pathname: "/", hash: "home", socmed: false },
   { name: "About", pathname: "/", hash: "about", socmed: false },
@@ -34,21 +29,21 @@ export const SOCMED = [
 
 export const CARD_CONTENTS = [
   {
-    image: DonationImg,
+    image: "pictures/donation.png",
     title: "Open Donations",
     body:
       "We are open for donations with all profits will be given to the children in Indonesia",
     link: "/donate#donate",
   },
   {
-    image: CommServImg,
+    image: "pictures/comm_serv.png",
     title: "Community Services",
     body:
       "We conduct voluntary work to educate, distribute food, and empower children",
     link: "/",
   },
   {
-    image: WebinarsImg,
+    image: "pictures/webinars.png",
     title: "Webinars",
     body:
       "We provides self development webinars to help fund out community service",
@@ -66,13 +61,13 @@ export const DONATION_GOALS = [
 export const SPEAKERS = [
   {
     name: "Yosephine Devina Wijaya",
-    image: speakerImg,
+    image: "pictures/speaker1.jpg",
     description:
       "Key Account Manager at P&G Top 6 HSBC/HKU Asia Pacific Business Case Competition, Hongkong",
   },
   {
     name: "Yacinta Shafira Pradana",
-    image: speakerImg,
+    image: "pictures/speaker2.jpg",
     description:
       "Founder Women Beyond Indonesia YLI Wave 12",
   }

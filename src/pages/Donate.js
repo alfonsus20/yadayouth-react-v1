@@ -1,8 +1,5 @@
 import React, { useEffect } from "react";
-import DonationImg from "../assets/donation.png";
 import Container from "../components/Container";
-import MandiriLogo from "../assets/mandiri.png";
-import BNILogo from "../assets/bni.png";
 import { DONATION_GOALS } from "../utils/constants";
 import DonationCard from "../components/DonationCard";
 import Button from "../components/Button";
@@ -37,13 +34,13 @@ const Donate = () => {
             Through your kind donations, you can make positive impact towards
             children empowerment in Indonesia!
             <img
-              src={DonationImg}
+              src="pictures/donation.png"
               className="w-80 h-auto hidden md:absolute md:-right-3/4 md:-bottom-1/2 md:block"
               alt="donation"
             />
           </p>
           <img
-            src={DonationImg}
+            src="pictures/donation.png"
             className="mx-auto mb-12 md:hidden"
             alt="donation"
           />
@@ -57,14 +54,14 @@ const Donate = () => {
           <div className="text-black flex flex-col lg:flex-row space-x-4">
             <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:block space-y-4 sm:space-y-0">
               <div className="flex flex-col text-center justify-center items-center sm:text-left space-y-4 sm:space-y-0 sm:flex-row sm:space-x-8 ">
-                <img src={BNILogo} className="w-auto" alt="bni-logo" />
+                <img src="logos/bni.png" className="w-auto" alt="bni-logo" />
                 <div>
                   <strong>0842396708</strong>
                   <br /> a/n Yakina Athiyyah D.
                 </div>
               </div>
               <div className="flex flex-col text-center justify-center items-center  sm:text-left space-y-4 sm:space-y-0 sm:flex-row sm:space-x-8 ">
-                <img src={MandiriLogo} className="w-auto" alt="mandiri-logo" />
+                <img src="logos/mandiri.png" className="w-auto" alt="mandiri-logo" />
                 <div>
                   <strong>0842396708</strong>
                   <br /> a/n Yakina Athiyyah D.

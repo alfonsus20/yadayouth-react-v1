@@ -1,22 +1,17 @@
 import React, { useEffect } from "react";
 import Container from "../components/Container";
-import LandingPageImg from "../assets/landingpage.png";
-import YadaYouthMainLogoImg from "../assets/yadayouthmainlogo.png";
 import Card from "../components/Card";
 import Button from "../components/Button";
 import PostCarousel from "../components/PostCarousel";
 import Title from "../components/Title";
 import { CARD_CONTENTS } from "../utils/constants";
-import BlueShape from "../assets/blueshape.png";
-import YellowShape from "../assets/yellowshape.png";
-import Arrow from "../assets/arrow.png";
-import YellowDiamondShape from "../assets/yellowdiamondshape.png";
 import styles from "./Home.module.css";
 import { useLocation } from "react-router-dom";
 import { animateScroll as scroll, scroller } from "react-scroll";
 
 const Home = () => {
   const location = useLocation();
+  
   useEffect(() => {
     document.title = "Yada Youth";
     scroller.scrollTo(location.hash.replace("#", ""), {
@@ -25,6 +20,7 @@ const Home = () => {
       offset: -77,
     });
   }, [location]);
+
   return (
     <div className="relative">
       <Button scrollUp />
@@ -37,8 +33,6 @@ const Home = () => {
           <h3 className="text-4xl text-orange text-center md:text-left my-4 md:my-0">
             EMPOWERING CHILDREN OF TOMORROW
           </h3>
-          {/* <img src="./star.png" className = {styles.star} />
-          <img src="./star.png" className = {styles.star2} /> */}
         </div>
         <div className="flex flex-col-reverse md:flex-row md:mt-16">
           <div className="w-full md:w-6/12 flex justify-center items-center md:justify-start md:items-start">
@@ -49,7 +43,7 @@ const Home = () => {
           </div>
           <div className="w-full md:w-6/12 flex justify-center items-center md:justify-start md:items-start mt-4 mb-8 md:my-0">
             <img
-              src={LandingPageImg}
+              src="pictures/landingpage.png"
               alt="Landing Page"
               className="object-cover w-10/12  md:ml-auto"
             />
@@ -57,7 +51,7 @@ const Home = () => {
         </div>
         <div className="" style={{ paddingBottom: "2rem", paddingTop: "2rem" }}>
           <img
-            src={Arrow}
+            src="shapes/arrow.png"
             alt="Arrow"
             className="cursor-pointer mx-auto"
             onClick={() =>
@@ -84,7 +78,7 @@ const Home = () => {
             </p>
           </div>
           <img
-            src={YadaYouthMainLogoImg}
+            src="pictures/yadayouthmainlogo.png"
             alt="Yada Youth Main Logo"
             className="relative top-12 lg:right-40 lg:top-0 w-80 lg:w-120"
           />
@@ -116,12 +110,12 @@ const Home = () => {
           })}
         </div>
         <img
-          src={BlueShape}
+          src="shapes/blueshape.png"
           alt="Blue Shape"
           className={styles.blueShapeLeft + " hidden lg:block"}
         />
         <img
-          src={BlueShape}
+          src="shapes/blueshape.png"
           alt="Blue Shape"
           className={styles.blueShapeRight + " hidden lg:block"}
         />
@@ -143,22 +137,22 @@ const Home = () => {
             path="/donate#donate"
           />
           <img
-            src={YellowDiamondShape}
+            src="shapes/yellowdiamondshape.png"
             alt="Yellow Diamond"
             className={styles.diamondLeft + " hidden md:block"}
           />
           <img
-            src={YellowDiamondShape}
+            src="shapes/yellowdiamondshape.png"
             alt="Yellow Diamond"
             className={styles.diamondRight + " hidden md:block"}
           />
           <img
-            src={YellowShape}
+            src="shapes/yellowshape.png"
             alt="Yellow Shape"
             className={styles.yellowShapeLeft + " hidden md:block"}
           />
           <img
-            src={YellowShape}
+            src="shapes/yellowshape.png"
             alt="Yellow Shape"
             className={styles.yellowShapeRight + " hidden md:block"}
           />

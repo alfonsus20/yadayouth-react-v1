@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ArrowWhite from "../assets/arrow-white.png";
 import { animateScroll as scroll } from "react-scroll";
 
 const Button = ({
@@ -25,7 +24,7 @@ const Button = ({
         onClick={() => scroll.scrollToTop({ duration: 500 })}
         style={{ borderWidth: 5, borderRadius: 25 }}
       >
-        <img src={ArrowWhite} className="w-6 h-6" alt="arrow-white" />
+        <img src="shapes/arrow-white.png" className="w-6 h-6" alt="arrow-white" />
       </div>
     );
   }
