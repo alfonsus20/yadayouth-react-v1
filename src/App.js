@@ -29,7 +29,7 @@ const App = () => {
         <Route path="/" component={Home} exact />
         <Route path="/donate" component={Donate} exact />
         <Route path="/webinar" component={Webinar} exact />
-        {/* <Route path="/webinar/register" component={RegisterWebinar} exact /> */}
+        <Route path="/webinar/register" component={RegisterWebinar} exact />
         <Route path="*" component={NotFound} />
       </Switch>
       <Footer menu={menu} toggleMenu={toggleMenu} mobile = {width <= 768}/>

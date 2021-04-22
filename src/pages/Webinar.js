@@ -113,8 +113,8 @@ const Webinar = () => {
             bgColor="blue-light"
             color="yellow"
             width="80"
-            // path="/webinar/register"
-            url = 'https://docs.google.com/forms/d/e/1FAIpQLSftXxbffI7xQYIGWgDWasD3OeK32X3-kFJ0eaTJPlAocGbAuA/viewform'
+            path="/webinar/register"
+            // url = 'https://docs.google.com/forms/d/e/1FAIpQLSftXxbffI7xQYIGWgDWasD3OeK32X3-kFJ0eaTJPlAocGbAuA/viewform'
             rounded="full"
           />
           <img

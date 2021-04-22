@@ -5,7 +5,7 @@ const NavLogo = ({ toggleMenu, menu }) => {
   return (
     <div className="flex flex-row items-center bg-blue">
       <Link to="/#home">
-        <img src="pictures/yadayouthmainlogo.png" alt="yada-youth-logo" className="w-20" />
+        <img src={process.env.PUBLIC_URL + "/pictures/yadayouthmainlogo.png"} alt="yada-youth-logo" className="w-20" />
       </Link>
       <i
         onClick={() => toggleMenu(!menu)}

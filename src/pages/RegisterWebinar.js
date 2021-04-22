@@ -3,6 +3,7 @@ import Button from "../components/Button";
 import classes from "./RegisterWebinar.module.css";
 import { animateScroll as scroll } from "react-scroll";
 import { useLocation } from "react-router-dom";
+import Container from "../components/Container";
 
 const RegisterWebinar = () => {
   const location = useLocation();
@@ -27,13 +28,13 @@ const RegisterWebinar = () => {
         </div>
         <div className=" w-full md:w-1/2">
           <img
-            src="pictures/connect.png"
+            src={process.env.PUBLIC_URL + '/pictures/connect.png'}
             alt='webinar'
             className="mx-auto md:ml-auto md:mr-0 w-full md:w-8/12"
           />
         </div>
       </div>
-      {/* <Container padding="3% 0%">
+      <Container padding="3% 0%">
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSda15McXJBsqsxaN84rezu3ElGNPs0pKTsQ7nS9Uj2_HiOaJQ/viewform?embedded=true"
           width="100%"
@@ -44,7 +45,7 @@ const RegisterWebinar = () => {
         >
           Loading…
         </iframe>
-      </Container> */}
+      </Container>
     </div>
   );
 };
