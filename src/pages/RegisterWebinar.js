@@ -28,7 +28,7 @@ const RegisterWebinar = () => {
         </div>
         <div className=" w-full md:w-1/2">
           <img
-            src={process.env.PUBLIC_URL + '/pictures/connect.png'}
+            src='/pictures/connect.png'
             alt='webinar'
             className="mx-auto md:ml-auto md:mr-0 w-full md:w-8/12"
           />
