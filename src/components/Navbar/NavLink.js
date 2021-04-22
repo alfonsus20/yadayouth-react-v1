@@ -4,14 +4,15 @@ import { NavHashLink, HashLink } from "react-router-hash-link";
 const NavLink = ({ text, pathname, hash, mobile, toggleMenu }) => {
   if (hash) {
     return (
-      <HashLink
+      <NavHashLink
         className="px-4 text-xl cursor-pointer"
-        to={{pathname, hash}}
+        to={pathname + "#" + hash}
         smooth
         onClick={() => toggleMenu(!mobile)}
+        activeClassName="active"
       >
         {text}
-      </HashLink>
+      </NavHashLink>
     );
   }
   return (

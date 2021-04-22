@@ -6,6 +6,7 @@ import { SPEAKERS } from "../utils/constants";
 import Speaker from "../components/Speaker";
 import { animateScroll as scroll } from "react-scroll";
 import classes from "./Webinar.module.css";
+import {HashLink} from "react-router-hash-link"
 
 const Webinar = () => {
 
@@ -27,13 +28,14 @@ const Webinar = () => {
             <p className="text-2xl text-blue mt-4 text-center md:text-left">
               HOW CAN (YOU)TH MAKE A DIFFERENCE An Empowerment to Empower
             </p>
-            <div className="mt-4">
+            <div to='webinar/#learn-more' className="mt-4">
               <Button
                 text="Learn More"
                 bgColor="orange"
                 width="56"
                 color="yellow"
                 rounded="full"
+                path='#learn-more'
               />
             </div>
           </div>
@@ -46,7 +48,7 @@ const Webinar = () => {
           </div>
         </div>
       </Container>
-      <Container center padding="6% 7% 3% 7%">
+      <Container center padding="6% 7% 3% 7%" id='learn-more'>
         <Title
           text="About Yada Talks 1.0"
           bgColor="orange"
@@ -70,12 +72,12 @@ const Webinar = () => {
           ))}
         </div>
         <img
-          src="shapes/blueshape.png"
+          src="/shapes/blueshape.png"
           alt="Blue Shape"
           className={classes.blueShapeLeft + " hidden lg:block"}
         />
         <img
-          src="shapes/blueshape.png"
+          src="/shapes/blueshape.png"
           alt="Blue Shape"
           className={classes.blueShapeRight + " hidden lg:block"}
         />
@@ -116,22 +118,22 @@ const Webinar = () => {
             rounded="full"
           />
           <img
-            src="shapes/whitediamondshape.png"
+            src="/shapes/whitediamondshape.png"
             alt="White Diamond"
             className={classes.diamondLeft + " hidden md:block"}
           />
           <img
-            src="shapes/whitediamondshape.png"
+            src="/shapes/whitediamondshape.png"
             alt="White Diamond"
             className={classes.diamondRight + " hidden md:block"}
           />
           <img
-            src="shapes/whiteshape.png"
+            src="/shapes/whiteshape.png"
             alt="White Shape"
             className={classes.whiteShapeLeft + " hidden md:block"}
           />
           <img
-            src="shapes/whiteshape.png"
+            src="/shapes/whiteshape.png"
             alt="White Shape"
             className={classes.whiteShapeRight + " hidden md:block"}
           />
