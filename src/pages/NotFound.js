@@ -13,14 +13,11 @@ const NotFound = () => {
     <Container center screen padding="3% 7% 4% 7%" id="not-found">
       <div className="flex flex-col justify-center items-center text-center">
         <img
-          src={process.env.PUBLIC_URL + "/pictures/yadayouthmainlogo.png"}
+          src="/pictures/yadayouthmainlogo.png"
           className="w-24 mb-8"
           alt="yada-youth-logo"
         />
-        <img
-          src={process.env.PUBLIC_URL + "/pictures/not-found.png"}
-          alt="not-found"
-        />
+        <img src="/pictures/not-found.png" alt="not-found" />
         <h1 className="text-4xl text-blue font-bold my-8">
           The page is unknown or does not exist
         </h1>

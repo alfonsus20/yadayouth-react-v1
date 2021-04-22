@@ -43,7 +43,7 @@ const Home = () => {
           </div>
           <div className="w-full md:w-6/12 flex justify-center items-center md:justify-start md:items-start mt-4 mb-8 md:my-0">
             <img
-              src="pictures/landingpage.png"
+              src="/pictures/landingpage.png"
               alt="Landing Page"
               className="object-cover w-10/12  md:ml-auto"
             />
@@ -78,7 +78,7 @@ const Home = () => {
             </p>
           </div>
           <img
-            src="pictures/yadayouthmainlogo.png"
+            src="/pictures/yadayouthmainlogo.png"
             alt="Yada Youth Main Logo"
             className="relative top-12 lg:right-40 lg:top-0 w-80 lg:w-120"
           />

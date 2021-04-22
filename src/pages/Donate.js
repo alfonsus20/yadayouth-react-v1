@@ -34,13 +34,13 @@ const Donate = () => {
             Through your kind donations, you can make positive impact towards
             children empowerment in Indonesia!
             <img
-              src="pictures/donation.png"
+              src="/pictures/donation.png"
               className="w-80 h-auto hidden md:absolute md:-right-3/4 md:-bottom-1/2 md:block"
               alt="donation"
             />
           </p>
           <img
-            src="pictures/donation.png"
+            src="/pictures/donation.png"
             className="mx-auto mb-12 md:hidden"
             alt="donation"
           />
