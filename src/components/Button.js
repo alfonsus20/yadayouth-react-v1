@@ -24,7 +24,11 @@ const Button = ({
         onClick={() => scroll.scrollToTop({ duration: 500 })}
         style={{ borderWidth: 5, borderRadius: 25 }}
       >
-        <img src={process.env.PUBLIC_URL + "/shapes/arrow-white.png"} className="w-6 h-6" alt="arrow-white" />
+        <img
+          src="/shapes/arrow-white.png"
+          className="w-6 h-6"
+          alt="arrow-white"
+        />
       </div>
     );
   }

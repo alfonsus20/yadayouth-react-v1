@@ -13,7 +13,7 @@ const Footer = () => {
     >
       <div className="flex flex-col w-full sm:w-6/12 my-8">
         <img
-          src={process.env.PUBLIC_URL + "/pictures/yadayouthmainlogo.png"}
+          src="/pictures/yadayouthmainlogo.png"
           alt="Yada Youth Main Logo"
           className="w-24"
         />
@@ -44,7 +44,7 @@ const Footer = () => {
               icon={socmed.icon}
               pathname={socmed.link}
               text={socmed.name}
-              socmed = {socmed.socmed}
+              socmed={socmed.socmed}
             />
           ))}
         </dl>
