@@ -1,33 +1,29 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
-import { Link as LinkScroll } from "react-scroll";
+import { NavHashLink, HashLink } from "react-router-hash-link";
 
 const NavLink = ({ text, pathname, hash, mobile, toggleMenu }) => {
-  const location = useLocation();
-  if (location.pathname !== pathname) {
+  if (hash) {
     return (
-      <Link
-        to={{ pathname, hash }}
+      <HashLink
         className="px-4 text-xl cursor-pointer"
+        to={{pathname, hash}}
+        smooth
         onClick={() => toggleMenu(!mobile)}
       >
         {text}
-      </Link>
+      </HashLink>
     );
   }
   return (
-    <LinkScroll
-      activeClass = 'active'
-      spy
+    <NavHashLink
       className="px-4 text-xl cursor-pointer"
-      to={hash}
-      onClick={() => toggleMenu(!mobile)}
-      offset = {-77}
+      to={pathname}
       smooth
-      duration={500}
+      activeClassName="active"
+      onClick={() => toggleMenu(!mobile)}
     >
       {text}
-    </LinkScroll>
+    </NavHashLink>
   );
 };
 

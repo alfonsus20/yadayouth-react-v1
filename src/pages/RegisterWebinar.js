@@ -42,6 +42,7 @@ const RegisterWebinar = () => {
           frameborder="0"
           marginheight="0"
           marginwidth="0"
+          title='form'
         >
           Loading…
         </iframe>

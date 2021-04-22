@@ -6,15 +6,13 @@ import { SPEAKERS } from "../utils/constants";
 import Speaker from "../components/Speaker";
 import { animateScroll as scroll } from "react-scroll";
 import classes from "./Webinar.module.css";
-import {useLocation} from 'react-router-dom'
 
 const Webinar = () => {
-  const location = useLocation();
 
   useEffect(() => {
     document.title = 'Webinar'
-    scroll.scrollToTop({duration: 500});
-  },[location.pathname]);
+    scroll.scrollToTop({duration:0});
+  },[]);
 
   return (
     <div>
@@ -113,8 +111,8 @@ const Webinar = () => {
             bgColor="blue-light"
             color="yellow"
             width="80"
-            path="/webinar/register"
-            // url = 'https://docs.google.com/forms/d/e/1FAIpQLSftXxbffI7xQYIGWgDWasD3OeK32X3-kFJ0eaTJPlAocGbAuA/viewform'
+            // path="/webinar/register"
+            url = 'https://docs.google.com/forms/d/e/1FAIpQLSftXxbffI7xQYIGWgDWasD3OeK32X3-kFJ0eaTJPlAocGbAuA/viewform'
             rounded="full"
           />
           <img

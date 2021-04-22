@@ -3,15 +3,13 @@ import Container from "../components/Container";
 import { DONATION_GOALS } from "../utils/constants";
 import DonationCard from "../components/DonationCard";
 import Button from "../components/Button";
-import { animateScroll as scroll } from "react-scroll";
-import { useLocation } from "react-router-dom";
+import { animateScroll as scroll} from "react-scroll";
 
 const Donate = () => {
-  const location = useLocation();
   useEffect(() => {
     document.title = "Donate";
-    scroll.scrollToTop({ duration: 500 });
-  }, [location.pathname]);
+    scroll.scrollToTop({ duration: 0 });
+  },[]);
 
   return (
     <>

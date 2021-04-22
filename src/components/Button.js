@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {HashLink} from "react-router-hash-link"
 import { animateScroll as scroll } from "react-scroll";
 
 const Button = ({
@@ -45,14 +45,14 @@ const Button = ({
     );
   }
   return (
-    <Link to={`${path}`}>
+    <HashLink to={`${path}`}>
       <div
         className={`bg-${bgColor} w-${width} text-center text-${color} text-xl mt-4 px-${px} py-${py} rounded-${rounded} border-${borderWidth} border-${borderColor}`}
         {...rest}
       >
         {text}
       </div>
-    </Link>
+    </HashLink>
   );
 };
 

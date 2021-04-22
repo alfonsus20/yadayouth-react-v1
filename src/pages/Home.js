@@ -6,20 +6,14 @@ import PostCarousel from "../components/PostCarousel";
 import Title from "../components/Title";
 import { CARD_CONTENTS } from "../utils/constants";
 import styles from "./Home.module.css";
-import { useLocation } from "react-router-dom";
 import { animateScroll as scroll, scroller } from "react-scroll";
+import {HashLink} from 'react-router-hash-link'
 
 const Home = () => {
-  const location = useLocation();
-  
   useEffect(() => {
     document.title = "Yada Youth";
-    scroller.scrollTo(location.hash.replace("#", ""), {
-      duration: 500,
-      smooth: "easeInOut",
-      offset: -77,
-    });
-  }, [location]);
+    scroll.scrollToTop({duration: 0})
+  },[]);
 
   return (
     <div className="relative">
@@ -43,26 +37,19 @@ const Home = () => {
           </div>
           <div className="w-full md:w-6/12 flex justify-center items-center md:justify-start md:items-start mt-4 mb-8 md:my-0">
             <img
-              src="/pictures/landingpage.png"
+              src="pictures/landingpage.png"
               alt="Landing Page"
               className="object-cover w-10/12  md:ml-auto"
             />
           </div>
         </div>
-        <div className="" style={{ paddingBottom: "2rem", paddingTop: "2rem" }}>
+        <HashLink to='/#about'smooth style={{ paddingBottom: "2rem", paddingTop: "2rem" }}>
           <img
             src="shapes/arrow.png"
             alt="Arrow"
             className="cursor-pointer mx-auto"
-            onClick={() =>
-              scroller.scrollTo("about", {
-                smooth: "easeInOut",
-                duration: 500,
-                offset: -77,
-              })
-            }
           />
-        </div>
+        </HashLink>
       </Container>
       <Container additional="relative" bgColor="yellow" id="about">
         <div className="flex flex-col-reverse lg:flex-row justify-center items-center text-2xl relative lg:left-20">
@@ -78,7 +65,7 @@ const Home = () => {
             </p>
           </div>
           <img
-            src="/pictures/yadayouthmainlogo.png"
+            src="pictures/yadayouthmainlogo.png"
             alt="Yada Youth Main Logo"
             className="relative top-12 lg:right-40 lg:top-0 w-80 lg:w-120"
           />

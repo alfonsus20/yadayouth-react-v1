@@ -24,6 +24,10 @@
   src: url("./assets/fonts/Gotham-Light.otf");
 }
 
+html {
+  scroll-padding-top: 76.8px;
+}
+
 body {
   font-family: "Gotham Medium";
 }
@@ -77,6 +81,6 @@ body {
   flex-direction: column;
 }
 
-.active{
+.active {
   color: #ff4c2e;
 }
