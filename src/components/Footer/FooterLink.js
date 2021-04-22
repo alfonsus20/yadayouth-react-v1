@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
+import { HashLink } from "react-router-hash-link";
 
 const FooterLink = ({ icon, text, pathname, hash, socmed }) => {
   const location = useLocation();
@@ -18,30 +19,31 @@ const FooterLink = ({ icon, text, pathname, hash, socmed }) => {
     );
   }
 
-  if (location.pathname !== pathname) {
+  if (hash) {
     return (
       <dd>
-        <Link to={{ pathname, hash }} className="font-book cursor-pointer">
+        <HashLink
+          to={pathname + "#" + hash}
+          smooth
+          className="font-book cursor-pointer"
+        >
           {icon && (
             <>
               <i className={icon}></i>&nbsp;
             </>
           )}
           {text}
-        </Link>
+        </HashLink>
       </dd>
     );
   }
 
   return (
     <dd>
-      <LinkScroll
-        activeClass="active"
+      <HashLink
         className="font-book cursor-pointer"
-        to={hash}
-        offset={-77}
+        to={pathname}
         smooth
-        duration={500}
       >
         {icon && (
           <>
@@ -49,7 +51,7 @@ const FooterLink = ({ icon, text, pathname, hash, socmed }) => {
           </>
         )}
         {text}
-      </LinkScroll>
+      </HashLink>
     </dd>
   );
 };
