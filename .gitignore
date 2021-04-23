@@ -24,3 +24,6 @@ yarn-debug.log*
 yarn-error.log*
 
 .vercel
+
+# build files
+build.zip
