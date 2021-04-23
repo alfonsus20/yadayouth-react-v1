@@ -55,3 +55,24 @@
   background-repeat: no-repeat;
   background-position: 70% 50%;
 }
+/* 
+.front {
+  transform: rotateX();
+} */
+
+.flipCardInner{
+  transition: transform 0.5s ease;
+}
+
+.flipCard:hover .flipCardInner{
+  transform: rotateX(180deg);
+}
+
+.back,
+.front {
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateX(180deg);
+}

@@ -28,6 +28,9 @@ module.exports = {
       screens: {
         slg: "932px",
       },
+      zIndex : {
+        '-10' : '-10'
+      }
     },
     colors: {
       blue: {

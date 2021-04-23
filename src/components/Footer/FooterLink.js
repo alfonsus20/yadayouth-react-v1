@@ -1,11 +1,7 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
-import { Link as LinkScroll } from "react-scroll";
 import { HashLink } from "react-router-hash-link";
 
 const FooterLink = ({ icon, text, pathname, hash, socmed }) => {
-  const location = useLocation();
-
   if (socmed) {
     return (
       <a href={pathname} className="font-book cursor-pointer" target="blank">

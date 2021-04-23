@@ -1,0 +1,57 @@
+.flipCard {
+  height: 300px;
+}
+
+.points li {
+  padding-left: 12px;
+}
+
+.points li::before {
+  content: "-";
+}
+
+.flipCardInner {
+  transition: transform 0.5s ease;
+}
+
+.flipCard:hover .flipCardInner {
+  transform: rotateX(180deg);
+}
+
+.back,
+.front {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.back {
+  height: 100%;
+}
+
+.front {
+  height: 100%;
+}
+
+.back {
+  transform: rotateX(180deg);
+  font-size: min(1.5rem, 1.8vw);
+}
+
+@media (max-width: 767px) {
+  .flipCard {
+    height: 250px;
+  }
+  .back {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .flipCard {
+    height: 200px;
+  }
+  .back {
+    font-size: 1.2rem;
+  }
+}

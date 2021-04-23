@@ -20,7 +20,7 @@ const Button = ({
   if (scrollUp) {
     return (
       <div
-        className="fixed bottom-12 right-16 w-16 h-16 bg-blue z-10 border-white shadow-2xl cursor-pointer grid place-items-center"
+        className="fixed bottom-12 right-16 w-16 h-16 bg-blue z-30 border-white shadow-2xl cursor-pointer grid place-items-center"
         onClick={() => scroll.scrollToTop({ duration: 500 })}
         style={{ borderWidth: 5, borderRadius: 25 }}
       >

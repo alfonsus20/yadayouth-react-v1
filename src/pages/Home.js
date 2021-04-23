@@ -6,7 +6,7 @@ import PostCarousel from "../components/PostCarousel";
 import Title from "../components/Title";
 import { CARD_CONTENTS } from "../utils/constants";
 import styles from "./Home.module.css";
-import { animateScroll as scroll, scroller } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 import {HashLink} from 'react-router-hash-link'
 
 const Home = () => {

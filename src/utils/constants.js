@@ -68,7 +68,26 @@ export const SPEAKERS = [
   {
     name: "Yacinta Shafira Pradana",
     image: "/pictures/speaker2.jpg",
-    description:
-      "Founder Women Beyond Indonesia YLI Wave 12",
-  }
+    description: "Founder Women Beyond Indonesia YLI Wave 12",
+  },
+];
+
+export const TALKING_POINTS = [
+  {
+    front: "SELF DEVELOPMENT",
+    back: [
+      "Importance of Self-Development",
+      "Overcoming Lack of Confidence and Fear of Public Speaking",
+      "How to be Outstanding: Discovering and Developing Your Self Potential",
+    ],
+  },
+  {
+    front: "SELF MOVEMENT",
+    back: [
+      "Importance of Social Movement",
+      "Helping Others with Useful Social Movements",
+      "Examples of Applicable and Beneficial Social Movements + Tips and Tricks",
+      "Tackling Day-to-Day Problems in Social Movements",
+    ],
+  },
 ];

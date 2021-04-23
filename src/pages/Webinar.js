@@ -2,23 +2,22 @@ import React, { useEffect } from "react";
 import Button from "../components/Button";
 import Container from "../components/Container";
 import Title from "../components/Title";
-import { SPEAKERS } from "../utils/constants";
+import { SPEAKERS, TALKING_POINTS } from "../utils/constants";
 import Speaker from "../components/Speaker";
 import { animateScroll as scroll } from "react-scroll";
 import classes from "./Webinar.module.css";
-import {HashLink} from "react-router-hash-link"
+import FlipCard from "../components/FlipCard/FlipCard";
 
 const Webinar = () => {
-
   useEffect(() => {
-    document.title = 'Webinar'
-    scroll.scrollToTop({duration:0});
-  },[]);
+    document.title = "Webinar";
+    scroll.scrollToTop({ duration: 0 });
+  }, []);
 
   return (
     <div>
       <Button scrollUp />
-      <Container screen additional={classes.hero} >
+      <Container screen additional={classes.hero}>
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left">
             <h1 className="text-6xl text-white">Yada Talks 2021</h1>
@@ -28,18 +27,18 @@ const Webinar = () => {
             <p className="text-2xl text-blue mt-4 text-center md:text-left">
               HOW CAN (YOU)TH MAKE A DIFFERENCE An Empowerment to Empower
             </p>
-            <div to='webinar/#learn-more' className="mt-4">
+            <div to="webinar/#learn-more" className="mt-4">
               <Button
                 text="Learn More"
                 bgColor="orange"
                 width="56"
                 color="yellow"
                 rounded="full"
-                path='#learn-more'
+                path="#learn-more"
               />
             </div>
           </div>
-          <div className="w-full md:w-1/2 ">
+          <div className="w-full md:w-1/2">
             <img
               src="/pictures/connect.png"
               alt="webinar"
@@ -48,7 +47,7 @@ const Webinar = () => {
           </div>
         </div>
       </Container>
-      <Container center padding="6% 7% 3% 7%" id='learn-more'>
+      <Container center padding="6% 7% 3% 7%" id="learn-more">
         <Title
           text="About Yada Talks 1.0"
           bgColor="orange"
@@ -81,25 +80,17 @@ const Webinar = () => {
           alt="Blue Shape"
           className={classes.blueShapeRight + " hidden lg:block"}
         />
-        <div className='flex flex-col md:flex-row mt-8'>
-          <div className="bg-yellow w-full md:w-1/2 text-center rounded-2xl my-6 mx-0 md:mx-8 lg:mx-20 px-4 py-8 grid place-items-center">
-            <div>
-              <h4 className="text-blue font-book text-2xl">Talking Points:</h4>
-              <h3 className="text-white font-bold  text-4xl">
-                SELF DEVELOPMENT
-              </h3>
-            </div>
-          </div>
-          <div className="border-4 border-blue w-full md:w-1/2 rounded-2xl my-6 mx-0 md:mx-8 lg:mx-20 px-4 py-8 text-blue font-light">
-            <ul className={classes.points}>
-              <li> Importance of Social Movement </li>
-              <li> Helping Others with Useful Social Movements </li>
-              <li> Examples of Applicable and Beneficial Social Movements</li>
-              <li>Tips and Tricks </li>
-              <li> Tackling Day-to-Day Problems in Social Movements </li>
-            </ul>
-          </div>
+        <div className="w-full flex flex-col mt-8 md:flex-row">
+          {TALKING_POINTS.map((point, idx) => (
+            <FlipCard key={idx} front={point.front} back={point.back} />
+          ))}
         </div>
+
+        <img
+          src="/pictures/speaker-background.svg"
+          className="absolute bottom-0 right-0 z-10 hidden md:block"
+          alt ="speaker-background"
+        />
       </Container>
       <Container center additional={classes.register}>
         <div className="x-4 md:px-16 py-10 rounded-2xl w-10/12 md:w-8/12 border-white border-4 flex flex-col justify-center items-center bg-white text-center">
@@ -114,7 +105,7 @@ const Webinar = () => {
             color="yellow"
             width="80"
             // path="/webinar/register"
-            url = 'https://docs.google.com/forms/d/e/1FAIpQLSftXxbffI7xQYIGWgDWasD3OeK32X3-kFJ0eaTJPlAocGbAuA/viewform'
+            url="https://docs.google.com/forms/d/e/1FAIpQLSftXxbffI7xQYIGWgDWasD3OeK32X3-kFJ0eaTJPlAocGbAuA/viewform"
             rounded="full"
           />
           <img
