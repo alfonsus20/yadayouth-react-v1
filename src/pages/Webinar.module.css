@@ -1,5 +1,4 @@
 .hero {
-  background-image: url("../assets/gradient_1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -50,7 +49,6 @@
 }
 
 .register {
-  background-image: url("../assets/gradient_2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 70% 50%;

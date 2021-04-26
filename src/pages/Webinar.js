@@ -17,7 +17,7 @@ const Webinar = () => {
   return (
     <div>
       <Button scrollUp />
-      <Container screen additional={classes.hero}>
+      <Container screen additional={classes.hero} bgImage='gradient_1.jpg'>
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left">
             <h1 className="text-6xl text-white">Yada Talks 1.0</h1>
@@ -92,7 +92,7 @@ const Webinar = () => {
           alt="speaker-background"
         />
       </Container>
-      <Container center additional={classes.register}>
+      <Container center additional={classes.register} bgImage="gradient_2.jpg">
         <div className="x-4 md:px-16 py-10 rounded-2xl w-10/12 md:w-8/12 border-white border-4 flex flex-col justify-center items-center bg-white text-center">
           <h2 className="text-2xl font-bold">So, What Are You Waiting For?</h2>
           <p className="text-xl my-2 font-book ">
