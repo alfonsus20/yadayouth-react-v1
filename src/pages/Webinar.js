@@ -7,6 +7,7 @@ import Speaker from "../components/Speaker";
 import { animateScroll as scroll } from "react-scroll";
 import classes from "./Webinar.module.css";
 import FlipCard from "../components/FlipCard/FlipCard";
+import { HashLink } from "react-router-hash-link";
 
 const Webinar = () => {
   useEffect(() => {
@@ -20,14 +21,14 @@ const Webinar = () => {
       <Container screen additional={classes.hero}>
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left">
-            <h1 className="text-6xl text-white">Yada Talks 2021</h1>
+            <h1 className="text-6xl text-white">Yada Talks 1.0</h1>
             <h2 className="text-3xl my-2 text-white">
               May 2<sup>nd</sup>, 2021
             </h2>
             <p className="text-2xl text-blue mt-4 text-center md:text-left">
-              HOW CAN (YOU)TH MAKE A DIFFERENCE An Empowerment to Empower
+              HOW CAN (YOU)TH MAKE A DIFFERENCE <br/> An Empowerment to Empower
             </p>
-            <div to="webinar/#learn-more" className="mt-4">
+            <HashLink to="webinar/#learn-more" smooth className="mt-4">
               <Button
                 text="Learn More"
                 bgColor="orange"
@@ -36,7 +37,7 @@ const Webinar = () => {
                 rounded="full"
                 path="#learn-more"
               />
-            </div>
+            </HashLink>
           </div>
           <div className="w-full md:w-1/2">
             <img
