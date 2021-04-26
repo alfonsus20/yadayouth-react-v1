@@ -4,12 +4,15 @@ import axios from "axios";
 
 const PostCarousel = () => {
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const fetchInstagramPosts = async () => {
     try {
+      setLoading(true);
       const { data } = await axios.get(
         "https://yadayouth-backend.vercel.app/api/instagram/"
       );
+      setLoading(false);
       setPosts(data.data);
     } catch (e) {
       console.log(e);
@@ -18,7 +21,7 @@ const PostCarousel = () => {
 
   useEffect(() => {
     fetchInstagramPosts();
-  },[]);
+  }, []);
 
   const settings = {
     dots: true,
@@ -48,15 +51,19 @@ const PostCarousel = () => {
   };
   return (
     <div>
-      <Slider {...settings}>
-        {posts.map((post) => (
-          <div key={post.id} className="md:p-2 lg:p-4 outline-none">
-            <a href={post.permalink} target='blank'>
-              <img src={post.media_url} alt="feed" />
-            </a>
-          </div>
-        ))}
-      </Slider>
+      {loading ? (
+        <div className="w-full h-100 grid place-items-center text-orange text-2xl">Loading...</div>
+      ) : (
+        <Slider {...settings}>
+          {posts.map((post) => (
+            <div key={post.id} className="md:p-2 lg:p-4 outline-none">
+              <a href={post.permalink} target="blank">
+                <img src={post.media_url} alt="feed" />
+              </a>
+            </div>
+          ))}
+        </Slider>
+      )}
     </div>
   );
 };

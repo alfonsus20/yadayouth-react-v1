@@ -19,7 +19,7 @@ const FooterLink = ({ icon, text, pathname, hash, socmed }) => {
     return (
       <dd>
         <HashLink
-          to={pathname + "#" + hash}
+          to={hash === "contacts" ? "#" + hash : pathname + "#" + hash}
           smooth
           className="font-book cursor-pointer"
         >

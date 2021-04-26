@@ -49,7 +49,7 @@ const Donate = () => {
           <h2 className="text-center text-4xl text-blue mb-12 font-bold">
             How To Donate?
           </h2>
-          <div className="text-black flex flex-col lg:flex-row space-x-4">
+          <div className="text-black flex flex-col lg:flex-row space-x-0 lg:space-x-4">
             <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:block space-y-4 sm:space-y-0">
               <div className="flex flex-col text-center justify-center items-center sm:text-left space-y-4 sm:space-y-0 sm:flex-row sm:space-x-8 ">
                 <img src="logos/bni.png" className="w-auto" alt="bni-logo" />
@@ -66,7 +66,7 @@ const Donate = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full lg:w-1/2 mt-8 lg:mt-0 text-justify">
+            <div className="w-full lg:w-1/2  mt-8 lg:mt-0 text-justify">
               Please <strong>add a Rp1</strong> to the donation (Ex: for 50k
               donation please make it Rp50.001 and/or add the description “yada
               youth donation” in the description/notes to help us calculate the

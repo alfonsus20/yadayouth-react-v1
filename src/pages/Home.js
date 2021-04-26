@@ -121,7 +121,7 @@ const Home = () => {
             bgColor="blue-light"
             color="yellow"
             width="72"
-            path="/donate#donate"
+            path="/donate"
           />
           <img
             src="shapes/yellowdiamondshape.png"

@@ -2,21 +2,19 @@ import React, { useEffect } from "react";
 import Button from "../components/Button";
 import classes from "./RegisterWebinar.module.css";
 import { animateScroll as scroll } from "react-scroll";
-import { useLocation } from "react-router-dom";
 import Container from "../components/Container";
 
 const RegisterWebinar = () => {
-  const location = useLocation();
 
   useEffect(() => {
     document.title = "Register Webinar";
     scroll.scrollToTop({ duration: 500 });
-  }, [location.pathname]);
+  }, []);
 
   return (
     <div>
       <Button scrollUp />
-      <div className={`flex flex-col md:flex-row ${classes.hero}`}>
+      <div className={`flex flex-col md:flex-row ${classes.hero}`} style={{backgroundImage:'url(/backgrounds/gradient_3.jpg)'}}>
         <div className="flex flex-col justify-center w-full md:w-1/2 text-center md:text-left">
           <h1 className="text-6xl text-blue">Yada Talks 2021</h1>
           <p className="text-2xl text-orange mt-4 text-center md:text-left">

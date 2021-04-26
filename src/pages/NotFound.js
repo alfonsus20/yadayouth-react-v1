@@ -29,7 +29,7 @@ const NotFound = () => {
             text="Go Home"
             bgColor="blue"
             color="white"
-            path="/#home"
+            path="/"
             px={8}
             borderWidth={4}
             borderColor="blue"
