@@ -12,6 +12,7 @@
 
 .flipCardInner {
   transition: transform 0.5s ease;
+  transform-style: preserve-3d;
 }
 
 .flipCard:hover .flipCardInner {
@@ -26,21 +27,13 @@
 }
 
 .back {
-  height: 100%;
-}
-
-.front {
-  height: 100%;
-}
-
-.back {
   transform: rotateX(180deg);
   font-size: min(1.5rem, 1.8vw);
 }
 
 @media (max-width: 767px) {
   .flipCard {
-    height: 250px;
+    height: 200px;
   }
   .back {
     font-size: 1.5rem;
@@ -52,6 +45,6 @@
     height: 200px;
   }
   .back {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }

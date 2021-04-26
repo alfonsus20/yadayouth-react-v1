@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect} from "react";
 import Button from "../components/Button";
 import Container from "../components/Container";
 import Title from "../components/Title";
@@ -7,7 +7,6 @@ import Speaker from "../components/Speaker";
 import { animateScroll as scroll } from "react-scroll";
 import classes from "./Webinar.module.css";
 import FlipCard from "../components/FlipCard/FlipCard";
-import { HashLink } from "react-router-hash-link";
 
 const Webinar = () => {
   useEffect(() => {
@@ -26,9 +25,9 @@ const Webinar = () => {
               May 2<sup>nd</sup>, 2021
             </h2>
             <p className="text-2xl text-blue mt-4 text-center md:text-left">
-              HOW CAN (YOU)TH MAKE A DIFFERENCE <br/> An Empowerment to Empower
+              HOW CAN (YOU)TH MAKE A DIFFERENCE <br /> An Empowerment to Empower
             </p>
-            <HashLink to="webinar/#learn-more" smooth className="mt-4">
+            <div className="mt-4">
               <Button
                 text="Learn More"
                 bgColor="orange"
@@ -37,7 +36,7 @@ const Webinar = () => {
                 rounded="full"
                 path="#learn-more"
               />
-            </HashLink>
+            </div>
           </div>
           <div className="w-full md:w-1/2">
             <img
@@ -81,7 +80,7 @@ const Webinar = () => {
           alt="Blue Shape"
           className={classes.blueShapeRight + " hidden lg:block"}
         />
-        <div className="w-full flex flex-col mt-8 md:flex-row">
+        <div className="w-full flex flex-col py-8 md:flex-row">
           {TALKING_POINTS.map((point, idx) => (
             <FlipCard key={idx} front={point.front} back={point.back} />
           ))}
@@ -90,7 +89,7 @@ const Webinar = () => {
         <img
           src="/pictures/speaker-background.svg"
           className="absolute bottom-0 right-0 z-10 hidden md:block"
-          alt ="speaker-background"
+          alt="speaker-background"
         />
       </Container>
       <Container center additional={classes.register}>
