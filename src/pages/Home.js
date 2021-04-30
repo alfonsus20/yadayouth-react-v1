@@ -6,14 +6,13 @@ import PostCarousel from "../components/PostCarousel";
 import Title from "../components/Title";
 import { CARD_CONTENTS } from "../utils/constants";
 import styles from "./Home.module.css";
-import { animateScroll as scroll } from "react-scroll";
-import {HashLink} from 'react-router-hash-link'
+import { animateScroll as scroll, scroller } from "react-scroll";
 
 const Home = () => {
   useEffect(() => {
     document.title = "Yada Youth";
-    scroll.scrollToTop({duration: 0})
-  },[]);
+    scroll.scrollToTop({ duration: 0 });
+  }, []);
 
   return (
     <div className="relative">
@@ -43,13 +42,18 @@ const Home = () => {
             />
           </div>
         </div>
-        <HashLink to='/#about'smooth style={{ paddingBottom: "2rem", paddingTop: "2rem" }}>
-          <img
-            src="shapes/arrow.png"
-            alt="Arrow"
-            className="cursor-pointer mx-auto"
-          />
-        </HashLink>
+        <img
+          src="shapes/arrow.png"
+          alt="Arrow"
+          className="cursor-pointer mx-auto"
+          onClick={() =>
+            scroller.scrollTo("about", {
+              smooth: "easeInOut",
+              duration: 500,
+              offset: -76.8,
+            })
+          }
+        />
       </Container>
       <Container additional="relative" bgColor="yellow" id="about">
         <div className="flex flex-col-reverse lg:flex-row justify-center items-center text-2xl relative lg:left-20">
@@ -91,7 +95,7 @@ const Home = () => {
                 image={cardContent.image}
                 title={cardContent.title}
                 body={cardContent.body}
-                link = {cardContent.link}
+                link={cardContent.link}
               />
             );
           })}

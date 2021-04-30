@@ -1,0 +1,11 @@
+.hero {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3% 7%;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 6% 7%;
+  }
+}

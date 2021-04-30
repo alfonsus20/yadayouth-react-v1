@@ -33,7 +33,7 @@ export const CARD_CONTENTS = [
     title: "Open Donations",
     body:
       "We are open for donations with all profits will be given to the children in Indonesia",
-    link: "/donate#donate",
+    link: "/donate",
   },
   {
     image: "/pictures/comm_serv.png",

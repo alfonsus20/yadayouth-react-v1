@@ -1,10 +1,10 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import Button from "../components/Button";
 import Container from "../components/Container";
 import Title from "../components/Title";
 import { SPEAKERS, TALKING_POINTS } from "../utils/constants";
 import Speaker from "../components/Speaker";
-import { animateScroll as scroll } from "react-scroll";
+import { animateScroll as scroll, scroller } from "react-scroll";
 import classes from "./Webinar.module.css";
 import FlipCard from "../components/FlipCard/FlipCard";
 
@@ -17,7 +17,7 @@ const Webinar = () => {
   return (
     <div>
       <Button scrollUp />
-      <Container screen additional={classes.hero} bgImage='gradient_1.jpg'>
+      <Container screen additional={classes.hero} bgImage="gradient_1.jpg">
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left">
             <h1 className="text-6xl text-white">Yada Talks 1.0</h1>
@@ -34,7 +34,14 @@ const Webinar = () => {
                 width="56"
                 color="yellow"
                 rounded="full"
-                path="#learn-more"
+                path="/webinar"
+                onClick={() =>
+                  scroller.scrollTo("learn-more", {
+                    smooth: "easeInOut",
+                    duration: 500,
+                    offset: -76.8,
+                  })
+                }
               />
             </div>
           </div>
@@ -85,7 +92,6 @@ const Webinar = () => {
             <FlipCard key={idx} front={point.front} back={point.back} />
           ))}
         </div>
-
         <img
           src="/pictures/speaker-background.svg"
           className="absolute bottom-0 right-0 z-10 hidden md:block"

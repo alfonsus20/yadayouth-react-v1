@@ -14,6 +14,8 @@ const Button = ({
   borderColor,
   borderWidth,
   rounded,
+  additional,
+  fontSize,
   url,
   ...rest
 }) => {
@@ -35,7 +37,7 @@ const Button = ({
     return (
       <a href={url} target="blank">
         <div
-          className={`bg-${bgColor} w-${width} text-center text-${color} text-xl mt-4 px-${px} py-${py} rounded-${rounded} border-${borderWidth} border-${borderColor}`}
+          className={`bg-${bgColor} w-${width} text-center text-${color} text-${fontSize} mt-4 px-${px} py-${py} rounded-${rounded} border-${borderWidth} border-${borderColor} ${additional}`}
           {...rest}
         >
           {text}
@@ -46,7 +48,7 @@ const Button = ({
     return (
       <HashLink to={`${path}`} smooth>
         <div
-          className={`bg-${bgColor} w-${width} text-center text-${color} text-xl mt-4 px-${px} py-${py} rounded-${rounded} border-${borderWidth} border-${borderColor}`}
+          className={`bg-${bgColor} w-${width} text-center text-${color} text-${fontSize} mt-4 px-${px} py-${py} rounded-${rounded} border-${borderWidth} border-${borderColor} ${additional}`}
           {...rest}
         >
           {text}
@@ -59,6 +61,7 @@ const Button = ({
 Button.defaultProps = {
   px: 3,
   py: 2,
+  fontSize : 'xl',
   rounded: "lg",
 };
 

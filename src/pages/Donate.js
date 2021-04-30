@@ -61,8 +61,8 @@ const Donate = () => {
               <div className="flex flex-col text-center justify-center items-center  sm:text-left space-y-4 sm:space-y-0 sm:flex-row sm:space-x-8 ">
                 <img src="logos/mandiri.png" className="w-auto" alt="mandiri-logo" />
                 <div>
-                  <strong>0842396708</strong>
-                  <br /> a/n Yakina Athiyyah D.
+                  <strong>1330016450835</strong>
+                  <br /> a/n Febrio Luqman W.
                 </div>
               </div>
             </div>

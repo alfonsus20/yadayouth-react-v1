@@ -9,11 +9,16 @@ const Container = ({
   padding,
   screen,
   bgImage,
+  maxWidth,
 }) => {
   const containerStyle = { padding: padding };
 
   if (bgImage) {
-    containerStyle['backgroundImage'] = `url(/backgrounds/${bgImage})`  ;
+    containerStyle["backgroundImage"] = `url(/backgrounds/${bgImage})`;
+  }
+
+  if (maxWidth) {
+    containerStyle["maxWidth"] = maxWidth;
   }
 
   return (

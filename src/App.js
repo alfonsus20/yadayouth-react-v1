@@ -8,6 +8,8 @@ import useWindowDimensions from "./utils/window-dimension";
 import { useState, useEffect } from "react";
 import Webinar from "./pages/Webinar";
 import RegisterWebinar from "./pages/RegisterWebinar";
+import Articles from "./pages/Article";
+import ArticleDetail from "./components/Article/ArticleDetail";
 
 const App = () => {
   const [menu, toggleMenu] = useState(false);
@@ -30,6 +32,8 @@ const App = () => {
         <Route path="/donate" component={Donate} exact />
         <Route path="/webinar" component={Webinar} exact />
         {/* <Route path="/webinar/register" component={RegisterWebinar} exact /> */}
+        <Route path="/articles" component={Articles} exact />
+        <Route path="/articles/:id" component={ArticleDetail} exact />
         <Route path="*" component={NotFound} />
       </Switch>
       <Footer menu={menu} toggleMenu={toggleMenu} mobile = {width <= 768}/>
