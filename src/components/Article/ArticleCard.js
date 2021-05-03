@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../Button";
 
-const ArticleCard = ({ title, description, publishTime }) => {
+const ArticleCard = ({ title, description, publishTime, image,id }) => {
   const countWords = (str) => {
     return str.split(" ").filter((n) => n !== "").length;
   };
@@ -35,14 +35,14 @@ const ArticleCard = ({ title, description, publishTime }) => {
               text="Read More"
               additional="shadow-xl font-book w-40 md:w-52"
               rounded="2xl"
-              path = "/articles/2"
+              path = {`/articles/${id}`}
             />
           </div>
         </div>
       </div>
       <div className="w-full sm:w-4/12 grid place-items-center">
         <img
-          src="/pictures/feed.png"
+          src={image}
           alt="article"
           className="sm:ml-auto w-full sm:w-56 h-auto rounded-lg"
         />

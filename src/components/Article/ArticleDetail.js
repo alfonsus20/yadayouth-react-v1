@@ -1,27 +1,45 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import { useParams, Link } from "react-router-dom";
 import Container from "../Container";
 import ArticleMiniCard from "./ArticleMiniCard";
 import "./ArticleDetail.css";
 import {animateScroll as scroll} from 'react-scroll'
 import Button from "../Button";
+import yadayouth from "../../api/yadayouth";
+import moment from "moment";
 
 const ArticleDetail = () => {
   const { id } = useParams();
+  const [article, setArticle] = useState({});
+  const [loading, setLoading] = useState(false);
+
+  const fetchArticle = async () => {
+    try {
+      setLoading(true);
+      const { data } = await yadayouth.get(`/api/article/${id}`);
+      setLoading(false);
+      setArticle(data);
+    } catch (e) {
+      setLoading(false);
+    }
+  };
+
 
   useEffect(()=>{
     scroll.scrollToTop({ duration: 0 });
+    fetchArticle();
   },[])
 
   return (
     <Container maxWidth = {1800} additional='mx-auto'>
       <Button scrollUp/>
       <h1 className="text-5xl text-blue font-book text-center">
-        Child Empowerment In Playing Phase
+        {article.title}
       </h1>
-      <p className="text-center my-4 font-light">April 22, 4 min read</p>
-      <div className="font-book text-lg">
-        <p className="my-4">
+      <p className="text-center my-4 font-light">{moment(article.timePublised).format('MMMM Do')}, 4 min read</p>
+      <img src={article.articleImage} className='w-full my-4' alt = 'article' />
+      <div className="font-book text-lg mt-8 mb-12">
+        {/* <p className="my-4">
           Have you ever wondered how important it is the playing phase for
           children? Contrary to popular belief, playing holds more than just
           entertainment objectives. It contributes to the intellectual growth
@@ -44,9 +62,10 @@ const ArticleDetail = () => {
           1997). It is seen as a creative process to the onlooker, yet makes
           absolute sense and has grounded reasoning to the children involved
           (Moyles, 2005)
-        </p>
+        </p> */}
+        <div dangerouslySetInnerHTML = {{__html : article.content}}/>
       </div>
-      <h2 className="font-medium text-2xl">
+      {/* <h2 className="font-medium text-2xl">
         How does children's playtime plays a part in empowering them?
       </h2>
       <ul className="font-book list-decimal pl-4 text-lg">
@@ -87,35 +106,11 @@ const ArticleDetail = () => {
           child's concentration and state of mind and enable a sense of being at
           one with the environtment (Csikszentmihalyu, 1979).
         </li>
-      </ul>
+      </ul> */}
       <div className="flex flex-col md:flex-row">
         <div className="flex flex-row flex-wrap w-full sm:w-8/12 md:w-10/12">
           <span className="font-book p-2 bg-gray rounded-md m-2">
-            Yada Youth
-          </span>
-          <span className="font-book p-2 bg-gray rounded-md m-2">
-            EmpoweringChildrenofTomorrow{" "}
-          </span>
-          <span className="font-book p-2 bg-gray rounded-md m-2">
-            EqualChildren
-          </span>
-          <span className="font-book p-2 bg-gray rounded-md m-2">
-            EqualChildren
-          </span>
-          <span className="font-book p-2 bg-gray rounded-md m-2">
-            EqualChildren
-          </span>
-          <span className="font-book p-2 bg-gray rounded-md m-2">
-            EqualChildren
-          </span>
-          <span className="font-book p-2 bg-gray rounded-md m-2">
-            EqualChildren
-          </span>
-          <span className="font-book p-2 bg-gray rounded-md m-2">
-            EqualChildren
-          </span>
-          <span className="font-book p-2 bg-gray rounded-md m-2">
-            EqualChildren
+            {article.topic}
           </span>
         </div>
         <div className="text-white ml-auto mt-4 sm:mt-0 w-full sm:w-4/12 md:w-2/12 grid place-items-center">

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
-import axios from "axios";
+import yadayouth from "../api/yadayouth";
 
 const PostCarousel = () => {
   const [posts, setPosts] = useState([]);
@@ -9,8 +9,8 @@ const PostCarousel = () => {
   const fetchInstagramPosts = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(
-        "https://yadayouth-backend.vercel.app/api/instagram/"
+      const { data } = await yadayouth.get(
+        "/api/instagram/"
       );
       setLoading(false);
       setPosts(data.data);

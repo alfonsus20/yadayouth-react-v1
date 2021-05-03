@@ -6,8 +6,8 @@ const Pagination = () => {
     <div className='flex justify-end' style={{paddingBottom : '6%'}}>
       <Link to="/articles" className='mx-2'>
         <div className="bg-orange text-white text-md px-4 py-2 rounded-full shadow-lg">
-          <i class="fas fa-chevron-left"></i>
-          <i class="fas fa-chevron-left"></i>
+          <i className="fas fa-chevron-left"></i>
+          <i className="fas fa-chevron-left"></i>
         </div>
       </Link>
       <Link to="/articles" className='mx-2'>
@@ -27,8 +27,8 @@ const Pagination = () => {
       </Link>
       <Link to="/articles" className='mx-2'>
         <div className="bg-orange text-white text-md px-4 py-2 rounded-full shadow-lg">
-          <i class="fas fa-chevron-right"></i>
-          <i class="fas fa-chevron-right"></i>
+          <i className="fas fa-chevron-right"></i>
+          <i className="fas fa-chevron-right"></i>
         </div>
       </Link>
     </div>
