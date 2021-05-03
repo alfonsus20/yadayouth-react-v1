@@ -38,7 +38,7 @@ const ArticleDetail = () => {
       </h1>
       <p className="text-center my-4 font-light">{moment(article.timePublised).format('MMMM Do')}, 4 min read</p>
       <img src={article.articleImage} className='w-full my-4' alt = 'article' />
-      <div className="font-book text-lg mt-8 mb-12">
+      <div className="font-book text-lg my-8">
         {/* <p className="my-4">
           Have you ever wondered how important it is the playing phase for
           children? Contrary to popular belief, playing holds more than just
