@@ -7,6 +7,7 @@ import Speaker from "../components/Speaker";
 import { animateScroll as scroll, scroller } from "react-scroll";
 import classes from "./Webinar.module.css";
 import FlipCard from "../components/FlipCard/FlipCard";
+import Fade from 'react-reveal/Fade';
 
 const Webinar = () => {
   useEffect(() => {
@@ -18,41 +19,43 @@ const Webinar = () => {
     <div>
       <Button scrollUp />
       <Container screen additional={classes.hero} bgImage="gradient_1.jpg">
-        <div className="flex flex-col md:flex-row">
-          <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left">
-            <h1 className="text-6xl text-white">Yada Talks 1.0</h1>
-            <h2 className="text-3xl my-2 text-white">
-              May 2<sup>nd</sup>, 2021
-            </h2>
-            <p className="text-2xl text-blue mt-4 text-center md:text-left">
-              HOW CAN (YOU)TH MAKE A DIFFERENCE <br /> An Empowerment to Empower
-            </p>
-            <div className="mt-4">
-              <Button
-                text="Learn More"
-                bgColor="orange"
-                width="56"
-                color="yellow"
-                rounded="full"
-                path="/webinar"
-                onClick={() =>
-                  scroller.scrollTo("learn-more", {
-                    smooth: "easeInOut",
-                    duration: 500,
-                    offset: -76.8,
-                  })
-                }
+        <Fade>
+          <div className="flex flex-col md:flex-row">
+            <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left">
+              <h1 className="text-6xl text-white">Yada Talks 1.0</h1>
+              <h2 className="text-3xl my-2 text-white">
+                May 2<sup>nd</sup>, 2021
+              </h2>
+              <p className="text-2xl text-blue mt-4 text-center md:text-left">
+                HOW CAN (YOU)TH MAKE A DIFFERENCE <br /> An Empowerment to Empower
+              </p>
+              <div className="mt-4">
+                <Button
+                  text="Learn More"
+                  bgColor="orange"
+                  width="56"
+                  color="yellow"
+                  rounded="full"
+                  path="/webinar"
+                  onClick={() =>
+                    scroller.scrollTo("learn-more", {
+                      smooth: "easeInOut",
+                      duration: 500,
+                      offset: -76.8,
+                    })
+                  }
+                />
+              </div>
+            </div>
+            <div className="w-full md:w-1/2">
+              <img
+                src="/pictures/connect.png"
+                alt="webinar"
+                className="mx-auto md:ml-auto md:mr-0 w-full md:w-8/12"
               />
             </div>
           </div>
-          <div className="w-full md:w-1/2">
-            <img
-              src="/pictures/connect.png"
-              alt="webinar"
-              className="mx-auto md:ml-auto md:mr-0 w-full md:w-8/12"
-            />
-          </div>
-        </div>
+        </Fade>
       </Container>
       <Container center padding="6% 7% 3% 7%" id="learn-more">
         <Title
@@ -67,26 +70,32 @@ const Webinar = () => {
           youth on understanding sustainable development of youth and further
           develop their awareness to do so.
         </p>
-        <div className="flex flex-col md:flex-row">
-          {SPEAKERS.map((speaker, idx) => (
-            <Speaker
-              key={idx}
-              image={speaker.image}
-              description={speaker.description}
-              name={speaker.name}
-            />
-          ))}
-        </div>
-        <img
-          src="/shapes/blueshape.png"
-          alt="Blue Shape"
-          className={classes.blueShapeLeft + " hidden lg:block"}
-        />
-        <img
-          src="/shapes/blueshape.png"
-          alt="Blue Shape"
-          className={classes.blueShapeRight + " hidden lg:block"}
-        />
+        <Fade bottom>
+          <div className="flex flex-col md:flex-row">
+            {SPEAKERS.map((speaker, idx) => (
+              <Speaker
+                key={idx}
+                image={speaker.image}
+                description={speaker.description}
+                name={speaker.name}
+              />
+            ))}
+          </div>
+        </Fade>
+        <Fade right>
+          <img
+            src="/shapes/blueshape.png"
+            alt="Blue Shape"
+            className={classes.blueShapeLeft + " hidden lg:block"}
+          />
+        </Fade>
+        <Fade left>
+          <img
+            src="/shapes/blueshape.png"
+            alt="Blue Shape"
+            className={classes.blueShapeRight + " hidden lg:block"}
+          />
+        </Fade>
         <div className="w-full flex flex-col py-8 md:flex-row">
           {TALKING_POINTS.map((point, idx) => (
             <FlipCard key={idx} front={point.front} back={point.back} />
