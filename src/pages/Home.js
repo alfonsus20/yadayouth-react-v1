@@ -7,6 +7,8 @@ import Title from "../components/Title";
 import { CARD_CONTENTS } from "../utils/constants";
 import styles from "./Home.module.css";
 import { animateScroll as scroll, scroller } from "react-scroll";
+import Fade from 'react-reveal/Fade';
+
 
 const Home = () => {
   useEffect(() => {
@@ -18,44 +20,53 @@ const Home = () => {
     <div className="relative">
       <Button scrollUp />
       <Container padding="4%" screen id="home">
-        <div className="relative">
-          <h2 className="text-6xl text-blue text-center md:text-left font-bold">
-            Welcome To Yada Youth!
-            <button onClick={() => scroll.scrollTo("serv")}></button>
-          </h2>
-          <h3 className="text-4xl text-orange text-center md:text-left my-4 md:my-0">
-            EMPOWERING CHILDREN OF TOMORROW
-          </h3>
-        </div>
-        <div className="flex flex-col-reverse md:flex-row md:mt-16">
-          <div className="w-full md:w-6/12 flex justify-center items-center md:justify-start md:items-start">
-            <div className="bg-yellow rounded-2xl px-4 py-3 text-2xl text-blue w-auto md:w-112 leading-tight">
-              We provide community services where all profits will go to the
-              children of Indonesia
+        <Fade>
+          <div className="relative">
+            <h2 className="text-6xl text-blue text-center md:text-left font-bold">
+              Welcome To Yada Youth!
+              <button onClick={() => scroll.scrollTo("serv")}></button>
+            </h2>
+            <h3 className="text-4xl text-orange text-center md:text-left my-4 md:my-0">
+              EMPOWERING CHILDREN OF TOMORROW
+            </h3>
+          </div>
+        </Fade>
+        <Fade>
+          <div className="flex flex-col-reverse md:flex-row md:mt-16">
+            <div className="w-full md:w-6/12 flex justify-center items-center md:justify-start md:items-start">
+              <div className="bg-yellow rounded-2xl px-4 py-3 text-2xl text-blue w-auto md:w-112 leading-tight">
+                We provide community services where all profits will go to the
+                children of Indonesia
+              </div>
+            </div>
+            <div className="w-full md:w-6/12 flex justify-center items-center md:justify-start md:items-start mt-4 mb-8 md:my-0">
+              <img
+                src="pictures/landingpage.png"
+                alt="Landing Page"
+                className="object-cover w-10/12  md:ml-auto"
+              />
             </div>
           </div>
-          <div className="w-full md:w-6/12 flex justify-center items-center md:justify-start md:items-start mt-4 mb-8 md:my-0">
-            <img
-              src="pictures/landingpage.png"
-              alt="Landing Page"
-              className="object-cover w-10/12  md:ml-auto"
-            />
-          </div>
-        </div>
-        <img
-          src="shapes/arrow.png"
-          alt="Arrow"
-          className="cursor-pointer mx-auto"
-          onClick={() =>
-            scroller.scrollTo("about", {
-              smooth: "easeInOut",
-              duration: 500,
-              offset: -76.8,
-            })
-          }
-        />
+        </Fade>
+
+        <Fade>
+          <img
+            src="shapes/arrow.png"
+            alt="Arrow"
+            className="cursor-pointer mx-auto"
+            onClick={() =>
+              scroller.scrollTo("about", {
+                smooth: "easeInOut",
+                duration: 500,
+                offset: -76.8,
+              })
+            }
+          />
+        </Fade>
       </Container>
+      
       <Container additional="relative" bgColor="yellow" id="about">
+        <Fade left>
         <div className="flex flex-col-reverse lg:flex-row justify-center items-center text-2xl relative lg:left-20">
           <div className="bg-blue-light px-10 py-10 mb-4 lg:mb-0 rounded-2xl w-10/12 lg:w-7/12 lg:pr-40 border-white border-4">
             <h4 className="text-yellow mt-4 lg:mt-0">
@@ -74,42 +85,54 @@ const Home = () => {
             className="relative top-12 lg:right-40 lg:top-0 w-80 lg:w-120"
           />
         </div>
+        </Fade>
       </Container>
 
       <Container center px={52} id="services">
-        <Title
-          text="OUR SERVICES"
-          bgColor="orange"
-          color="white"
-          borderColor="white"
-        />
-        <p className="text-center text-xl w-full md:w-6/12 mt-4 font-book">
-          Yada Youth provides volunteer opportunities, community services, and
-          development programs to help educate, feed, and empower the youth.
-        </p>
-        <div className="flex flex-wrap justify-between w-full text-center">
-          {CARD_CONTENTS.map((cardContent, id) => {
-            return (
-              <Card
-                key={id}
-                image={cardContent.image}
-                title={cardContent.title}
-                body={cardContent.body}
-                link={cardContent.link}
-              />
-            );
-          })}
-        </div>
-        <img
-          src="shapes/blueshape.png"
-          alt="Blue Shape"
-          className={styles.blueShapeLeft + " hidden lg:block"}
-        />
-        <img
-          src="shapes/blueshape.png"
-          alt="Blue Shape"
-          className={styles.blueShapeRight + " hidden lg:block"}
-        />
+        <Fade bottom>
+          <Title
+            text="OUR SERVICES"
+            bgColor="orange"
+            color="white"
+            borderColor="white"
+          />
+        </Fade>
+        <Fade bottom>
+          <p className="text-center text-xl w-full md:w-6/12 mt-4 font-book">
+            Yada Youth provides volunteer opportunities, community services, and
+            development programs to help educate, feed, and empower the youth.
+          </p>
+        </Fade>
+        <Fade bottom>
+          <div className="flex flex-wrap justify-between w-full text-center">
+            {CARD_CONTENTS.map((cardContent, id) => {
+              return (
+                <Card
+                  key={id}
+                  image={cardContent.image}
+                  title={cardContent.title}
+                  body={cardContent.body}
+                  link={cardContent.link}
+                />
+              );
+            })}
+          </div>
+        </Fade>
+
+        <Fade right>
+          <img
+            src="shapes/blueshape.png"
+            alt="Blue Shape"
+            className={styles.blueShapeLeft + " hidden lg:block"}
+          />
+        </Fade>
+        <Fade left>
+          <img
+            src="shapes/blueshape.png"
+            alt="Blue Shape"
+            className={styles.blueShapeRight + " hidden lg:block"}
+          />
+        </Fade>
       </Container>
       <Container center bgColor="orange">
         <div className="bg-yellow px-4 md:px-16 py-10 rounded-2xl w-10/12 md:w-8/12 border-white border-4 flex flex-col justify-center items-center">
@@ -127,39 +150,51 @@ const Home = () => {
             width="72"
             path="/donate"
           />
-          <img
-            src="shapes/yellowdiamondshape.png"
-            alt="Yellow Diamond"
-            className={styles.diamondLeft + " hidden md:block"}
-          />
-          <img
-            src="shapes/yellowdiamondshape.png"
-            alt="Yellow Diamond"
-            className={styles.diamondRight + " hidden md:block"}
-          />
-          <img
-            src="shapes/yellowshape.png"
-            alt="Yellow Shape"
-            className={styles.yellowShapeLeft + " hidden md:block"}
-          />
-          <img
-            src="shapes/yellowshape.png"
-            alt="Yellow Shape"
-            className={styles.yellowShapeRight + " hidden md:block"}
-          />
+          <Fade right>
+            <img
+              src="shapes/yellowdiamondshape.png"
+              alt="Yellow Diamond"
+              className={styles.diamondLeft + " hidden md:block"}
+            />
+          </Fade>
+          <Fade left>
+            <img
+              src="shapes/yellowdiamondshape.png"
+              alt="Yellow Diamond"
+              className={styles.diamondRight + " hidden md:block"}
+            />
+          </Fade>
+          <Fade right>
+            <img
+              src="shapes/yellowshape.png"
+              alt="Yellow Shape"
+              className={styles.yellowShapeLeft + " hidden md:block"}
+            />
+          </Fade>
+          <Fade left>
+            <img
+              src="shapes/yellowshape.png"
+              alt="Yellow Shape"
+              className={styles.yellowShapeRight + " hidden md:block"}
+            />
+          </Fade>
         </div>
       </Container>
       <Container center>
-        <Title
-          text="RECENT POSTS"
-          color="blue"
-          bgColor="white"
-          borderColor="orange"
-          width={84}
-        />
-        <p className="text-center text-xl w-6/12 mt-4 font-book">
-          Follow Us at @yadayouth.id
-        </p>
+        <Fade bottom>
+          <Title
+            text="RECENT POSTS"
+            color="blue"
+            bgColor="white"
+            borderColor="orange"
+            width={84}
+          />
+        </Fade>
+        <Fade bottom>
+          <p className="text-center text-xl w-6/12 mt-4 font-book">
+            Follow Us at @yadayouth.id
+          </p>
+        </Fade>
         <div className="px-10 py-10 rounded-2xl w-11/12 border-white border-4">
           <PostCarousel />
         </div>
