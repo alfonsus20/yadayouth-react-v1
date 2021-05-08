@@ -1,17 +1,25 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Container from "../Container";
 import ArticleMiniCard from "./ArticleMiniCard";
 import "./ArticleDetail.css";
-import {animateScroll as scroll} from 'react-scroll'
+import { animateScroll as scroll } from "react-scroll";
 import Button from "../Button";
 import yadayouth from "../../api/yadayouth";
 import moment from "moment";
+import { css } from "@emotion/react";
+import PuffLoader from "react-spinners/PuffLoader";
 
 const ArticleDetail = () => {
   const { id } = useParams();
   const [article, setArticle] = useState({});
   const [loading, setLoading] = useState(false);
+
+  const override = css`
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  `;
 
   const fetchArticle = async () => {
     try {
@@ -24,22 +32,29 @@ const ArticleDetail = () => {
     }
   };
 
-
-  useEffect(()=>{
+  useEffect(() => {
     scroll.scrollToTop({ duration: 0 });
     fetchArticle();
-  },[])
+  }, []);
 
   return (
-    <Container maxWidth = {1800} additional='mx-auto'>
-      <Button scrollUp/>
-      <h1 className="text-5xl text-blue font-book text-center">
-        {article.title}
-      </h1>
-      <p className="text-center my-4 font-light">{moment(article.timePublised).format('MMMM Do')}, 4 min read</p>
-      <img src={article.articleImage} className='w-full my-4' alt = 'article' />
-      <div className="font-book text-lg my-8">
-        {/* <p className="my-4">
+    <Container maxWidth={1800} additional="mx-auto">
+      {!loading ? (
+        <>
+          <Button scrollUp />
+          <h1 className="text-5xl text-blue font-book text-center">
+            {article.title}
+          </h1>
+          <p className="text-center my-4 font-light">
+            {moment(article.timePublised).format("MMMM Do")}, 4 min read
+          </p>
+          <img
+            src={article.articleImage}
+            className="w-full my-4"
+            alt="article"
+          />
+          <div className="font-book text-lg my-8">
+            {/* <p className="my-4">
           Have you ever wondered how important it is the playing phase for
           children? Contrary to popular belief, playing holds more than just
           entertainment objectives. It contributes to the intellectual growth
@@ -63,9 +78,9 @@ const ArticleDetail = () => {
           absolute sense and has grounded reasoning to the children involved
           (Moyles, 2005)
         </p> */}
-        <div dangerouslySetInnerHTML = {{__html : article.content}}/>
-      </div>
-      {/* <h2 className="font-medium text-2xl">
+            <div dangerouslySetInnerHTML={{ __html: article.content }} />
+          </div>
+          {/* <h2 className="font-medium text-2xl">
         How does children's playtime plays a part in empowering them?
       </h2>
       <ul className="font-book list-decimal pl-4 text-lg">
@@ -107,48 +122,63 @@ const ArticleDetail = () => {
           one with the environtment (Csikszentmihalyu, 1979).
         </li>
       </ul> */}
-      <div className="flex flex-col md:flex-row">
-        <div className="flex flex-row flex-wrap w-full sm:w-8/12 md:w-10/12">
-          <span className="font-book p-2 bg-gray rounded-md m-2">
-            {article.topic}
-          </span>
-        </div>
-        <div className="text-white ml-auto mt-4 sm:mt-0 w-full sm:w-4/12 md:w-2/12 grid place-items-center">
+          <div className="flex flex-col md:flex-row">
+            <div className="flex flex-row flex-wrap w-full sm:w-8/12 md:w-10/12">
+              <span className="font-book p-2 bg-gray rounded-md m-2">
+                {article.topic}
+              </span>
+            </div>
+            <div className="text-white ml-auto mt-4 sm:mt-0 w-full sm:w-4/12 md:w-2/12 grid place-items-center">
+              <div
+                className="rounded-full py-2 px-4 mb-auto mt-2 icon"
+                style={{ backgroundColor: "#FDAE5A" }}
+              >
+                <i className="fas fa-link"></i>&nbsp; Share This Article
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 className="text-blue text-center text-xl my-8">
+              More From YadaYouth Article
+            </h3>
+            <div className="flex flex-row flex-wrap ">
+              <ArticleMiniCard />
+              <ArticleMiniCard />
+              <ArticleMiniCard />
+            </div>
+          </div>
           <div
-            className="rounded-full py-2 px-4 mb-auto mt-2 icon"
-            style={{ backgroundColor: "#FDAE5A" }}
+            className="flex justify-between sm:px-12 my-4"
+            style={{ fontSize: "clamp(12px,2vw,1rem)" }}
           >
-            <i className="fas fa-link"></i>&nbsp; Share This Article
+            <Link to="/articles">
+              <div className="bg-orange text-white text-md px-4 py-2 rounded-lg shadow-lg">
+                <i className="fas fa-chevron-left"></i>
+                <i className="fas fa-chevron-left"></i>
+                &nbsp; Previous Article
+              </div>
+            </Link>
+            <Link to="/articles">
+              <div className="bg-orange text-white text-md px-4 py-2 rounded-lg shadow-lg">
+                Next Article &nbsp;
+                <i className="fas fa-chevron-right"></i>
+                <i className="fas fa-chevron-right"></i>
+              </div>
+            </Link>
+          </div>
+        </>
+      ) : (
+        <div className="grid place-items-center h-60">
+          <div className="w-full">
+            <div className="text-2xl text-orange text-center mb-2">
+              Loading...
+            </div>
+            <div className="w-full h-24 relative">
+              <PuffLoader loading={loading} color="#FF4C2E" css={override} />
+            </div>
           </div>
         </div>
-      </div>
-      <div>
-        <h3 className="text-blue text-center text-xl my-8">
-          More From YadaYouth Article
-        </h3>
-        <div className="flex flex-row flex-wrap ">
-          <ArticleMiniCard />
-          <ArticleMiniCard />
-          <ArticleMiniCard />
-        </div>
-      </div>
-      <div className="flex justify-between sm:px-12 my-4"  style={{fontSize : 'clamp(12px,2vw,1rem)'}}>
-        <Link to="/articles">
-          <div className='bg-orange text-white text-md px-4 py-2 rounded-lg shadow-lg'>
-            <i className="fas fa-chevron-left"></i>
-            <i className="fas fa-chevron-left"></i>
-            &nbsp; Previous Article
-          </div>
-        </Link>
-        <Link to="/articles">
-          <div className='bg-orange text-white text-md px-4 py-2 rounded-lg shadow-lg'>
-            Next Article &nbsp;
-            <i className="fas fa-chevron-right"></i>
-            <i className="fas fa-chevron-right"></i>
-          </div>
-        </Link>
- 
-      </div>
+      )}
     </Container>
   );
 };

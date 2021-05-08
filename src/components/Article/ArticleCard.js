@@ -22,18 +22,20 @@ const ArticleCard = ({ title, description, publishTime, image,id }) => {
       }}
     >
       <div className="flex flex-col w-full sm:w-8/12 justify-around mr-4">
-        <h3 className="text-3xl text-blue font-bold my-4 sm:my-0">{title}</h3>
-        <p className="text-lg font-book text-justify">{content}</p>
-        <div className="flex flex-col sm:flex-row">
+        <h3 className="text-2xl lg:text-3xl text-blue font-bold my-4 sm:my-0">{title}</h3>
+        <p className="text-lg font-book text-justify mt-2" dangerouslySetInnerHTML ={{__html : content}}></p>
+        <div className="flex flex-col lg:flex-row">
           <time className="mt-4 font-light text-blue">
             Published At : {publishTime}
           </time>
-          <div className="mx-auto sm:ml-auto sm:mr-0">
+          <div className="mx-auto md:ml-0 lg:ml-auto sm:mr-0">
             <Button
               color="blue"
               bgColor="white"
               text="Read More"
               additional="shadow-xl font-book w-40 md:w-52"
+              px={1}
+              py={1}
               rounded="2xl"
               path = {`/articles/${id}`}
             />

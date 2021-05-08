@@ -7,18 +7,33 @@ import Container from "../components/Container";
 import classes from "./Article.module.css";
 import { animateScroll as scroll } from "react-scroll";
 import yadayouth from "../api/yadayouth";
-import moment from 'moment';
+import moment from "moment";
+import { css } from "@emotion/react";
+import PuffLoader from "react-spinners/PuffLoader";
 
 const Article = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [prev, setPrev] = useState(null);
+  const [next, setNext] = useState(null);
+  const [categories, setCategories] = useState([]);
+
+  const override = css`
+    position : absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  `;
 
   const fetchArticles = async () => {
     try {
       setLoading(true);
       const { data } = await yadayouth.get("/api/article/");
+      const { data: categoryData } = await yadayouth.get("/api/topic/");
       setLoading(false);
-      setArticles(data);
+      setArticles(data.results);
+      setCategories(categoryData.results);
+      setPrev(data.prev);
+      setNext(data.next);
     } catch (e) {
       setLoading(false);
     }
@@ -55,23 +70,34 @@ const Article = () => {
         maxWidth={1800}
       >
         <div className="w-full md:w-8/12">
-          {!loading
-            ? articles.map((article) => {
-                return (
-                  <ArticleCard
-                    key={article.id}
-                    title={article.title}
-                    description=""
-                    publishTime={moment(article.timePublised).format('dddd, MMMM Do YYYY')}
-                    image = {article.articleImage}
-                    id = {article.id}
-                  />
-                );
-              })
-            : "Loading..."}
-          <Pagination />
+          {!loading ? (
+            articles.map((article) => {
+              return (
+                <ArticleCard
+                  key={article.id}
+                  title={article.title}
+                  description={article.content}
+                  publishTime={moment(article.timePublised).format(
+                    "dddd, MMMM Do YYYY"
+                  )}
+                  image={article.articleImage}
+                  id={article.id}
+                />
+              );
+            })
+          ) : (
+            <div className="grid place-items-center h-60">
+              <div className="w-full">
+                <div className="text-2xl text-orange text-center mb-2">Loading...</div>
+                <div className="w-full h-24 relative">
+                  <PuffLoader loading={loading} color="#FF4C2E" css={override} />
+                </div>
+              </div>
+            </div>
+          )}
+          <Pagination prev={prev} next={next} />
         </div>
-        <ArticleAside />
+        <ArticleAside articles={articles} categories={categories}/>
       </Container>
     </div>
   );
