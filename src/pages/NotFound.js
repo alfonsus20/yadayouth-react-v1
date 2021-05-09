@@ -13,7 +13,7 @@ const NotFound = () => {
     <Container center screen padding="3% 7% 4% 7%" id="not-found">
       <div className="flex flex-col justify-center items-center text-center">
         <img
-          src="/pictures/yadayouthmainlogo.png"
+          src="/pictures/yadayouthmainlogo.svg"
           className="w-24 mb-8"
           alt="yada-youth-logo"
         />
@@ -21,8 +21,8 @@ const NotFound = () => {
         <h1 className="text-4xl text-blue font-bold my-8">
           The page is unknown or does not exist
         </h1>
-        <p className="text-3xl text-orange font-bold">
-          Sorry about that, but the page you looking for is unavalaible
+        <p className="text-xl md:text-2xl text-orange font-bold">
+          Sorry about that, but the page you are looking for is unavalaible
         </p>
         <div className="flex flex-row mt-4 space-x-4">
           <Button

@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <div className="relative">
       <Button scrollUp />
-      <Container padding="4%" screen id="home">
+      <Container padding="4% 7%" screen id="home">
         <Fade>
           <div className="relative">
             <h2 className="text-6xl text-blue text-center md:text-left font-bold">
@@ -53,7 +53,7 @@ const Home = () => {
           <img
             src="shapes/arrow.png"
             alt="Arrow"
-            className="cursor-pointer mx-auto"
+            className="cursor-pointer mx-auto my-6 sm:my-0"
             onClick={() =>
               scroller.scrollTo("about", {
                 smooth: "easeInOut",
