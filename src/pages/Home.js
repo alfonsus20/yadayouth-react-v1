@@ -26,7 +26,7 @@ const Home = () => {
               Welcome To Yada Youth!
               <button onClick={() => scroll.scrollTo("serv")}></button>
             </h2>
-            <h3 className="text-4xl text-orange text-center md:text-left my-4 md:my-0">
+            <h3 className="text-3xl text-orange text-center md:text-left my-4 md:my-0">
               EMPOWERING CHILDREN OF TOMORROW
             </h3>
           </div>
