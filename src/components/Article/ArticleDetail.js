@@ -27,8 +27,8 @@ const ArticleDetail = () => {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: window.document.title,
-          text: article.content,
+          title: 'Yada Youth Article',
+          text: window.document.title,
           url: window.document.location,
         });
         console.log("Thank you for sharing !")
