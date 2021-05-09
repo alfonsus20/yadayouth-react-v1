@@ -9,6 +9,7 @@ import yadayouth from "../../api/yadayouth";
 import moment from "moment";
 import { css } from "@emotion/react";
 import PuffLoader from "react-spinners/PuffLoader";
+import {countWords} from "../../utils/functions"
 
 const ArticleDetail = () => {
   const { id } = useParams();
@@ -52,6 +53,8 @@ const ArticleDetail = () => {
     fetchArticles();
   }, [id]);
 
+  const readingTime = Math.round(countWords(article.content || "" )/275);
+
   return (
     <Container maxWidth={1800} additional="mx-auto">
       {!loading ? (
@@ -61,7 +64,7 @@ const ArticleDetail = () => {
             {article.title}
           </h1>
           <p className="text-center my-4 font-light">
-            {moment(article.timePublised).format("MMMM Do")}, 4 min read
+            {moment(article.timePublised).format("MMMM Do")}, {readingTime} min read
           </p>
           <img
             src={article.articleImage}
@@ -69,74 +72,8 @@ const ArticleDetail = () => {
             alt="article"
           />
           <div className="font-book text-lg my-8">
-            {/* <p className="my-4">
-          Have you ever wondered how important it is the playing phase for
-          children? Contrary to popular belief, playing holds more than just
-          entertainment objectives. It contributes to the intellectual growth
-          and construction in children that are crucial in their
-          self-development and maturity.
-        </p>
-        <p className="my-4">
-          These factors play a vital role in determining their future
-          livelihood. Through the correct tool, environment, and supervision,
-          playtime can be a valuable learning experience. Thus, we encourage
-          Yada friends to support and realize how important this process is in a
-          child’s playing stages.
-        </p>
-        <h2 className="font-medium text-2xl">
-          So, What does playing mean in this context?
-        </h2>
-        <p className="my-4 ">
-          Playing is investigating new ways of doing things, and developing
-          imaginative competence and problem-solving skills (Sutton Smith,
-          1997). It is seen as a creative process to the onlooker, yet makes
-          absolute sense and has grounded reasoning to the children involved
-          (Moyles, 2005)
-        </p> */}
             <div dangerouslySetInnerHTML={{ __html: article.content }} />
           </div>
-          {/* <h2 className="font-medium text-2xl">
-        How does children's playtime plays a part in empowering them?
-      </h2>
-      <ul className="font-book list-decimal pl-4 text-lg">
-        <li className="my-4">
-          It provides a foundation for enabling self-understanding through doing
-          and testing social and emotional relationships and is a catalyst for
-          self choice when it is child-initiated and child-led (Hughes, 2001)
-        </li>
-        <li className="my-4">
-          A child from an early age in a play situation can develop a sense of
-          what they like and dislike, who they want to share their play space
-          with who they don't. Making simple decisions without immediate
-          consequences empowers children to develop a sense of who they are
-          (Bauman & May, 2001).
-        </li>
-        <li className="my-4">
-          To a child, the they are involved in a construction of knowledge,
-          ideas meanings (Mayall, 2001).
-        </li>
-        <li className="my-4">
-          Erikson (1963) observed that play has an ego-building function, aiding
-          the development of self-esteem. The child is able to demonstrate their
-          personality within paradigm of play and the boundaries they have set.
-          This provide an environment in which the child can explore
-          understanding of themselves and therefore subconsciously support their
-          emotional development.
-        </li>
-        <li className="my-4">
-          Holme and Massie (1970) agree that play and socialization with peers
-          are independent in supporting an aware of self their emotions. There
-          responses support the construction of children's development self. In
-          play children are able to develop skills of self understanding and
-          discovery.
-        </li>
-        <li className="my-4">
-          When Children are engaged in playful situations they are able to
-          maintain a sense of flexibility and freedom which can capture a
-          child's concentration and state of mind and enable a sense of being at
-          one with the environtment (Csikszentmihalyu, 1979).
-        </li>
-      </ul> */}
           <div className="flex flex-col md:flex-row">
             <div className="flex flex-row flex-wrap w-full sm:w-8/12 md:w-10/12">
               <span className="font-book p-2 bg-gray rounded-md m-2">
@@ -164,7 +101,7 @@ const ArticleDetail = () => {
                   time={moment(recentArticle.timePublised).format(
                     "dddd, MMMM Do YYYY"
                   )}
-                  id ={recentArticle.id}
+                  id={recentArticle.id}
                   image={recentArticle.articleImage}
                 />
               ))}

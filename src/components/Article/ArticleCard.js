@@ -1,10 +1,8 @@
 import React from "react";
 import Button from "../Button";
+import {countWords} from '../../utils/functions';
 
 const ArticleCard = ({ title, description, publishTime, image,id }) => {
-  const countWords = (str) => {
-    return str.split(" ").filter((n) => n !== "").length;
-  };
 
   const content = description
     .split(" ")
