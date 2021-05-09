@@ -13,7 +13,7 @@ const Footer = () => {
     >
       <div className="flex flex-col w-full sm:w-6/12 my-8">
         <img
-          src="/pictures/yadayouthmainlogo.png"
+          src="/pictures/yadayouthmainlogo.svg"
           alt="Yada Youth Main Logo"
           className="w-24"
         />

@@ -1,0 +1,57 @@
+<svg id="SVG" xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #fbbb1b;
+      }
+
+      .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3, .cls-5 {
+        fill: #222aef;
+      }
+
+      .cls-4 {
+        fill: #ff4c2e;
+      }
+
+      .cls-5 {
+        font-size: 41.667px;
+        font-family: Gotham;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g id="background_copy" data-name="background copy">
+    <circle class="cls-1" cx="540" cy="540" r="540"/>
+  </g>
+  <g id="orang_copy" data-name="orang copy">
+    <path class="cls-2" d="M362,834c4.369-112.233,12.475-178.821-16-305C328,450.688,447.857,409.4,478,498c36.723,137.048,29.687,256.584,23,348C493.709,942.174,357.019,935.256,362,834Z"/>
+    <path class="cls-3" d="M330,528c-82.946-.076-150.6-11.014-211-22-80.872-14.036-65-118.044,22-103,170.609,23.237,297.434,78.222,385-178,19.513-56.407,126.64-43.087,87,59-32.953,84.23-59.832,129.273-124,200C444.842,381.3,304.888,446.853,330,528Z"/>
+    <circle class="cls-4" cx="334.078" cy="310.078" r="89.922"/>
+  </g>
+  <g id="yadayouth.id_copy" data-name="yadayouth.id copy">
+    <g id="yada">
+      <text id="y" class="cls-5" transform="translate(540 583.04) scale(4.142)">y</text>
+      <text id="a" class="cls-5" transform="translate(629 583.04) scale(4.142)">a</text>
+      <text id="d" class="cls-5" transform="translate(718 583.04) scale(4.142)">d</text>
+      <text id="a_copy" data-name="a copy" class="cls-5" transform="translate(822 583.04) scale(4.142)">a</text>
+    </g>
+    <g id="youth">
+      <text id="y-2" data-name="y" class="cls-5" transform="translate(554 727.04) scale(4.142)">y</text>
+      <text id="o" class="cls-5" transform="translate(638 729.04) scale(4.142)">o</text>
+      <text id="u" class="cls-5" transform="translate(740 729.04) scale(4.142)">u</text>
+      <text id="t" class="cls-5" transform="translate(837 729.04) scale(4.142)">t</text>
+      <text id="h" class="cls-5" transform="translate(895 729.04) scale(4.142)">h</text>
+    </g>
+    <text id="i" class="cls-5" transform="matrix(3.71, 0, 0, 3.71, 572.011, 886.441)">i</text>
+    <text id="d-2" data-name="d" class="cls-5" transform="matrix(3.71, 0, 0, 3.71, 606.011, 886.441)">d</text>
+    <text id="_." data-name="." class="cls-5" transform="matrix(3.71, 0, 0, 3.71, 541.011, 886.441)">.</text>
+  </g>
+</svg>

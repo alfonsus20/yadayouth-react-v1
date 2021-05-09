@@ -19,29 +19,29 @@ const Article = () => {
   const [categories, setCategories] = useState([]);
 
   const override = css`
-    position : absolute;
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
   `;
 
-  const fetchArticles = async () => {
-    try {
-      setLoading(true);
-      const { data } = await yadayouth.get("/api/article/");
-      const { data: categoryData } = await yadayouth.get("/api/topic/");
-      setLoading(false);
-      setArticles(data.results);
-      setCategories(categoryData.results);
-      setPrev(data.prev);
-      setNext(data.next);
-    } catch (e) {
-      setLoading(false);
-    }
-  };
-
   useEffect(() => {
     document.title = "Articles";
     scroll.scrollToTop({ duration: 0 });
+
+    const fetchArticles = async () => {
+      try {
+        setLoading(true);
+        const { data } = await yadayouth.get("/api/article/");
+        const { data: categoryData } = await yadayouth.get("/api/topic/");
+        setLoading(false);
+        setArticles(data.results);
+        setCategories(categoryData.results);
+        setPrev(data.prev);
+        setNext(data.next);
+      } catch (e) {
+        setLoading(false);
+      }
+    };
 
     fetchArticles();
   }, []);
@@ -88,16 +88,26 @@ const Article = () => {
           ) : (
             <div className="grid place-items-center h-60">
               <div className="w-full">
-                <div className="text-2xl text-orange text-center mb-2">Loading...</div>
+                <div className="text-2xl text-orange text-center mb-2">
+                  Loading...
+                </div>
                 <div className="w-full h-24 relative">
-                  <PuffLoader loading={loading} color="#FF4C2E" css={override} />
+                  <PuffLoader
+                    loading={loading}
+                    color="#FF4C2E"
+                    css={override}
+                  />
                 </div>
               </div>
             </div>
           )}
           <Pagination prev={prev} next={next} />
         </div>
-        <ArticleAside articles={articles} categories={categories} loading = {loading}/>
+        <ArticleAside
+          articles={articles}
+          categories={categories}
+          loading={loading}
+        />
       </Container>
     </div>
   );

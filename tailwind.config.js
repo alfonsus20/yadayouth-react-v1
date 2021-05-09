@@ -6,15 +6,18 @@ module.exports = {
   theme: {
     extend: {
       minHeight: {
-        "0": "0",
+        0: "0",
         "1/4": "25%",
         "1/2": "50%",
-        "3/5" : "60%",
+        "3/5": "60%",
         "3/4": "75%",
-        "full": "100%",
+        full: "100%",
       },
       spacing: {
         84: "21rem",
+        91: "22rem",
+        92: "23rem",
+        96: "24rem",
         100: "25rem",
         104: "26rem",
         108: "27rem",
@@ -30,9 +33,9 @@ module.exports = {
       screens: {
         slg: "932px",
       },
-      zIndex : {
-        '-10' : '-10'
-      }
+      zIndex: {
+        "-10": "-10",
+      },
     },
     colors: {
       blue: {

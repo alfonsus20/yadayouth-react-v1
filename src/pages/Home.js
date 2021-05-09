@@ -34,7 +34,7 @@ const Home = () => {
         <Fade>
           <div className="flex flex-col-reverse md:flex-row md:mt-16">
             <div className="w-full md:w-6/12 flex justify-center items-center md:justify-start md:items-start">
-              <div className="bg-yellow rounded-2xl px-4 py-3 text-2xl text-blue w-auto md:w-112 leading-tight">
+              <div className="bg-yellow rounded-2xl px-4 py-3 text-2xl text-blue w-auto md:w-92 leading-tight">
                 We provide community services where all profits will go to the
                 children of Indonesia
               </div>
@@ -43,7 +43,7 @@ const Home = () => {
               <img
                 src="pictures/landingpage.png"
                 alt="Landing Page"
-                className="object-cover w-10/12  md:ml-auto"
+                className="w-10/12 h-auto md:ml-auto"
               />
             </div>
           </div>
@@ -80,7 +80,7 @@ const Home = () => {
             </p>
           </div>
           <img
-            src="pictures/yadayouthmainlogo.png"
+            src="pictures/yadayouthmainlogo.svg"
             alt="Yada Youth Main Logo"
             className="relative top-12 lg:right-40 lg:top-0 w-80 lg:w-120"
           />

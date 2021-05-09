@@ -14,6 +14,7 @@ const ArticleDetail = () => {
   const { id } = useParams();
   const [article, setArticle] = useState({});
   const [loading, setLoading] = useState(false);
+  const [articles, setArticles] = useState([]);
 
   const override = css`
     position: absolute;
@@ -21,21 +22,35 @@ const ArticleDetail = () => {
     transform: translateX(-50%);
   `;
 
-  const fetchArticle = async () => {
-    try {
-      setLoading(true);
-      const { data } = await yadayouth.get(`/api/article/${id}`);
-      setLoading(false);
-      setArticle(data);
-    } catch (e) {
-      setLoading(false);
-    }
-  };
-
   useEffect(() => {
     scroll.scrollToTop({ duration: 0 });
+
+    const fetchArticle = async () => {
+      try {
+        setLoading(true);
+        const { data } = await yadayouth.get(`/api/article/${id}`);
+        setArticle(data);
+        document.title = data.title;
+        console.log(data);
+      } catch (e) {
+        setLoading(false);
+      }
+    };
+
+    const fetchArticles = async () => {
+      try {
+        const { data } = await yadayouth.get("/api/article/");
+        setArticles(data.results);
+        setLoading(false);
+      } catch (e) {
+        setLoading(false);
+      }
+    };
+
     fetchArticle();
-  }, []);
+
+    fetchArticles();
+  }, [id]);
 
   return (
     <Container maxWidth={1800} additional="mx-auto">
@@ -142,9 +157,17 @@ const ArticleDetail = () => {
               More From YadaYouth Article
             </h3>
             <div className="flex flex-row flex-wrap ">
-              <ArticleMiniCard />
-              <ArticleMiniCard />
-              <ArticleMiniCard />
+              {articles.slice(0, 3).map((recentArticle) => (
+                <ArticleMiniCard
+                  key={recentArticle.id}
+                  title={recentArticle.title}
+                  time={moment(recentArticle.timePublised).format(
+                    "dddd, MMMM Do YYYY"
+                  )}
+                  id ={recentArticle.id}
+                  image={recentArticle.articleImage}
+                />
+              ))}
             </div>
           </div>
           <div

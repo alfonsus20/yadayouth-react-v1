@@ -1,17 +1,23 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import yadayouth from "../api/yadayouth";
+import PuffLoader from "react-spinners/PuffLoader";
+import { css } from "@emotion/react";
 
 const PostCarousel = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  const override = css`
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  `;
+
   const fetchInstagramPosts = async () => {
     try {
       setLoading(true);
-      const { data } = await yadayouth.get(
-        "/api/instagram/"
-      );
+      const { data } = await yadayouth.get("/api/instagram/");
       setLoading(false);
       setPosts(data.data);
     } catch (e) {
@@ -52,7 +58,16 @@ const PostCarousel = () => {
   return (
     <div>
       {loading ? (
-        <div className="w-full h-100 grid place-items-center text-orange text-2xl">Loading...</div>
+        <div className="w-full h-100 grid place-items-center text-orange text-2xl">
+          <div className="w-full">
+            <div className="text-2xl text-orange text-center mb-2">
+              Loading...
+            </div>
+            <div className="w-full h-24 relative">
+              <PuffLoader loading={loading} color="#FF4C2E" css={override} />
+            </div>
+          </div>
+        </div>
       ) : (
         <Slider {...settings}>
           {posts.map((post) => (
