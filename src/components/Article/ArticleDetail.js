@@ -10,6 +10,7 @@ import moment from "moment";
 import { css } from "@emotion/react";
 import PuffLoader from "react-spinners/PuffLoader";
 import { countWords } from "../../utils/functions";
+import axios from 'axios'
 
 const ArticleDetail = () => {
   const { id } = useParams();
@@ -26,10 +27,14 @@ const ArticleDetail = () => {
   const shareArticle = async () => {
     if (navigator.share) {
       try {
+        let response = await fetch(article.articleImage);
+        let blob = await response.blob();
+        let file = new File([blob], 'image.jpg', {type : blob.type});
         await navigator.share({
           title: 'Yada Youth Article',
           text: window.document.title,
           url: window.document.location,
+          files : [file]
         });
         console.log("Thank you for sharing !")
       } catch (e) {
