@@ -97,7 +97,7 @@ const Article = () => {
           )}
           <Pagination prev={prev} next={next} />
         </div>
-        <ArticleAside articles={articles} categories={categories}/>
+        <ArticleAside articles={articles} categories={categories} loading = {loading}/>
       </Container>
     </div>
   );
