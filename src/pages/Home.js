@@ -12,7 +12,7 @@ import Fade from "react-reveal/Fade";
 const Home = () => {
   useEffect(() => {
     document.title = "Yada Youth";
-    // scroll.scrollToTop({ duration: 0 });
+    scroll.scrollToTop({ duration: 0 });
   }, []);
 
   return (
@@ -57,7 +57,7 @@ const Home = () => {
               scroller.scrollTo("about", {
                 smooth: "easeInOut",
                 duration: 500,
-                offset: -76.8,
+                offset: -70,
               })
             }
           />

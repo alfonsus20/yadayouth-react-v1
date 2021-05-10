@@ -5,8 +5,9 @@ import { useLocation } from "react-router-dom";
 
 const Navbar = ({ menu, toggleMenu, mobile }) => {
   const location = useLocation();
+
   return (
-    <>
+    <div className="sticky top-0 z-30">
       {location.pathname === "/" && (
         <div className="marquee">
           <div className="marquee-inner flex text-blue">
@@ -50,13 +51,15 @@ const Navbar = ({ menu, toggleMenu, mobile }) => {
         </div>
       )}
       <header
-        className={`flex flex-col md:flex-row text-white sticky top-0 bg-blue px-4 py-4 md:px-12 z-30 justify-center`}
-        style={{ minHeight: 76.8 }}
+        className={`flex flex-col md:flex-row text-white ${
+          location.pathname !== "/" && "top-0"
+        } bg-blue px-4 py-4 md:px-12 z-30 justify-center`}
+        style={{minHeight: 70 }}
       >
         <NavLogo toggleMenu={toggleMenu} menu={menu} />
         <NavList menu={menu} mobile={mobile} toggleMenu={toggleMenu} />
       </header>
-    </>
+    </div>
   );
 };
 
