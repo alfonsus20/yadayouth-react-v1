@@ -7,7 +7,6 @@ import Footer from "./components/Footer/Footer";
 import useWindowDimensions from "./utils/window-dimension";
 import { useState, useEffect } from "react";
 import Webinar from "./pages/Webinar";
-import RegisterWebinar from "./pages/RegisterWebinar";
 import Articles from "./pages/Article";
 import ArticleDetail from "./components/Article/ArticleDetail";
 
@@ -26,7 +25,23 @@ const App = () => {
 
   return (
     <Router className="App">
-      <Navbar menu={menu} toggleMenu={toggleMenu} mobile = {width <= 768}/>
+      <div className="marquee">
+        <div className="marquee-inner flex text-blue">
+          <div className="italic flex flex-row">
+            <span className='flex flex-row justify-center items-center'>We are opening recruitment for staff position!</span> &nbsp;
+            <span className='flex flex-row justify-center items-center'>We are opening recruitment for staff position!</span> &nbsp;
+            <span className='flex flex-row justify-center items-center'>We are opening recruitment for staff position!</span> &nbsp;
+            <span className='flex flex-row justify-center items-center'>We are opening recruitment for staff position!</span> &nbsp;
+          </div>
+          <div className="italic flex flex-row">
+            <span className='flex flex-row justify-center items-center'>We are opening recruitment for staff position!</span> &nbsp;
+            <span className='flex flex-row justify-center items-center'>We are opening recruitment for staff position!</span> &nbsp;
+            <span className='flex flex-row justify-center items-center'>We are opening recruitment for staff position!</span> &nbsp;
+            <span className='flex flex-row justify-center items-center'>We are opening recruitment for staff position!</span> &nbsp;
+          </div>
+        </div>
+      </div>
+      <Navbar menu={menu} toggleMenu={toggleMenu} mobile={width <= 768} />
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/donate" component={Donate} exact />
@@ -36,7 +51,7 @@ const App = () => {
         <Route path="/articles/:id" component={ArticleDetail} exact />
         <Route path="*" component={NotFound} />
       </Switch>
-      <Footer menu={menu} toggleMenu={toggleMenu} mobile = {width <= 768}/>
+      <Footer menu={menu} toggleMenu={toggleMenu} mobile={width <= 768} />
     </Router>
   );
 };

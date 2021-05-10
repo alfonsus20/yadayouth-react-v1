@@ -71,7 +71,7 @@ const Webinar = () => {
           develop their awareness to do so.
         </p>
         <Fade bottom>
-          <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row z-20">
             {SPEAKERS.map((speaker, idx) => (
               <Speaker
                 key={idx}
