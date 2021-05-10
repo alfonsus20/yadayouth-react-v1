@@ -15,6 +15,8 @@ const Container = ({
 
   if (bgImage) {
     containerStyle["backgroundImage"] = `url(/backgrounds/${bgImage})`;
+    containerStyle["backgroundRepeat"] = "no-repeat";
+    containerStyle["backgroundSize"] = "cover";
   }
 
   if (maxWidth) {

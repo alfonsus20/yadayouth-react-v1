@@ -7,13 +7,12 @@ import Title from "../components/Title";
 import { CARD_CONTENTS } from "../utils/constants";
 import styles from "./Home.module.css";
 import { animateScroll as scroll, scroller } from "react-scroll";
-import Fade from 'react-reveal/Fade';
-
+import Fade from "react-reveal/Fade";
 
 const Home = () => {
   useEffect(() => {
     document.title = "Yada Youth";
-    scroll.scrollToTop({ duration: 0 });
+    // scroll.scrollToTop({ duration: 0 });
   }, []);
 
   return (
@@ -64,27 +63,28 @@ const Home = () => {
           />
         </Fade>
       </Container>
-      
+
       <Container additional="relative" bgColor="yellow" id="about">
         <Fade left>
-        <div className="flex flex-col-reverse lg:flex-row justify-center items-center text-2xl relative lg:left-20">
-          <div className="bg-blue-light px-10 py-10 mb-4 lg:mb-0 rounded-2xl w-10/12 lg:w-7/12 lg:pr-40 border-white border-4">
-            <h4 className="text-yellow mt-4 lg:mt-0">
-              Yada Youth means the heighest form of commitment towards the youth
-            </h4>
-            <p className="text-white font-book mt-4">
-              We are a non-profit organization that aims to focus to on the
-              empowerment of Indonesian children and young people living in
-              poverty through a collective effort to minimize the systemic
-              factors which caused poverty
-            </p>
+          <div className="flex flex-col-reverse lg:flex-row justify-center items-center text-2xl relative lg:left-20">
+            <div className="bg-blue-light px-10 py-10 mb-4 lg:mb-0 rounded-2xl w-10/12 lg:w-7/12 lg:pr-40 border-white border-4">
+              <h4 className="text-yellow mt-4 lg:mt-0">
+                Yada Youth means the heighest form of commitment towards the
+                youth
+              </h4>
+              <p className="text-white font-book mt-4">
+                We are a non-profit organization that aims to focus to on the
+                empowerment of Indonesian children and young people living in
+                poverty through a collective effort to minimize the systemic
+                factors which caused poverty
+              </p>
+            </div>
+            <img
+              src="pictures/yadayouthmainlogo.svg"
+              alt="Yada Youth Main Logo"
+              className="relative top-12 lg:right-40 lg:top-0 w-80 lg:w-120"
+            />
           </div>
-          <img
-            src="pictures/yadayouthmainlogo.svg"
-            alt="Yada Youth Main Logo"
-            className="relative top-12 lg:right-40 lg:top-0 w-80 lg:w-120"
-          />
-        </div>
         </Fade>
       </Container>
 
@@ -179,6 +179,37 @@ const Home = () => {
             />
           </Fade>
         </div>
+      </Container>
+      <Container bgImage="gradient_5.jpg">
+        <img
+          src="/pictures/oprec-left.png"
+          className="absolute left-0 bottom-0 w-100 hidden md:block"
+          alt="leftOprec"
+        />
+        <div
+          className={`${styles.oprecContainer}`}
+        >
+          <div className="bg-white w-full md:w-8/12 py-16 mx-auto flex flex-col justify-center items-center rounded-lg md:rounded-full relative z-10">
+            <Title
+              text="OPEN RECRUITMENT STAFF"
+              width="92"
+              fontSize="xl"
+              bgColor="blue"
+              color="yellow"
+              borderColor="blue"
+            />
+            <p className="w-8/12 mt-6 text-center text-lg font-book">
+              We are openning recruitment for staff position in Yada Youth!
+              <br />
+              Let’s grow with us and get new benefit experience together!
+            </p>
+          </div>
+        </div>
+        <img
+          src="/pictures/oprec-right.png"
+          className="absolute right-0 bottom-0 w-100 hidden md:block"
+          alt="leftOprec"
+        />
       </Container>
       <Container center>
         <Fade bottom>

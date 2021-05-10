@@ -25,22 +25,6 @@ const App = () => {
 
   return (
     <Router className="App">
-      <div className="marquee">
-        <div className="marquee-inner flex text-blue">
-          <div className="italic flex flex-row">
-            <span className='flex flex-row justify-center items-center'>We are opening recruitment for staff position!</span> &nbsp;
-            <span className='flex flex-row justify-center items-center'>We are opening recruitment for staff position!</span> &nbsp;
-            <span className='flex flex-row justify-center items-center'>We are opening recruitment for staff position!</span> &nbsp;
-            <span className='flex flex-row justify-center items-center'>We are opening recruitment for staff position!</span> &nbsp;
-          </div>
-          <div className="italic flex flex-row">
-            <span className='flex flex-row justify-center items-center'>We are opening recruitment for staff position!</span> &nbsp;
-            <span className='flex flex-row justify-center items-center'>We are opening recruitment for staff position!</span> &nbsp;
-            <span className='flex flex-row justify-center items-center'>We are opening recruitment for staff position!</span> &nbsp;
-            <span className='flex flex-row justify-center items-center'>We are opening recruitment for staff position!</span> &nbsp;
-          </div>
-        </div>
-      </div>
       <Navbar menu={menu} toggleMenu={toggleMenu} mobile={width <= 768} />
       <Switch>
         <Route path="/" component={Home} exact />

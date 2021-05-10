@@ -34,4 +34,7 @@
   left: 10%;
 }
 
-
+.oprecContainer{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
