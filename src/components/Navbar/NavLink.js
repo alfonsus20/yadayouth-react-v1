@@ -5,7 +5,7 @@ const NavLink = ({ text, pathname, hash, mobile, toggleMenu }) => {
   if (hash) {
     return (
       <NavHashLink
-        className="px-4 text-lg cursor-pointer hover:text-orange"
+        className="px-4 text-xl cursor-pointer hover:text-orange"
         to={hash === "contacts" ? "#" + hash : pathname + "#" + hash}
         smooth
         onClick={() => toggleMenu(!mobile)}
