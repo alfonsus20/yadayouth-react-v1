@@ -17,7 +17,7 @@ const NavLink = ({ text, pathname, hash, mobile, toggleMenu }) => {
   }
   return (
     <NavHashLink
-      className="px-4 text-lg cursor-pointer hover:text-orange"
+      className="px-4 text-xl cursor-pointer hover:text-orange"
       to={pathname}
       smooth
       activeClassName="active"
