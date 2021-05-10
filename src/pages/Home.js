@@ -33,14 +33,14 @@ const Home = () => {
         <Fade>
           <div className="flex flex-col-reverse md:flex-row md:mt-16">
             <div className="w-full md:w-6/12 flex justify-center items-center md:justify-start md:items-start">
-              <div className="bg-yellow rounded-2xl px-4 py-3 text-2xl text-blue w-auto md:w-92 leading-tight">
+              <div className="bg-yellow rounded-2xl px-4 py-3 text-2xl text-blue w-auto md:w-92 leading-tight text-justify">
                 We provide community services where all profits will go to the
                 children of Indonesia
               </div>
             </div>
             <div className="w-full md:w-6/12 flex justify-center items-center md:justify-start md:items-start mt-4 mb-8 md:my-0">
               <img
-                src="pictures/landingpage.png"
+                src="/pictures/landingpage.png"
                 alt="Landing Page"
                 className="w-10/12 h-auto md:ml-auto"
               />
@@ -50,7 +50,7 @@ const Home = () => {
 
         <Fade>
           <img
-            src="shapes/arrow.png"
+            src="/shapes/arrow.png"
             alt="Arrow"
             className="cursor-pointer mx-auto my-6 sm:my-0"
             onClick={() =>
@@ -80,7 +80,7 @@ const Home = () => {
               </p>
             </div>
             <img
-              src="pictures/yadayouthmainlogo.svg"
+              src="/pictures/yadayouthmainlogo.svg"
               alt="Yada Youth Main Logo"
               className="relative top-12 lg:right-40 lg:top-0 w-80 lg:w-120"
             />
@@ -121,14 +121,14 @@ const Home = () => {
 
         <Fade right>
           <img
-            src="shapes/blueshape.png"
+            src="/shapes/blueshape.png"
             alt="Blue Shape"
             className={styles.blueShapeLeft + " hidden lg:block"}
           />
         </Fade>
         <Fade left>
           <img
-            src="shapes/blueshape.png"
+            src="/shapes/blueshape.png"
             alt="Blue Shape"
             className={styles.blueShapeRight + " hidden lg:block"}
           />
@@ -152,28 +152,28 @@ const Home = () => {
           />
           <Fade right>
             <img
-              src="shapes/yellowdiamondshape.png"
+              src="/shapes/yellowdiamondshape.png"
               alt="Yellow Diamond"
               className={styles.diamondLeft + " hidden md:block"}
             />
           </Fade>
           <Fade left>
             <img
-              src="shapes/yellowdiamondshape.png"
+              src="/shapes/yellowdiamondshape.png"
               alt="Yellow Diamond"
               className={styles.diamondRight + " hidden md:block"}
             />
           </Fade>
           <Fade right>
             <img
-              src="shapes/yellowshape.png"
+              src="/shapes/yellowshape.png"
               alt="Yellow Shape"
               className={styles.yellowShapeLeft + " hidden md:block"}
             />
           </Fade>
           <Fade left>
             <img
-              src="shapes/yellowshape.png"
+              src="/shapes/yellowshape.png"
               alt="Yellow Shape"
               className={styles.yellowShapeRight + " hidden md:block"}
             />
