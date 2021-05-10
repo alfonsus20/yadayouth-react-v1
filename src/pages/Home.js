@@ -199,7 +199,7 @@ const Home = () => {
               borderColor="blue"
             />
             <p className="w-8/12 mt-6 text-center text-lg font-book">
-              We are openning recruitment for staff position in Yada Youth!
+              We are opening recruitment for staff position in Yada Youth!
               <br />
               Let’s grow with us and get new benefit experience together!
             </p>
