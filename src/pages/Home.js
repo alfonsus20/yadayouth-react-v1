@@ -19,7 +19,7 @@ const Home = () => {
     <div className="relative">
       <Button scrollUp />
       <Container padding="4% 7%" screen id="home">
-        <Fade>
+        <Fade delay={250}>
           <div className="relative">
             <h2 className="text-6xl text-blue text-center md:text-left font-bold">
               Welcome To Yada Youth!
@@ -30,14 +30,17 @@ const Home = () => {
             </h3>
           </div>
         </Fade>
-        <Fade>
-          <div className="flex flex-col-reverse md:flex-row md:mt-16">
+        
+        <div className="flex flex-col-reverse md:flex-row md:mt-16">
+          <Fade delay={750}>
             <div className="w-full md:w-6/12 flex justify-center items-center md:justify-start md:items-start">
               <div className="bg-yellow rounded-2xl px-4 py-3 text-2xl text-blue w-auto md:w-92 leading-tight text-justify">
                 We provide community services where all profits will go to the
                 children of Indonesia
               </div>
             </div>
+          </Fade>
+          <Fade delay={500}>
             <div className="w-full md:w-6/12 flex justify-center items-center md:justify-start md:items-start mt-4 mb-8 md:my-0">
               <img
                 src="/pictures/landingpage.png"
@@ -45,8 +48,9 @@ const Home = () => {
                 className="w-10/12 h-auto md:ml-auto"
               />
             </div>
-          </div>
-        </Fade>
+          </Fade>
+        </div>
+        
 
         <Fade>
           <img
