@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link, Redirect } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Container from "../Container";
 import ArticleMiniCard from "./ArticleMiniCard";
 import "./ArticleDetail.css";
@@ -10,7 +10,6 @@ import moment from "moment";
 import { css } from "@emotion/react";
 import PuffLoader from "react-spinners/PuffLoader";
 import { countWords } from "../../utils/functions";
-import axios from 'axios'
 
 const ArticleDetail = () => {
   const { id } = useParams();

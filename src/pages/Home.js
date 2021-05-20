@@ -8,6 +8,7 @@ import { CARD_CONTENTS } from "../utils/constants";
 import styles from "./Home.module.css";
 import { animateScroll as scroll, scroller } from "react-scroll";
 import Fade from "react-reveal/Fade";
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
   useEffect(() => {
@@ -17,6 +18,14 @@ const Home = () => {
 
   return (
     <div className="relative">
+      <Helmet>
+        <title>YadaYouth</title>
+        <meta
+          name="description"
+          content="YadaYouth.id | “Empowering Children of Tomorrow” | We are a non-profit organization 
+          that aims to focus to on the empowerment of Indonesian children and young people living in 
+          poverty through a collective effort to minimize the systemic factors which caused poverty "/>
+      </Helmet>      
       <Button scrollUp />
       <Container padding="4% 7%" screen id="home">
         <Fade delay={250}>
