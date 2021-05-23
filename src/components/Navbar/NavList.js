@@ -18,6 +18,7 @@ const NavList = ({ menu, mobile, toggleMenu }) => {
         mobile && "mobile"
       } md:h-auto md:flex-row mx-auto md:mr-0 text-center md:text-center absolute md:relative bg-blue md:mt-0`}
       variants={variants}
+      initial="hidden"
       animate={menu ? "visible" : "hidden"}
       transition={{ x: { type: "spring", stiffness: 0 } }}
     >

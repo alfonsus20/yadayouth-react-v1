@@ -51,7 +51,7 @@ const Navbar = ({ menu, toggleMenu, mobile }) => {
         </div>
       )}
       <header
-        className={`flex flex-col md:flex-row text-white ${
+        className={`flex flex-col md:flex-row text-white relative ${
           location.pathname !== "/" && "top-0"
         } bg-blue px-4 py-4 md:px-12 z-30 justify-center`}
         style={{minHeight: 70 }}

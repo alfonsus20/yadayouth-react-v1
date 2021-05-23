@@ -69,12 +69,12 @@ body {
 }
 
 .mobile {
-  height: calc(var(--vh, 1vh) * 100 - 6rem);
-  top: 6rem;
+  height: calc(var(--vh, 1vh) * 100 - 70px);
+  top: 70px;
 }
 
 .min-h-screen {
-  min-height: calc(var(--vh, 1vh) * 100 - 6rem);
+  min-height: calc(var(--vh, 1vh) * 100 - 70px);
   /* min-height: calc(100vh - 6rem); */
   display: flex;
   justify-content: center;
