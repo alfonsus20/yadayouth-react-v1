@@ -77,7 +77,7 @@ const ArticleDetail = () => {
 
   const readingTime = Math.round(countWords(article.content || "") / 275);
   return (
-    <Container maxWidth={1800} additional="mx-auto" >
+    <Container maxWidth={1800} additional="mx-auto" padding={`${articleLoading ? "0%" : "6% 7%"}`}>
       {!articleLoading ? (
         <>
           <Button scrollUp />
@@ -118,7 +118,7 @@ const ArticleDetail = () => {
           </>
         </>
       ) : (
-        <div className="grid place-items-center min-h-screen">
+        <div className="min-h-screen md:h-80 grid place-items-center">
           <div className="w-full">
             <div className="text-2xl text-orange text-center mb-2">
               Loading...
@@ -153,9 +153,6 @@ const ArticleDetail = () => {
           </div>
         ) : (
           <div className="w-full">
-            <div className="text-2xl text-orange text-center mb-2">
-              Loading...
-            </div>
             <div className="w-full h-24 relative">
               <PuffLoader
                 loading={articleLoading}
