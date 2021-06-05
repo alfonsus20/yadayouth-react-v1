@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useHistory } from "react-router-dom";
 import Container from "../components/Container";
 import ArticleMiniCard from "../components/Article/ArticleMiniCard";
 import { animateScroll as scroll } from "react-scroll";
@@ -12,6 +12,7 @@ import { countWords } from "../utils/functions";
 
 const ArticleDetail = () => {
   const { id } = useParams();
+  const history = useHistory();
   const [article, setArticle] = useState({});
   const [articleLoading, setArticleLoading] = useState(false);
   const [otherArticlesloading, setOtherArticlesLoading] = useState(false);
@@ -52,9 +53,9 @@ const ArticleDetail = () => {
         setArticle(data);
         setArticleLoading(false);
         document.title = data.title;
-        console.log(data);
       } catch (e) {
         setArticleLoading(false);
+        history.push('/not-found')
       }
     };
 
