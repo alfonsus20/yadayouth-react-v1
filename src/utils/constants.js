@@ -31,22 +31,19 @@ export const CARD_CONTENTS = [
   {
     image: "/pictures/donation.png",
     title: "Open Donations",
-    body:
-      "We are open for donations with all profits will be given to the children in Indonesia",
+    body: "We are open for donations with all profits will be given to the children in Indonesia",
     link: "/donate",
   },
   {
     image: "/pictures/comm_serv.png",
     title: "Community Services",
-    body:
-      "We conduct voluntary work to educate, distribute food, and empower children",
+    body: "We conduct voluntary work to educate, distribute food, and empower children",
     link: "/",
   },
   {
     image: "/pictures/webinars.png",
     title: "Webinars",
-    body:
-      "We provides self development webinars to help fund out community service",
+    body: "We provides self development webinars to help fund out community service",
     link: "/webinar",
   },
 ];
@@ -89,5 +86,159 @@ export const TALKING_POINTS = [
       "Examples of Applicable and Beneficial Social Movements + Tips and Tricks",
       "Tackling Day-to-Day Problems in Social Movements",
     ],
+  },
+];
+
+export const DIVISIONS = [
+  {
+    name: "Community Development",
+    color: "orange",
+    subdivisions: [
+      {
+        image: "/oprec/content-writer.png",
+        title: "Content Writer",
+        description:
+          "Responsible for writing and research a content for all of Yada Youth Indonesia social media",
+      },
+      {
+        image: "/oprec/public-relation.png",
+        title: "Public Relations",
+        description:
+          "Responsible for building good image for Yada Youth Indonesia and searching for cooperation partners to collaborate with.",
+      },
+      {
+        image: "/oprec/socmed-officer.png",
+        title: "Socmed Officer",
+        description:
+          "Responsible for handling all of Yada Youth Indonesia social media, including Instagram, and Linkedin, and publish all Yada Youth Indonesia content needs on all social media.",
+      },
+      {
+        image: "/oprec/tiktok-officer.png",
+        title: "TikTok Officer",
+        description:
+          "Responsible for research and make a content for Yada Youth Indonesia official TikTok",
+      },
+      {
+        image: "/oprec/tiktok-officer.png",
+        title: "Ambassador Supervisior",
+        description:
+          'Responsible for supervise the work of project ambassadors, make some "ambassador progress report project", and become a connector between the ambassador and Yada Youth Indonesia',
+      },
+    ],
+  },
+  {
+    name: "Media Production",
+    color: "blue",
+    subdivisions: [
+      {
+        image: "/oprec/graphic-designer.png",
+        title: "Graphic Designer",
+        description:
+          "Responsible to deliver information through appealing design to Yada Youth Indonesia audience",
+      },
+      {
+        image: "/oprec/web-developer.png",
+        title: "Web Developer",
+        description:
+          "Responsible for planning, designing, develop, and maintaining Yada Youth Indonesia official website",
+      },
+    ],
+  },
+  {
+    name: "Human Resource",
+    color: "orange",
+    subdivisions: [
+      {
+        image: "/oprec/human-resource.png",
+        title: "Human Resource",
+        description:
+          "Responsible for preparing open registration to recruit staff Yada Youth Indonesia <br/> Responsible for organize training and bonding to internal Yada Youth Indonesia <br/> Responsible for maintaining the staff relations with good at problem solving skill",
+      },
+    ],
+  },
+  {
+    name: "Administration & Finance",
+    color: "blue",
+    subdivisions: [
+      {
+        image: "/oprec/admin.png",
+        title: "Admin",
+        description:
+          "Responsible for carrying out any administrative duties for Yada Youth Indonesia",
+      },
+      {
+        image: "/oprec/finance.png",
+        title: "Finance",
+        description:
+          "Responsible for managing funds and coordinating any financial transactions within Yada Youth Indonesia",
+      },
+    ],
+  },
+  {
+    name: "Program Management",
+    color: "orange",
+    subdivisions: [
+      {
+        image: "/oprec/empowerment.png",
+        title: "Empowerment",
+        description:
+          "Conceptualize and execute empowerment events that targeting children who are in needs.",
+      },
+      {
+        image: "/oprec/fundraising.png",
+        title: "Fundraising",
+        description:
+          "Arrange and conduct events to raise fund for supporting the empowerment mission of Yada Youth",
+      },
+      {
+        image: "/oprec/research-and-expansion.png",
+        title: "Research and Expansion",
+        description:
+          "Responsible for research everything that related to Yada Youth Indonesia, compile suggestions and evaluations for the development of Yada Youth Indonesia.",
+      },
+    ],
+  },
+];
+
+export const OPREC_TIMELINE = [
+  {
+    period: "8 - 13",
+    date: "JUNE 2021",
+    phase: "REGISTRATION",
+  },
+  {
+    period: "8 - 13",
+    date: "JUNE 2021",
+    phase: "SELEKSI ADMINISTRASI DAN WAWANCARA",
+  },
+  {
+    period: "15",
+    date: "JUNE 2021",
+    phase: "PENGUMUMAN",
+  },
+];
+
+export const FAQ = [
+  {
+    question: "What is Yada Youth?",
+    answer: "lorem ipsum",
+  },
+  {
+    question: "Who can apply?",
+    answer: (
+      <ol className='list-decimal pl-5'>
+        <li>Anyone between the ages of 17 - 27</li>
+        <li>Dedicated to contribute towards the youth</li>
+        <li>Fluent in English</li>
+        <li>Have a good attitude, and communicative</li>
+        <li>Creative, Innovative, and take responsibility seriously</li>
+        <li>Able to operate basic computer program (word, excel, ppt, etc.</li>
+      </ol>
+    ),
+  },
+  {
+    question:
+      "Any files that need to be prepared to fill out the registration?",
+    answer: "lorem ipsum",
   },
 ];

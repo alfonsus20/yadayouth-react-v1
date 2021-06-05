@@ -4,6 +4,11 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    listStyleType: {
+      none: "none",
+      disc: "disc",
+      decimal: "decimal",
+    },
     extend: {
       minHeight: {
         0: "0",
@@ -24,6 +29,8 @@ module.exports = {
         112: "28rem",
         116: "29rem",
         120: "30rem",
+        124: "31rem",
+        128: "32rem",
       },
       borderRadius: {
         lg: "1rem",
@@ -55,9 +62,6 @@ module.exports = {
       white: colors.white,
       black: colors.black,
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [require("@tailwindcss/typography")],
 };

@@ -59,8 +59,6 @@ const Home = () => {
             </div>
           </Fade>
         </div>
-        
-
         <Fade>
           <img
             src="/shapes/arrow.png"

@@ -11,6 +11,7 @@ import Articles from "./pages/Article";
 import ArticleDetail from "./components/Article/ArticleDetail";
 import AnimatedRoutes from "./components/Animations/AnimatedRoutes";
 import RouteTransition from "./components/Animations/RouteTransitions";
+import Oprec from "./pages/Oprec";
 
 
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
         {/* <Route path="/webinar/register" component={RegisterWebinar} exact /> */}
         <RouteTransition path="/articles" component={<Articles/>} exact />
         <RouteTransition path="/articles/:id" component={<ArticleDetail/>} exact />
+        <RouteTransition path="/oprec" component={<Oprec/>} exact />
         <RouteTransition path="*" component={<NotFound/>} />
       </AnimatedRoutes>
       <Footer menu={menu} toggleMenu={toggleMenu} mobile={width <= 768} />
