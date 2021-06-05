@@ -8,7 +8,7 @@ import useWindowDimensions from "./utils/window-dimension";
 import { useState, useEffect } from "react";
 import Webinar from "./pages/Webinar";
 import Articles from "./pages/Article";
-import ArticleDetail from "./components/Article/ArticleDetail";
+import ArticleDetail from "./pages/ArticleDetail";
 import AnimatedRoutes from "./components/Animations/AnimatedRoutes";
 import RouteTransition from "./components/Animations/RouteTransitions";
 import Oprec from "./pages/Oprec";

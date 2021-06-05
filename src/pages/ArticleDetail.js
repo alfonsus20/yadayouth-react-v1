@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import Container from "../Container";
-import ArticleMiniCard from "./ArticleMiniCard";
-import "./ArticleDetail.css";
+import Container from "../components/Container";
+import ArticleMiniCard from "../components/Article/ArticleMiniCard";
 import { animateScroll as scroll } from "react-scroll";
-import Button from "../Button";
-import yadayouth from "../../api/yadayouth";
+import Button from "../components/Button";
+import yadayouth from "../api/yadayouth";
 import moment from "moment";
 import { css } from "@emotion/react";
 import PuffLoader from "react-spinners/PuffLoader";
-import { countWords } from "../../utils/functions";
+import { countWords } from "../utils/functions";
 
 const ArticleDetail = () => {
   const { id } = useParams();
@@ -106,8 +105,8 @@ const ArticleDetail = () => {
                 </div>
                 <div className="text-white mt-4 sm:mt-0 w-full sm:w-4/12 md:w-2/12 grid place-items-center">
                   <div
-                    className="rounded-full py-2 px-4 mb-auto mt-2 icon cursor-pointer"
-                    style={{ backgroundColor: "#FDAE5A" }}
+                    className="rounded-full py-2 px-4 mb-auto mt-2 cursor-pointer"
+                    style={{ backgroundColor: "#FDAE5A", fontSize:'clamp(12px,2vw,1rem)' }}
                     onClick={shareArticle}
                   >
                     <i className="fas fa-link"></i>&nbsp; Share This Article

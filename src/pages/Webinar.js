@@ -12,7 +12,7 @@ import Fade from 'react-reveal/Fade';
 const Webinar = () => {
   useEffect(() => {
     document.title = "Webinar";
-  }, []);
+  });
 
   return (
     <div>
@@ -35,7 +35,7 @@ const Webinar = () => {
                   width="56"
                   color="yellow"
                   rounded="full"
-                  path="/webinar"
+                  path="#learn-more"
                   onClick={() =>
                     scroller.scrollTo("learn-more", {
                       smooth: "easeInOut",

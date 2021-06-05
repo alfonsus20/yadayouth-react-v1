@@ -1,7 +1,7 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
-const ArticleMiniCard = ({title, time, image, id}) => {
+const ArticleMiniCard = ({ title, time, image, id }) => {
   return (
     <Link
       to={`/articles/${id}`}
@@ -13,14 +13,10 @@ const ArticleMiniCard = ({title, time, image, id}) => {
       }}
     >
       <div className="flex flex-col w-full sm:w-6/12 justify-around mr-4">
-        <h3 className="text-lg text-blue  my-4 sm:my-0">
-          {title}
-        </h3>
-        <div className="flex flex-col sm:flex-row">
-          <time className="font-light text-blue text-xs">
-            Published At : {time}
-          </time>
-        </div>
+        <h3 className="text-lg text-blue my-3 sm:my-0">{title}</h3>
+        <time className="font-light text-blue text-sm">
+          Published At : {time}
+        </time>
       </div>
       <div className="w-full sm:w-6/12 grid place-items-center">
         <img
