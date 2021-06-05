@@ -5,7 +5,6 @@ import Pagination from "../components/Article/Pagination";
 import Button from "../components/Button";
 import Container from "../components/Container";
 import classes from "./Article.module.css";
-import { animateScroll as scroll } from "react-scroll";
 import yadayouth from "../api/yadayouth";
 import moment from "moment";
 import { css } from "@emotion/react";
@@ -26,7 +25,6 @@ const Article = () => {
 
   useEffect(() => {
     document.title = "Articles";
-    scroll.scrollToTop({ duration: 0 });
 
     const fetchArticles = async () => {
       try {

@@ -2,11 +2,7 @@ import React, { useEffect } from "react";
 import Button from "../components/Button";
 import Container from "../components/Container";
 import Title from "../components/Title";
-import {
-  DIVISIONS,
-  FAQ,
-  OPREC_TIMELINE,
-} from "../utils/constants";
+import { DIVISIONS, FAQ, OPREC_TIMELINE } from "../utils/constants";
 import { scroller } from "react-scroll";
 import classes from "./Webinar.module.css";
 import Fade from "react-reveal/Fade";
@@ -17,8 +13,7 @@ import Accordion from "../components/Accordion";
 const Oprec = () => {
   useEffect(() => {
     document.title = "Open Recruitment Staff";
-    // scroll.scrollToTop({ duration: 0 });
-  }, []);
+  });
 
   return (
     <div>
@@ -41,7 +36,7 @@ const Oprec = () => {
                   width="48"
                   color="yellow"
                   rounded="full"
-                  path="/oprec"
+                  path="#positions"
                   onClick={() =>
                     scroller.scrollTo("positions", {
                       smooth: "easeInOut",
@@ -153,6 +148,39 @@ const Oprec = () => {
           />
           <img
             src="/shapes/yellowshape.png"
+            alt="White Shape"
+            className={classes.whiteShapeRight + " hidden md:block"}
+          />
+        </div>
+      </Container>
+      <Container center additional={classes.register} bgImage="gradient_2.jpg">
+        <div className="x-4 md:px-16 py-10 rounded-2xl w-10/12 md:w-8/12 border-white border-4 flex flex-col justify-center items-center bg-white text-center">
+          <h2 className="text-2xl font-bold">So, What Are You Waiting For?</h2>
+          <Button
+            text="REGISTER NOW!"
+            bgColor="blue-light"
+            color="yellow"
+            width="80"
+            url="https://docs.google.com/forms/d/e/1FAIpQLSftXxbffI7xQYIGWgDWasD3OeK32X3-kFJ0eaTJPlAocGbAuA/viewform"
+            rounded="full"
+          />
+          <img
+            src="/shapes/whitediamondshape.png"
+            alt="White Diamond"
+            className={classes.diamondLeft + " hidden md:block"}
+          />
+          <img
+            src="/shapes/whitediamondshape.png"
+            alt="White Diamond"
+            className={classes.diamondRight + " hidden md:block"}
+          />
+          <img
+            src="/shapes/whiteshape.png"
+            alt="White Shape"
+            className={classes.whiteShapeLeft + " hidden md:block"}
+          />
+          <img
+            src="/shapes/whiteshape.png"
             alt="White Shape"
             className={classes.whiteShapeRight + " hidden md:block"}
           />

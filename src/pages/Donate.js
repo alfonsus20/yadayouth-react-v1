@@ -3,14 +3,12 @@ import Container from "../components/Container";
 import { DONATION_GOALS } from "../utils/constants";
 import DonationCard from "../components/DonationCard";
 import Button from "../components/Button";
-import { animateScroll as scroll} from "react-scroll";
 import Fade from 'react-reveal/Fade';
 
 const Donate = () => {
   useEffect(() => {
     document.title = "Donate";
-    scroll.scrollToTop({ duration: 0 });
-  },[]);
+  });
 
   return (
     <>

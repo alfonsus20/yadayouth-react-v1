@@ -9,12 +9,12 @@ import styles from "./Home.module.css";
 import { animateScroll as scroll, scroller } from "react-scroll";
 import Fade from "react-reveal/Fade";
 import { Helmet } from 'react-helmet';
+import { Link } from "react-router-dom";
 
 const Home = () => {
   useEffect(() => {
     document.title = "Yada Youth";
-    scroll.scrollToTop({ duration: 0 });
-  }, []);
+  });
 
   return (
     <div className="relative">
@@ -200,7 +200,7 @@ const Home = () => {
         <div
           className={`${styles.oprecContainer}`}
         >
-          <div className="bg-white w-full md:w-8/12 py-16 mx-auto flex flex-col justify-center items-center rounded-lg md:rounded-full relative z-10">
+          <Link to='/oprec' className="bg-white w-full md:w-8/12 py-16 mx-auto flex flex-col justify-center items-center rounded-lg md:rounded-full relative z-10">
             <Title
               text="OPEN RECRUITMENT STAFF"
               width="92"
@@ -214,7 +214,7 @@ const Home = () => {
               <br />
               Let’s grow with us and get new benefit experience together!
             </p>
-          </div>
+          </Link>
         </div>
         <img
           src="/pictures/oprec-right.png"

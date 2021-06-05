@@ -4,7 +4,7 @@ import Container from "../components/Container";
 import Title from "../components/Title";
 import { SPEAKERS, TALKING_POINTS } from "../utils/constants";
 import Speaker from "../components/Speaker";
-import { animateScroll as scroll, scroller } from "react-scroll";
+import { scroller } from "react-scroll";
 import classes from "./Webinar.module.css";
 import FlipCard from "../components/FlipCard/FlipCard";
 import Fade from 'react-reveal/Fade';
@@ -12,7 +12,6 @@ import Fade from 'react-reveal/Fade';
 const Webinar = () => {
   useEffect(() => {
     document.title = "Webinar";
-    scroll.scrollToTop({ duration: 0 });
   }, []);
 
   return (
@@ -119,7 +118,6 @@ const Webinar = () => {
             bgColor="blue-light"
             color="yellow"
             width="80"
-            // path="/webinar/register"
             url="https://docs.google.com/forms/d/e/1FAIpQLSftXxbffI7xQYIGWgDWasD3OeK32X3-kFJ0eaTJPlAocGbAuA/viewform"
             rounded="full"
           />

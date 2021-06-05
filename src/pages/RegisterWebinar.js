@@ -1,15 +1,13 @@
 import React, { useEffect } from "react";
 import Button from "../components/Button";
 import classes from "./RegisterWebinar.module.css";
-import { animateScroll as scroll } from "react-scroll";
 import Container from "../components/Container";
 
 const RegisterWebinar = () => {
 
   useEffect(() => {
     document.title = "Register Webinar";
-    scroll.scrollToTop({ duration: 500 });
-  }, []);
+  });
 
   return (
     <div>
