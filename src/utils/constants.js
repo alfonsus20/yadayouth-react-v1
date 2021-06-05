@@ -1,7 +1,7 @@
 export const MENUS = [
   { name: "Home", pathname: "/", hash: "", socmed: false },
   { name: "About", pathname: "/", hash: "about", socmed: false },
-  { name: "Webinar", pathname: "/webinar", hash: "", socmed: false },
+  { name: "Oprec Staff", pathname: "/oprec", hash: "", socmed: false },
   { name: "Donate", pathname: "/donate", hash: "", socmed: false },
   { name: "Contact", pathname: "/", hash: "contacts", socmed: false },
 ];
