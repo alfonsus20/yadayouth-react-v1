@@ -44,7 +44,7 @@ const Button = ({
         </div>
       </a>
     );
-  } else {
+  } else if (path) {
     return (
       <HashLink to={`${path}`} smooth>
         <div
@@ -55,13 +55,22 @@ const Button = ({
         </div>
       </HashLink>
     );
+  } else {
+    return (
+      <div
+        className={`bg-${bgColor} w-${width} text-center cursor-pointer text-${color} text-${fontSize} mt-4 px-${px} py-${py} rounded-${rounded} border-${borderWidth} border-${borderColor} ${additional}`}
+        {...rest}
+      >
+        {text}
+      </div>
+    );
   }
 };
 
 Button.defaultProps = {
   px: 3,
   py: 2,
-  fontSize : 'xl',
+  fontSize: "xl",
   rounded: "lg",
 };
 

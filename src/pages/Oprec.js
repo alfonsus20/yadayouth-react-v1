@@ -20,7 +20,7 @@ const Oprec = () => {
       <Button scrollUp />
       <Container screen bgColor="yellow">
         <Fade>
-          <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row relative">
             <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left">
               <h1 className="text-4xl text-blue font-bold">Join Our Team At</h1>
               <h2 className="text-7xl my-1 mb-4 text-orange font-medium">
@@ -31,19 +31,23 @@ const Oprec = () => {
               </p>
               <div className="mt-2">
                 <Button
-                  text="Learn More"
-                  bgColor="orange"
-                  width="48"
+                  text="REGISTER NOW"
+                  bgColor="blue"
+                  width="52"
                   color="yellow"
                   rounded="full"
-                  path="#positions"
-                  onClick={() =>
-                    scroller.scrollTo("positions", {
-                      smooth: "easeInOut",
-                      duration: 500,
-                      offset: -76.8,
-                    })
-                  }
+                  additional='mx-auto md:mx-0'
+                  onClick = {()=> scroller.scrollTo('register', {smooth: true, offset: -76.8})}
+                />
+                <Button
+                  text="Learn More"
+                  bgColor="orange"
+                  width="36"
+                  color="yellow"
+                  rounded="full"
+                  fontSize='12'
+                  additional='mx-auto md:mx-0'
+                  onClick = {()=> scroller.scrollTo('positions', {smooth: true, offset: -76.8})}
                 />
               </div>
             </div>
@@ -54,19 +58,19 @@ const Oprec = () => {
                 className="mx-auto md:ml-auto md:mr-0 w-full md:w-8/12"
               />
             </div>
+            <img
+              src="/shapes/arrow.png"
+              alt="Arrow"
+              className="cursor-pointer mx-auto my-6 sm:my-0 absolute -bottom-4 md:-bottom-20 left-1/2 transform -translate-x-1/2"
+              onClick={() =>
+                scroller.scrollTo("positions", {
+                  smooth: "easeInOut",
+                  duration: 500,
+                  offset: -70,
+                })
+              }
+            />
           </div>
-          <img
-            src="/shapes/arrow.png"
-            alt="Arrow"
-            className="cursor-pointer mx-auto my-6 sm:my-0 absolute bottom-16 left-1/2 transform -translate-x-1/2"
-            onClick={() =>
-              scroller.scrollTo("positions", {
-                smooth: "easeInOut",
-                duration: 500,
-                offset: -70,
-              })
-            }
-          />
         </Fade>
       </Container>
       <Container center padding="6% 7% 0% 7%" id="positions">
@@ -154,7 +158,7 @@ const Oprec = () => {
           />
         </div>
       </Container>
-      <Container center additional={classes.register} bgImage="gradient_2.jpg">
+      <Container center additional={classes.register} bgImage="gradient_2.jpg" id='register'>
         <div className="x-4 md:px-16 py-10 rounded-2xl w-10/12 md:w-8/12 border-white border-4 flex flex-col justify-center items-center bg-white text-center">
           <h2 className="text-2xl font-bold">So, What Are You Waiting For?</h2>
           <Button
@@ -196,8 +200,12 @@ const Oprec = () => {
           borderColor="white"
         />
         <div className="w-full px-4 md:px-20">
-          {FAQ.map((question,idx) => (
-            <Accordion key={idx} question={question.question} answer={question.answer} />
+          {FAQ.map((question, idx) => (
+            <Accordion
+              key={idx}
+              question={question.question}
+              answer={question.answer}
+            />
           ))}
         </div>
       </Container>
