@@ -9,9 +9,12 @@ const Accordion = ({ question, answer }) => {
     hidden: {
       maxHeight: 0,
       overflowY: "hidden",
+      opacity: 0
     },
     visible: {
-      maxHeight: accordionRef.current && accordionRef.current.scrollHeight,
+      maxHeight: accordionRef.current ? accordionRef.current.scrollHeight : 500,
+      overflowY: "visible",
+      opacity: 1
     },
   };
 
@@ -26,25 +29,25 @@ const Accordion = ({ question, answer }) => {
 
   return (
     <div className="bg-yellow px-10 py-6 border-4 border-orange rounded-2xl my-8">
-      <div className="flex flex-row justify-between">
+      <div
+        className="flex flex-row justify-between cursor-pointer"
+        onClick={() => setIsOpen(!isOpen)}
+      >
         <h3 className="text-xl font-bold">{question}</h3>
         <motion.img
           src="/shapes/chevron-down.png"
           className="w-8 h-4 my-auto cursor-pointer"
           animate={isOpen ? "down" : "up"}
           variants={chevronVariants}
-          onClick={() => setIsOpen(!isOpen)}
         />
       </div>
       <motion.div
         animate={isOpen ? "visible" : "hidden"}
         variants={contentVariants}
-        transition={{stiffness: 0}}
+        transition={{ stiffness: 0 }}
         ref={accordionRef}
       >
-        <div className="my-4 text-lg">
-            {answer}
-        </div>
+        <div className="my-4 text-lg">{answer}</div>
       </motion.div>
     </div>
   );

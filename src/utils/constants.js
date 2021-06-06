@@ -221,24 +221,31 @@ export const OPREC_TIMELINE = [
 export const FAQ = [
   {
     question: "What is Yada Youth?",
-    answer: "lorem ipsum",
+    answer:
+      "We are non profit organization that aims to focus on the empowerment of Indonesian children and young people living in poverty through a collective effort to minimize the systemic factors which caused poverty.",
   },
   {
     question: "Who can apply?",
     answer: (
-      <ol className='list-decimal pl-5'>
+      <ol className="list-decimal pl-5">
         <li>Anyone between the ages of 17 - 27</li>
         <li>Dedicated to contribute towards the youth</li>
         <li>Fluent in English</li>
         <li>Have a good attitude, and communicative</li>
         <li>Creative, Innovative, and take responsibility seriously</li>
-        <li>Able to operate basic computer program (word, excel, ppt, etc.</li>
+        <li>Able to operate basic computer program (word, excel, ppt, etc.)</li>
       </ol>
     ),
   },
   {
     question:
       "Any files that need to be prepared to fill out the registration?",
-    answer: "lorem ipsum",
+    answer: (
+      <ol className="list-decimal pl-5">
+        <li>CV</li>
+        <li>Motivation letter  (not mandatory for Graphic Designer and Web Developer applicants)</li>
+        <li>Portofolio (only for Graphic Designer and Web Developer applicants)</li>
+      </ol>
+    ),
   },
 ];

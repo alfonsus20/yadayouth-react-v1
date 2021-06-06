@@ -43,24 +43,22 @@ module.exports = {
       zIndex: {
         "-10": "-10",
       },
-    },
-    colors: {
-      blue: {
-        DEFAULT: "#222AEF",
-        light: "#353DEF",
+      colors: {
+        blue: {
+          DEFAULT: "#222AEF",
+          light: "#353DEF",
+        },
+        yellow: {
+          DEFAULT: "#FBC226",
+          light: "#fbbb1b",
+        },
+        orange: {
+          DEFAULT: "#FF4C2E",
+        },
+        gray: {
+          DEFAULT: "#dbdbdb",
+        },
       },
-      yellow: {
-        DEFAULT: "#FBC226",
-        light: "#fbbb1b",
-      },
-      orange: {
-        DEFAULT: "#FF4C2E",
-      },
-      gray: {
-        DEFAULT: "#dbdbdb",
-      },
-      white: colors.white,
-      black: colors.black,
     },
   },
   plugins: [require("@tailwindcss/typography")],

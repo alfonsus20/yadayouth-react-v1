@@ -22,8 +22,8 @@ const Oprec = () => {
         <Fade>
           <div className="flex flex-col md:flex-row">
             <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left">
-              <h1 className="text-5xl text-blue font-bold">Join Our Team At</h1>
-              <h2 className="text-6xl my-4 text-orange font-medium">
+              <h1 className="text-4xl text-blue font-bold">Join Our Team At</h1>
+              <h2 className="text-7xl my-1 mb-4 text-orange font-medium">
                 YadaYouth
               </h2>
               <p className="text-xl text-blue text-center md:text-left font-book">
@@ -72,8 +72,8 @@ const Oprec = () => {
       <Container center padding="6% 7% 0% 7%" id="positions">
         <Title
           text="Available Positions"
-          bgColor="orange"
-          color="white"
+          bgColor="yellow"
+          color="black"
           borderColor="white"
           width="84"
         />
@@ -162,7 +162,7 @@ const Oprec = () => {
             bgColor="blue-light"
             color="yellow"
             width="80"
-            url="https://docs.google.com/forms/d/e/1FAIpQLSftXxbffI7xQYIGWgDWasD3OeK32X3-kFJ0eaTJPlAocGbAuA/viewform"
+            url="https://docs.google.com/forms/d/e/1FAIpQLSdZsvXfBUBgpg16188lSVWehDkWWP1x5AsXbJXg_LgyVk8h1w/viewform"
             rounded="full"
           />
           <img
