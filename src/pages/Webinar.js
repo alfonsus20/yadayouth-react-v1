@@ -35,7 +35,6 @@ const Webinar = () => {
                   width="56"
                   color="yellow"
                   rounded="full"
-                  path="#learn-more"
                   onClick={() =>
                     scroller.scrollTo("learn-more", {
                       smooth: "easeInOut",

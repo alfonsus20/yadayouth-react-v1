@@ -54,7 +54,6 @@ const ArticleDetail = () => {
         setArticleLoading(false);
         document.title = data.title;
       } catch (e) {
-        setArticleLoading(false);
         history.push('/not-found')
       }
     };
@@ -71,11 +70,12 @@ const ArticleDetail = () => {
     };
 
     fetchArticle();
-
     fetchArticles();
+
   }, [id, history]);
 
   const readingTime = Math.round(countWords(article.content || "") / 275);
+  
   return (
     <Container maxWidth={1800} additional="mx-auto" padding={`${articleLoading ? "0%" : "6% 7%"}`}>
       {!articleLoading ? (
