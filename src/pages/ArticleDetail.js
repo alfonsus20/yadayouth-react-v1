@@ -73,7 +73,7 @@ const ArticleDetail = () => {
     fetchArticle();
 
     fetchArticles();
-  }, [id]);
+  }, [id, history]);
 
   const readingTime = Math.round(countWords(article.content || "") / 275);
   return (

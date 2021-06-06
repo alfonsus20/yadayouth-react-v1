@@ -98,8 +98,9 @@ const Oprec = () => {
         </Fade>
       </Container>
       <Container padding="0% 7% 6% 7%">
-        {DIVISIONS.map((division) => (
+        {DIVISIONS.map((division, idx) => (
           <Division
+            key={idx}
             name={division.name}
             subdivisions={division.subdivisions}
             color={division.color}
@@ -195,8 +196,8 @@ const Oprec = () => {
           borderColor="white"
         />
         <div className="w-full px-4 md:px-20">
-          {FAQ.map((question) => (
-            <Accordion question={question.question} answer={question.answer} />
+          {FAQ.map((question,idx) => (
+            <Accordion key={idx} question={question.question} answer={question.answer} />
           ))}
         </div>
       </Container>

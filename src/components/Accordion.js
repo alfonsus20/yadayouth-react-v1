@@ -1,15 +1,17 @@
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 const Accordion = ({ question, answer }) => {
+  const accordionRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
+
   const contentVariants = {
     hidden: {
-      height: 0,
+      maxHeight: 0,
       overflowY: "hidden",
     },
     visible: {
-      height: "auto",
+      maxHeight: accordionRef.current && accordionRef.current.scrollHeight,
     },
   };
 
@@ -37,6 +39,8 @@ const Accordion = ({ question, answer }) => {
       <motion.div
         animate={isOpen ? "visible" : "hidden"}
         variants={contentVariants}
+        transition={{stiffness: 0}}
+        ref={accordionRef}
       >
         <div className="my-4 text-lg">
             {answer}
