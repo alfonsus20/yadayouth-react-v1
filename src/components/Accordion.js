@@ -12,7 +12,7 @@ const Accordion = ({ question, answer }) => {
       opacity: 0
     },
     visible: {
-      maxHeight: accordionRef.current ? accordionRef.current.scrollHeight : 500,
+      maxHeight: accordionRef.current ? accordionRef.current.scrollHeight : '100vh',
       overflowY: "visible",
       opacity: 1
     },
