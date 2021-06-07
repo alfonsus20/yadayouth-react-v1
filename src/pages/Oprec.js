@@ -53,7 +53,7 @@ const Oprec = () => {
             </div>
             <div className="w-full md:w-1/2">
               <img
-                src="oprec-pictures/coworking.png"
+                src="/oprec-pictures/coworking.png"
                 alt="webinar"
                 className="mx-auto md:ml-auto md:mr-0 w-full md:w-8/12"
               />
