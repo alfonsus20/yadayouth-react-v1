@@ -95,31 +95,31 @@ export const DIVISIONS = [
     color: "orange",
     subdivisions: [
       {
-        image: "/oprec/content-writer.png",
+        image: "oprec-pictures/content-writer.png",
         title: "Content Writer",
         description:
           "Responsible for writing and research a content for all of Yada Youth Indonesia social media",
       },
       {
-        image: "/oprec/public-relation.png",
+        image: "oprec-pictures/public-relation.png",
         title: "Public Relations",
         description:
           "Responsible for building good image for Yada Youth Indonesia and searching for cooperation partners to collaborate with.",
       },
       {
-        image: "/oprec/socmed-officer.png",
+        image: "oprec-pictures/socmed-officer.png",
         title: "Socmed Officer",
         description:
           "Responsible for handling all of Yada Youth Indonesia social media, including Instagram, and Linkedin, and publish all Yada Youth Indonesia content needs on all social media.",
       },
       {
-        image: "/oprec/tiktok-officer.png",
+        image: "oprec-pictures/tiktok-officer.png",
         title: "TikTok Officer",
         description:
           "Responsible for research and make a content for Yada Youth Indonesia official TikTok",
       },
       {
-        image: "/oprec/tiktok-officer.png",
+        image: "oprec-pictures/tiktok-officer.png",
         title: "Ambassador Supervisior",
         description:
           'Responsible for supervise the work of project ambassadors, make some "ambassador progress report project", and become a connector between the ambassador and Yada Youth Indonesia',
@@ -131,13 +131,13 @@ export const DIVISIONS = [
     color: "blue",
     subdivisions: [
       {
-        image: "/oprec/graphic-designer.png",
+        image: "oprec-pictures/graphic-designer.png",
         title: "Graphic Designer",
         description:
           "Responsible to deliver information through appealing design to Yada Youth Indonesia audience",
       },
       {
-        image: "/oprec/web-developer.png",
+        image: "oprec-pictures/web-developer.png",
         title: "Web Developer",
         description:
           "Responsible for planning, designing, develop, and maintaining Yada Youth Indonesia official website",
@@ -149,7 +149,7 @@ export const DIVISIONS = [
     color: "orange",
     subdivisions: [
       {
-        image: "/oprec/human-resource.png",
+        image: "oprec-pictures/human-resource.png",
         title: "Human Resource",
         description:
           "Responsible for preparing open registration to recruit staff Yada Youth Indonesia <br/> Responsible for organize training and bonding to internal Yada Youth Indonesia <br/> Responsible for maintaining the staff relations with good at problem solving skill",
@@ -161,13 +161,13 @@ export const DIVISIONS = [
     color: "blue",
     subdivisions: [
       {
-        image: "/oprec/admin.png",
+        image: "oprec-pictures/admin.png",
         title: "Admin",
         description:
           "Responsible for carrying out any administrative duties for Yada Youth Indonesia",
       },
       {
-        image: "/oprec/finance.png",
+        image: "oprec-pictures/finance.png",
         title: "Finance",
         description:
           "Responsible for managing funds and coordinating any financial transactions within Yada Youth Indonesia",
@@ -179,19 +179,19 @@ export const DIVISIONS = [
     color: "orange",
     subdivisions: [
       {
-        image: "/oprec/empowerment.png",
+        image: "oprec-pictures/empowerment.png",
         title: "Empowerment",
         description:
           "Conceptualize and execute empowerment events that targeting children who are in needs.",
       },
       {
-        image: "/oprec/fundraising.png",
+        image: "oprec-pictures/fundraising.png",
         title: "Fundraising",
         description:
           "Arrange and conduct events to raise fund for supporting the empowerment mission of Yada Youth",
       },
       {
-        image: "/oprec/research-and-expansion.png",
+        image: "oprec-pictures/research-and-expansion.png",
         title: "Research and Expansion",
         description:
           "Responsible for research everything that related to Yada Youth Indonesia, compile suggestions and evaluations for the development of Yada Youth Indonesia.",
