@@ -3,7 +3,7 @@ import React from "react";
 const OprecCard = ({ image, title, description, color }) => {
   return (
     <div
-      className={`flex flex-row items-center border-4 border-${color} rounded-lg ${title === 'Human Resource' ? 'w-full md:mx-24': 'w-128'} bg-yellow my-4 p-4`}
+      className={`flex flex-row items-center border-4 border-${color} rounded-lg ${title === 'Human Resource' || title === 'Research and Expansion' ? 'w-full md:mx-24': 'w-128'} bg-yellow my-4 p-4`}
     >
       <div className="flex-none">
         <img src={image} alt="position" className="w-40 h-auto md:w-auto" />

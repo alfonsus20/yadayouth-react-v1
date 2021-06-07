@@ -116,13 +116,13 @@ export const DIVISIONS = [
         image: "/oprec/tiktok-officer.png",
         title: "TikTok Officer",
         description:
-          "Responsible for research and make a content for Yada Youth Indonesia official TikTok",
+          "Responsible for researching and making contents for Yada Youth Indonesia official TikTok",
       },
       {
         image: "/oprec/tiktok-officer.png",
         title: "Ambassador Supervisior",
         description:
-          'Responsible for supervise the work of project ambassadors, make some "ambassador progress report project", and become a connector between the ambassador and Yada Youth Indonesia',
+          'Responsible for supervising the work of project ambassadors, make some "ambassador progress report project", and become a connector between the ambassador and Yada Youth Indonesia\'s',
       },
     ],
   },
@@ -140,7 +140,7 @@ export const DIVISIONS = [
         image: "/oprec/web-developer.png",
         title: "Web Developer",
         description:
-          "Responsible for planning, designing, develop, and maintaining Yada Youth Indonesia official website",
+          "Responsible for planning, designing, developing, and maintaining Yada Youth Indonesia's official website",
       },
     ],
   },
@@ -190,11 +190,17 @@ export const DIVISIONS = [
         description:
           "Arrange and conduct events to raise fund for supporting the empowerment mission of Yada Youth",
       },
+    ],
+  },
+  {
+    name: "Research",
+    color: "blue",
+    subdivisions: [
       {
         image: "/oprec/research-and-expansion.png",
         title: "Research and Expansion",
         description:
-          "Responsible for research everything that related to Yada Youth Indonesia, compile suggestions and evaluations for the development of Yada Youth Indonesia.",
+          "Responsible for researching everything that is related to Yada Youth Indonesia, compile suggestions and evaluations for the development of Yada Youth Indonesia.",
       },
     ],
   },
@@ -209,12 +215,12 @@ export const OPREC_TIMELINE = [
   {
     period: "8 - 13",
     date: "JUNE 2021",
-    phase: "SELEKSI ADMINISTRASI DAN WAWANCARA",
+    phase: "ADMINISTRATIVE SELECTION AND INTERVIEW",
   },
   {
     period: "15",
     date: "JUNE 2021",
-    phase: "PENGUMUMAN",
+    phase: "ANNOUNCEMENT",
   },
 ];
 
@@ -243,8 +249,13 @@ export const FAQ = [
     answer: (
       <ol className="list-decimal pl-5">
         <li>CV</li>
-        <li>Motivation letter  (not mandatory for Graphic Designer and Web Developer applicants)</li>
-        <li>Portofolio (only for Graphic Designer and Web Developer applicants)</li>
+        <li>
+          Motivation letter (not mandatory for Graphic Designer and Web
+          Developer applicants)
+        </li>
+        <li>
+          Portofolio (only for Graphic Designer and Web Developer applicants)
+        </li>
       </ol>
     ),
   },
