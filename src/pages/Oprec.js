@@ -126,7 +126,7 @@ const Oprec = () => {
             borderColor="orange"
             additional="mb-10"
           />
-          <div className="grid grid-cols-3 gap-x-2 md:gap-x-4">
+          <div className="grid grid-cols-3 gap-x-1 md:gap-x-4">
             {OPREC_TIMELINE.map((phase, idx) => (
               <TimelineCard
                 key={idx}
