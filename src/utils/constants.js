@@ -95,16 +95,35 @@ export const DIVISIONS = [
     color: "orange",
     subdivisions: [
       {
-        image: "/oprec-pictures/content-writer.png",
-        title: "Content Writer",
-        description:
-          "Responsible for writing and research a content for all of Yada Youth Indonesia social media",
-      },
-      {
         image: "/oprec-pictures/public-relation.png",
         title: "Public Relations",
         description:
           "Responsible for building good image for Yada Youth Indonesia and searching for cooperation partners to collaborate with.",
+      },
+      {
+        image: "/oprec-pictures/tiktok-officer.png",
+        title: "Ambassador Supervision",
+        description:
+          "Responsible for concepting and supervising all the activities by the project ambassadors, have capability as problem solver in the team, and become a connector between the ambassador and Yada Youth Indonesia",
+      },
+    ],
+  },
+  {
+    name: "Growth and Creative",
+    color: "blue",
+    subdivisions: [
+      {
+        image: "/oprec-pictures/tiktok-officer.png",
+        title: "TikTok Officer",
+        description:
+          "Responsible for researching and making contents for Yada Youth Indonesia official TikTok",
+      },
+
+      {
+        image: "/oprec-pictures/content-writer.png",
+        title: "Content Writer",
+        description:
+          "Responsible for writing and research a content for all of Yada Youth Indonesia social media",
       },
       {
         image: "/oprec-pictures/socmed-officer.png",
@@ -112,23 +131,11 @@ export const DIVISIONS = [
         description:
           "Responsible for handling all of Yada Youth Indonesia social media, including Instagram, and Linkedin, and publish all Yada Youth Indonesia content needs on all social media.",
       },
-      {
-        image: "/oprec-pictures/tiktok-officer.png",
-        title: "TikTok Officer",
-        description:
-          "Responsible for researching and making contents for Yada Youth Indonesia official TikTok",
-      },
-      {
-        image: "/oprec-pictures/tiktok-officer.png",
-        title: "Ambassador Supervisior",
-        description:
-          'Responsible for supervising the work of project ambassadors, make some "ambassador progress report project", and become a connector between the ambassador and Yada Youth Indonesia\'s',
-      },
     ],
   },
   {
     name: "Media Production",
-    color: "blue",
+    color: "orange",
     subdivisions: [
       {
         image: "/oprec-pictures/graphic-designer.png",
@@ -146,7 +153,7 @@ export const DIVISIONS = [
   },
   {
     name: "Human Resource",
-    color: "orange",
+    color: "blue",
     subdivisions: [
       {
         image: "/oprec-pictures/human-resource.png",
@@ -158,7 +165,7 @@ export const DIVISIONS = [
   },
   {
     name: "Administration & Finance",
-    color: "blue",
+    color: "orange",
     subdivisions: [
       {
         image: "/oprec-pictures/admin.png",
@@ -176,7 +183,7 @@ export const DIVISIONS = [
   },
   {
     name: "Program Management",
-    color: "orange",
+    color: "blue",
     subdivisions: [
       {
         image: "/oprec-pictures/empowerment.png",
@@ -194,7 +201,7 @@ export const DIVISIONS = [
   },
   {
     name: "Research",
-    color: "blue",
+    color: "orange",
     subdivisions: [
       {
         image: "/oprec-pictures/research-and-expansion.png",
