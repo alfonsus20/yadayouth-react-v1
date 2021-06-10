@@ -19,9 +19,9 @@ const Container = ({
     containerStyle["backgroundSize"] = "cover";
   }
 
-  if (maxWidth) {
-    containerStyle["maxWidth"] = maxWidth;
-  }
+  // if (maxWidth) {
+  //   containerStyle["maxWidth"] = maxWidth;
+  // }
 
   return (
     <div

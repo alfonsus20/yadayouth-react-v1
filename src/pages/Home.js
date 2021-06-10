@@ -27,7 +27,7 @@ const Home = () => {
           poverty through a collective effort to minimize the systemic factors which caused poverty "/>
       </Helmet>      
       <Button scrollUp />
-      <Container padding="4% 7%" screen id="home">
+      <Container padding="4% 7%" screen id="home" >
         <Fade delay={250}>
           <div className="relative">
             <h2 className="text-6xl text-blue text-center md:text-left font-bold">
@@ -77,7 +77,7 @@ const Home = () => {
 
       <Container additional="relative" bgColor="yellow" id="about">
         <Fade left>
-          <div className="flex flex-col-reverse lg:flex-row justify-center items-center text-2xl relative lg:left-20">
+          <div className="flex flex-col-reverse lg:flex-row justify-center items-center text-2xl relative lg:left-20 max-w-8xl mx-auto">
             <div className="bg-blue-light px-10 py-10 mb-4 lg:mb-0 rounded-2xl w-10/12 lg:w-7/12 lg:pr-40 border-white border-4">
               <h4 className="text-yellow mt-4 lg:mt-0">
                 Yada Youth means the heighest form of commitment towards the
@@ -99,7 +99,7 @@ const Home = () => {
         </Fade>
       </Container>
 
-      <Container center px={52} id="services">
+      <Container center px={52} id="services" additional='max-w-10xl mx-auto'>
         <Fade bottom>
           <Title
             text="OUR SERVICES"
@@ -146,7 +146,7 @@ const Home = () => {
         </Fade>
       </Container>
       <Container center bgColor="orange">
-        <div className="bg-yellow px-4 md:px-16 py-10 rounded-2xl w-10/12 md:w-8/12 border-white border-4 flex flex-col justify-center items-center">
+        <div className="bg-yellow px-4 md:px-16 py-10 rounded-2xl w-10/12 md:w-8/12 border-white border-4 flex flex-col justify-center items-center max-w-8xl mx-auto">
           <h2 className="text-2xl font-bold">HOW TO DONATE</h2>
           <p className="text-xl my-2 font-book">
             Yada Youth would like to inform you on several future plans,
@@ -198,7 +198,7 @@ const Home = () => {
           alt="leftOprec"
         />
         <div
-          className={`${styles.oprecContainer}`}
+          className={`${styles.oprecContainer} max-w-10xl mx-auto`}
         >
           <Link to='/oprec' className="bg-white w-full md:w-8/12 py-16 mx-auto flex flex-col justify-center items-center rounded-lg md:rounded-full relative z-10">
             <Title
@@ -222,7 +222,7 @@ const Home = () => {
           alt="leftOprec"
         />
       </Container>
-      <Container center>
+      <Container center additional = 'max-w-10xl mx-auto'>
         <Fade bottom>
           <Title
             text="RECENT POSTS"

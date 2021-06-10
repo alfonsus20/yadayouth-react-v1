@@ -73,7 +73,7 @@ const Oprec = () => {
           </div>
         </Fade>
       </Container>
-      <Container center padding="6% 7% 0% 7%" id="positions">
+      <Container center padding="6% 7% 0% 7%" id="positions" additional='max-w-10xl mx-auto'>
         <Title
           text="Available Positions"
           bgColor="yellow"
@@ -101,7 +101,7 @@ const Oprec = () => {
           />
         </Fade>
       </Container>
-      <Container padding="0% 7% 6% 7%">
+      <Container padding="0% 7% 6% 7%"  additional='max-w-10xl mx-auto'>
         {DIVISIONS.map((division, idx) => (
           <Division
             key={idx}
@@ -117,7 +117,7 @@ const Oprec = () => {
         bgColor="blue"
         padding="4% 7%"
       >
-        <div className="px-4 md:px-16 py-10 rounded-2xl w-12/12 md:w-8/12  flex flex-col justify-center items-center text-center">
+        <div className="px-4 md:px-16 py-10 rounded-2xl w-12/12 md:w-8/12  flex flex-col justify-center items-center text-center max-w-5xl mx-auto">
           <Title
             text="Timeline"
             bgColor="orange"
@@ -159,7 +159,7 @@ const Oprec = () => {
         </div>
       </Container>
       <Container center additional={classes.register} bgImage="gradient_2.jpg" id='register'>
-        <div className="x-4 md:px-16 py-10 rounded-2xl w-10/12 md:w-8/12 border-white border-4 flex flex-col justify-center items-center bg-white text-center">
+        <div className="x-4 md:px-16 py-10 rounded-2xl w-10/12 md:w-8/12 border-white border-4 flex flex-col justify-center items-center bg-white text-center  max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold">So, What Are You Waiting For?</h2>
           <Button
             text="REGISTER NOW!"
@@ -191,7 +191,7 @@ const Oprec = () => {
           />
         </div>
       </Container>
-      <Container center>
+      <Container center additional='max-w-10xl mx-auto'>
         <Title
           text="Frequently Asked Questions"
           bgColor="orange"

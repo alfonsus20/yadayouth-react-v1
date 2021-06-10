@@ -49,7 +49,7 @@ const Donate = () => {
       </Container>
       <Container center bgColor="yellow" id="how">
         <Fade bottom>
-          <div className="py-12 px-8 sm:px-16 border-4 border-orange rounded-3xl w-full sm:w-9/12 bg-white text-lg">
+          <div className="py-12 px-8 sm:px-16 border-4 border-orange rounded-3xl w-full sm:w-9/12 bg-white text-lg  max-w-5xl mx-auto">
             <h2 className="text-center text-4xl text-blue mb-12 font-bold">
               How To Donate?
             </h2>
@@ -80,7 +80,7 @@ const Donate = () => {
           </div>
         </Fade>
       </Container>
-      <Container padding="6% 15%">
+      <Container padding="6% 15%" additional='max-w-10xl mx-auto'>
         <Fade bottom>
           <h2 className="text-center text-4xl text-blue mb-8 font-bold">
             All the funds raised will be used for:
