@@ -23,11 +23,11 @@ jobs:
           npm run build
 
       - name: File Transfer Protocol
-        uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
-          ftp_host: ${{ secrets.FTP_HOST }}
-          ftp_username:  ${{ secrets.FTP_USERNAME }}
-          ftp_password: ${{ secrets.FTP_PASSWORD }}
-          local_source_dir: "build"
-          dist_target_dir: "/public_html"
-          only_newer: "true"
+          server: ${{ secrets.FTP_HOST }}
+          username:  ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          local-dir: "./build/"
+          server-dir: "./public_html/"
