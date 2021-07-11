@@ -4,7 +4,11 @@ import { HashLink } from "react-router-hash-link";
 const FooterLink = ({ icon, text, pathname, hash, socmed }) => {
   if (socmed) {
     return (
-      <a href={pathname} className="font-book cursor-pointer hover:text-orange" target="blank">
+      <a
+        href={pathname}
+        className="font-book cursor-pointer hover:text-orange"
+        target="blank"
+      >
         {icon && (
           <>
             <i className={icon}></i>&nbsp;

@@ -9,7 +9,7 @@ const Navbar = ({ menu, toggleMenu, mobile }) => {
   return (
     <div className="sticky top-0 z-30">
       {location.pathname === "/" && (
-        <Link to='/oprec'>
+        <Link to="/oprec">
           <div className="marquee">
             <div className="marquee-inner flex text-blue">
               <div className="italic flex flex-row">

@@ -8,7 +8,7 @@ import { CARD_CONTENTS } from "../utils/constants";
 import styles from "./Home.module.css";
 import { animateScroll as scroll, scroller } from "react-scroll";
 import Fade from "react-reveal/Fade";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -24,10 +24,11 @@ const Home = () => {
           name="description"
           content="YadaYouth.id | “Empowering Children of Tomorrow” | We are a non-profit organization 
           that aims to focus to on the empowerment of Indonesian children and young people living in 
-          poverty through a collective effort to minimize the systemic factors which caused poverty "/>
-      </Helmet>      
+          poverty through a collective effort to minimize the systemic factors which caused poverty "
+        />
+      </Helmet>
       <Button scrollUp />
-      <Container padding="4% 7%" screen id="home" >
+      <Container padding="4% 7%" screen id="home">
         <Fade delay={250}>
           <div className="relative">
             <h2 className="text-6xl text-blue text-center md:text-left font-bold">
@@ -39,7 +40,7 @@ const Home = () => {
             </h3>
           </div>
         </Fade>
-        
+
         <div className="flex flex-col-reverse md:flex-row md:mt-16">
           <Fade delay={750}>
             <div className="w-full md:w-6/12 flex justify-center items-center md:justify-start md:items-start">
@@ -99,7 +100,7 @@ const Home = () => {
         </Fade>
       </Container>
 
-      <Container center px={52} id="services" additional='max-w-10xl mx-auto'>
+      <Container center px={52} id="services" additional="max-w-10xl mx-auto">
         <Fade bottom>
           <Title
             text="OUR SERVICES"
@@ -197,10 +198,11 @@ const Home = () => {
           className="absolute left-0 bottom-0 w-100 hidden md:block"
           alt="leftOprec"
         />
-        <div
-          className={`${styles.oprecContainer} max-w-10xl mx-auto`}
-        >
-          <Link to='/oprec' className="bg-white w-full md:w-8/12 py-16 mx-auto flex flex-col justify-center items-center rounded-lg md:rounded-full relative z-10">
+        <div className={`${styles.oprecContainer} max-w-10xl mx-auto`}>
+          <Link
+            to="/oprec"
+            className="bg-white w-full md:w-8/12 py-16 mx-auto flex flex-col justify-center items-center rounded-lg md:rounded-full relative z-10"
+          >
             <Title
               text="OPEN RECRUITMENT STAFF"
               width="92"
@@ -222,7 +224,7 @@ const Home = () => {
           alt="leftOprec"
         />
       </Container>
-      <Container center additional = 'max-w-10xl mx-auto'>
+      <Container center additional="max-w-10xl mx-auto">
         <Fade bottom>
           <Title
             text="RECENT POSTS"

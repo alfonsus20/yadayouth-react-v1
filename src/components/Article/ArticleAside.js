@@ -19,7 +19,7 @@ const ArticleAside = ({ articles, categories, loading }) => {
                 </dd>
               ))
             ) : (
-              <TextSkeleton amount={3}/>
+              <TextSkeleton amount={3} />
             )}
           </dl>
         </div>
@@ -27,13 +27,17 @@ const ArticleAside = ({ articles, categories, loading }) => {
         <div>
           <h3 className="text-2xl text-blue font-bold">Categories</h3>
           <dl>
-            {!loading ? categories.map((category, idx) => (
-              <dd key={idx} className="my-4 font-book text-base">
-                <Link to={`articles?topic=${category.topic}`}>
-                  {category.topic}
-                </Link>
-              </dd>
-            )) : <TextSkeleton amount={4}/>}
+            {!loading ? (
+              categories.map((category, idx) => (
+                <dd key={idx} className="my-4 font-book text-base">
+                  <Link to={`articles?topic=${category.topic}`}>
+                    {category.topic}
+                  </Link>
+                </dd>
+              ))
+            ) : (
+              <TextSkeleton amount={4} />
+            )}
           </dl>
         </div>
         {/* <div className="bg-blue w-full my-8" style={{ height: 0.5 }}></div> */}

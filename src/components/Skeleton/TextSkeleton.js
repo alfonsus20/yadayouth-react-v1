@@ -5,7 +5,10 @@ const TextSkeleton = ({ amount }) => {
 
   for (let i = 0; i < amount; i++) {
     skeletons.push(
-      <div key={i} className="w-full h-4 rounded-md animate-pulse bg-gray my-4"></div>
+      <div
+        key={i}
+        className="w-full h-4 rounded-md animate-pulse bg-gray my-4"
+      ></div>
     );
   }
 

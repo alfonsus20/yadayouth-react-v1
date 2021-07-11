@@ -54,7 +54,7 @@ const ArticleDetail = () => {
         setArticleLoading(false);
         document.title = data.title;
       } catch (e) {
-        history.push('/not-found')
+        history.push("/not-found");
       }
     };
 
@@ -71,13 +71,16 @@ const ArticleDetail = () => {
 
     fetchArticle();
     fetchArticles();
-
   }, [id, history]);
 
   const readingTime = Math.round(countWords(article.content || "") / 275);
-  
+
   return (
-    <Container maxWidth={1800} additional="mx-auto" padding={`${articleLoading ? "0%" : "6% 7%"}`}>
+    <Container
+      maxWidth={1800}
+      additional="mx-auto"
+      padding={`${articleLoading ? "0%" : "6% 7%"}`}
+    >
       {!articleLoading ? (
         <>
           <Button scrollUp />
@@ -107,7 +110,10 @@ const ArticleDetail = () => {
                 <div className="text-white mt-4 sm:mt-0 w-full sm:w-4/12 md:w-2/12 grid place-items-center">
                   <div
                     className="rounded-full py-2 px-4 mb-auto mt-2 cursor-pointer"
-                    style={{ backgroundColor: "#FDAE5A", fontSize:'clamp(12px,2vw,1rem)' }}
+                    style={{
+                      backgroundColor: "#FDAE5A",
+                      fontSize: "clamp(12px,2vw,1rem)",
+                    }}
                     onClick={shareArticle}
                   >
                     <i className="fas fa-link"></i>&nbsp; Share This Article

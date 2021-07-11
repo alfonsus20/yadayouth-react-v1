@@ -36,8 +36,13 @@ const Oprec = () => {
                   width="52"
                   color="yellow"
                   rounded="full"
-                  additional='mx-auto md:mx-0'
-                  onClick = {()=> scroller.scrollTo('register', {smooth: true, offset: -76.8})}
+                  additional="mx-auto md:mx-0"
+                  onClick={() =>
+                    scroller.scrollTo("register", {
+                      smooth: true,
+                      offset: -76.8,
+                    })
+                  }
                 />
                 <Button
                   text="Learn More"
@@ -45,9 +50,14 @@ const Oprec = () => {
                   width="36"
                   color="yellow"
                   rounded="full"
-                  fontSize='12'
-                  additional='mx-auto md:mx-0'
-                  onClick = {()=> scroller.scrollTo('positions', {smooth: true, offset: -76.8})}
+                  fontSize="12"
+                  additional="mx-auto md:mx-0"
+                  onClick={() =>
+                    scroller.scrollTo("positions", {
+                      smooth: true,
+                      offset: -76.8,
+                    })
+                  }
                 />
               </div>
             </div>
@@ -73,7 +83,12 @@ const Oprec = () => {
           </div>
         </Fade>
       </Container>
-      <Container center padding="6% 7% 0% 7%" id="positions" additional='max-w-10xl mx-auto'>
+      <Container
+        center
+        padding="6% 7% 0% 7%"
+        id="positions"
+        additional="max-w-10xl mx-auto"
+      >
         <Title
           text="Available Positions"
           bgColor="yellow"
@@ -101,7 +116,7 @@ const Oprec = () => {
           />
         </Fade>
       </Container>
-      <Container padding="0% 7% 6% 7%"  additional='max-w-10xl mx-auto'>
+      <Container padding="0% 7% 6% 7%" additional="max-w-10xl mx-auto">
         {DIVISIONS.map((division, idx) => (
           <Division
             key={idx}
@@ -158,7 +173,12 @@ const Oprec = () => {
           />
         </div>
       </Container>
-      <Container center additional={classes.register} bgImage="gradient_2.jpg" id='register'>
+      <Container
+        center
+        additional={classes.register}
+        bgImage="gradient_2.jpg"
+        id="register"
+      >
         <div className="x-4 md:px-16 py-10 rounded-2xl w-10/12 md:w-8/12 border-white border-4 flex flex-col justify-center items-center bg-white text-center  max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold">So, What Are You Waiting For?</h2>
           <Button
@@ -191,7 +211,7 @@ const Oprec = () => {
           />
         </div>
       </Container>
-      <Container center additional='max-w-10xl mx-auto'>
+      <Container center additional="max-w-10xl mx-auto">
         <Title
           text="Frequently Asked Questions"
           bgColor="orange"

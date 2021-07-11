@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Pagination = ({prev, next}) => {
+const Pagination = ({ prev, next }) => {
   let count = prev + next;
   let paginationLinks = [];
   let currentIndex = prev + 1;

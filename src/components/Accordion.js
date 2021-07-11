@@ -14,7 +14,7 @@ const Accordion = ({ question, answer }) => {
     visible: {
       maxHeight: accordionRef.current ? accordionRef.current.scrollHeight : 200,
       overflowY: "visible",
-      opacity: 1
+      opacity: 1,
     },
   };
 
@@ -42,7 +42,7 @@ const Accordion = ({ question, answer }) => {
         />
       </div>
       <motion.div
-      initial="hidden"
+        initial="hidden"
         animate={isOpen ? "visible" : "hidden"}
         variants={contentVariants}
         transition={{ stiffness: 0 }}

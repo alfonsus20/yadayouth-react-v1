@@ -58,11 +58,11 @@
   transform: rotateX();
 } */
 
-.flipCardInner{
+.flipCardInner {
   transition: transform 0.5s ease;
 }
 
-.flipCard:hover .flipCardInner{
+.flipCard:hover .flipCardInner {
   transform: rotateX(180deg);
 }
 

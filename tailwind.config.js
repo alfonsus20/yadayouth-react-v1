@@ -16,10 +16,10 @@ module.exports = {
         "3/4": "75%",
         full: "100%",
       },
-      maxWidth :{
-        "8xl" : "88rem",
-        "9xl" : "96rem",
-        "10xl" : "104rem",
+      maxWidth: {
+        "8xl": "88rem",
+        "9xl": "96rem",
+        "10xl": "104rem",
       },
       spacing: {
         84: "21rem",

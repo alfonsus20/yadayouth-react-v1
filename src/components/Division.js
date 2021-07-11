@@ -21,7 +21,7 @@ const Division = ({ name, color, subdivisions }) => {
               image={subdivision.image}
               title={subdivision.title}
               description={subdivision.description}
-              color ={color}
+              color={color}
             />
           ))}
         </div>

@@ -3,7 +3,7 @@ import Container from "../components/Container";
 import { DONATION_GOALS } from "../utils/constants";
 import DonationCard from "../components/DonationCard";
 import Button from "../components/Button";
-import Fade from 'react-reveal/Fade';
+import Fade from "react-reveal/Fade";
 
 const Donate = () => {
   useEffect(() => {
@@ -63,7 +63,11 @@ const Donate = () => {
                   </div>
                 </div>
                 <div className="flex flex-col text-center justify-center items-center  sm:text-left space-y-4 sm:space-y-0 sm:flex-row sm:space-x-8 ">
-                  <img src="logos/mandiri.png" className="w-auto" alt="mandiri-logo" />
+                  <img
+                    src="logos/mandiri.png"
+                    className="w-auto"
+                    alt="mandiri-logo"
+                  />
                   <div>
                     <strong>1330016450835</strong>
                     <br /> a/n Febrio Luqman W.
@@ -72,15 +76,15 @@ const Donate = () => {
               </div>
               <div className="w-full lg:w-1/2  mt-8 lg:mt-0 text-justify">
                 Please <strong>add a Rp1</strong> to the donation (Ex: for 50k
-                donation please make it Rp50.001 and/or add the description “yada
-                youth donation” in the description/notes to help us calculate the
-                funds raised accurately)
+                donation please make it Rp50.001 and/or add the description
+                “yada youth donation” in the description/notes to help us
+                calculate the funds raised accurately)
               </div>
             </div>
           </div>
         </Fade>
       </Container>
-      <Container padding="6% 15%" additional='max-w-10xl mx-auto'>
+      <Container padding="6% 15%" additional="max-w-10xl mx-auto">
         <Fade bottom>
           <h2 className="text-center text-4xl text-blue mb-8 font-bold">
             All the funds raised will be used for:

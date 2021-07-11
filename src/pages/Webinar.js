@@ -7,7 +7,7 @@ import Speaker from "../components/Speaker";
 import { scroller } from "react-scroll";
 import classes from "./Webinar.module.css";
 import FlipCard from "../components/FlipCard/FlipCard";
-import Fade from 'react-reveal/Fade';
+import Fade from "react-reveal/Fade";
 
 const Webinar = () => {
   useEffect(() => {
@@ -26,7 +26,8 @@ const Webinar = () => {
                 May 2<sup>nd</sup>, 2021
               </h2>
               <p className="text-2xl text-blue mt-4 text-center md:text-left">
-                HOW CAN (YOU)TH MAKE A DIFFERENCE <br /> An Empowerment to Empower
+                HOW CAN (YOU)TH MAKE A DIFFERENCE <br /> An Empowerment to
+                Empower
               </p>
               <div className="mt-4">
                 <Button

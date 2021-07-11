@@ -1,9 +1,8 @@
 import React from "react";
 import Button from "../Button";
-import {countWords} from '../../utils/functions';
+import { countWords } from "../../utils/functions";
 
-const ArticleCard = ({ title, description, publishTime, image,id }) => {
-
+const ArticleCard = ({ title, description, publishTime, image, id }) => {
   const content = description
     .split(" ")
     .slice(0, 20)
@@ -11,7 +10,7 @@ const ArticleCard = ({ title, description, publishTime, image,id }) => {
     .concat(countWords(description) > 28 ? " ..." : "");
 
   return (
-    <div 
+    <div
       className="flex flex-col-reverse sm:flex-row py-8 px-8 lg:px-12 rounded-lg mb-8"
       style={{
         background:
@@ -21,7 +20,10 @@ const ArticleCard = ({ title, description, publishTime, image,id }) => {
     >
       <div className="flex flex-col w-full sm:w-8/12 justify-around mr-4">
         <h3 className="text-2xl text-blue font-bold my-4 sm:my-0">{title}</h3>
-        <p className="text-md font-book text-justify mt-2" dangerouslySetInnerHTML ={{__html : content}}></p>
+        <p
+          className="text-md font-book text-justify mt-2"
+          dangerouslySetInnerHTML={{ __html: content }}
+        ></p>
         <div className="flex flex-col lg:flex-row">
           <time className="mt-4 mr-4 font-light w-8/12 text-blue text-sm">
             Published At : {publishTime}
@@ -34,9 +36,9 @@ const ArticleCard = ({ title, description, publishTime, image,id }) => {
               additional="shadow-xl font-book w-40 md:w-52"
               px={1}
               py={1}
-              fontSize = "md"
+              fontSize="md"
               rounded="2xl"
-              path = {`/articles/${id}`}
+              path={`/articles/${id}`}
             />
           </div>
         </div>

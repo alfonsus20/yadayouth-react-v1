@@ -30,7 +30,7 @@ const NavList = ({ menu, mobile, toggleMenu }) => {
           hash={menuItem.hash}
           mobile={mobile}
           toggleMenu={toggleMenu}
-          menu = {menu}
+          menu={menu}
         />
       ))}
     </motion.ul>

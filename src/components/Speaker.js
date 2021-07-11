@@ -7,7 +7,9 @@ const Speaker = ({ image, name, description }) => {
       <div className="md:border-4 border-orange text-blue text-xl text-center font-book px-4 py-0 rounded-xl mt-4 mb-2 md:w-7/12 bg-white">
         {name}
       </div>
-      <p className="font-light text-md text-center w-9/12 md:w-7/12">{description}</p>
+      <p className="font-light text-md text-center w-9/12 md:w-7/12">
+        {description}
+      </p>
     </div>
   );
 };

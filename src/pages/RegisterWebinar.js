@@ -4,7 +4,6 @@ import classes from "./RegisterWebinar.module.css";
 import Container from "../components/Container";
 
 const RegisterWebinar = () => {
-
   useEffect(() => {
     document.title = "Register Webinar";
   });
@@ -12,7 +11,10 @@ const RegisterWebinar = () => {
   return (
     <div>
       <Button scrollUp />
-      <div className={`flex flex-col md:flex-row ${classes.hero}`} style={{backgroundImage:'url(/backgrounds/gradient_3.jpg)'}}>
+      <div
+        className={`flex flex-col md:flex-row ${classes.hero}`}
+        style={{ backgroundImage: "url(/backgrounds/gradient_3.jpg)" }}
+      >
         <div className="flex flex-col justify-center w-full md:w-1/2 text-center md:text-left">
           <h1 className="text-6xl text-blue">Yada Talks 2021</h1>
           <p className="text-2xl text-orange mt-4 text-center md:text-left">
@@ -24,8 +26,8 @@ const RegisterWebinar = () => {
         </div>
         <div className=" w-full md:w-1/2">
           <img
-            src='/pictures/connect.png'
-            alt='webinar'
+            src="/pictures/connect.png"
+            alt="webinar"
             className="mx-auto md:ml-auto md:mr-0 w-full md:w-8/12"
           />
         </div>
@@ -38,7 +40,7 @@ const RegisterWebinar = () => {
           frameborder="0"
           marginheight="0"
           marginwidth="0"
-          title='form'
+          title="form"
         >
           Loading…
         </iframe>

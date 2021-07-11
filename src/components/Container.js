@@ -18,11 +18,6 @@ const Container = ({
     containerStyle["backgroundRepeat"] = "no-repeat";
     containerStyle["backgroundSize"] = "cover";
   }
-
-  // if (maxWidth) {
-  //   containerStyle["maxWidth"] = maxWidth;
-  // }
-
   return (
     <div
       className={`bg-${bgColor} ${additional} ${
