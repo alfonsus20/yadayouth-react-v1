@@ -19,11 +19,29 @@ jobs:
           echo "Build React App"
           npm ci
           npm run build
+      - name: Temporary save build files
+        uses: actions/upload-artifact@v2
+        with: 
+          name: build-artifact
+          path: build/
+
   deploy-cpanel:
     name: Deployment
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Setup files
+        uses: actions/checkout@v2.3.2
+      
+      - name: Retrieve saved build files
+        uses: actions/download-artifact@v2
+        with:
+          name: build-artifact
+          path: build/
+      
+      - name: check all files
+        run: ls -al
+
       - name: File Transfer Protocol
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
