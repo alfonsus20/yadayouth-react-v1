@@ -2,15 +2,11 @@ import React, { useEffect } from "react";
 import Button from "../components/Button";
 import Container from "../components/Container";
 import Title from "../components/Title";
-import { DIVISIONS, FAQ, OPREC_TIMELINE } from "../utils/constants";
 import { scroller } from "react-scroll";
-import classes from "./Webinar.module.css";
+import classes from "./Ambassador.module.css";
 import Fade from "react-reveal/Fade";
-import Division from "../components/Division";
-import TimelineCard from "../components/TimelineCard";
-import Accordion from "../components/Accordion";
-import WhatIs from "../components/WhatIs";
-import Requirements from "../components/Requirements";
+import AmbassadorBenefitCard from "../components/AmbassadorBenefitCard";
+import { AMBASSADOR_BENEFITS } from "../utils/constants";
 
 const Ambassador = () => {
   useEffect(() => {
@@ -55,7 +51,7 @@ const Ambassador = () => {
                   fontSize="12"
                   additional="mx-auto md:mx-0"
                   onClick={() =>
-                    scroller.scrollTo("positions", {
+                    scroller.scrollTo("ambassador", {
                       smooth: true,
                       offset: -76.8,
                     })
@@ -75,7 +71,7 @@ const Ambassador = () => {
               alt="Arrow"
               className="cursor-pointer mx-auto my-6 sm:my-0 absolute -bottom-4 md:-bottom-20 left-1/2 transform -translate-x-1/2"
               onClick={() =>
-                scroller.scrollTo("positions", {
+                scroller.scrollTo("ambassador", {
                   smooth: "easeInOut",
                   duration: 500,
                   offset: -70,
@@ -85,33 +81,132 @@ const Ambassador = () => {
           </div>
         </Fade>
       </Container>
-      <Container
-        center
-        padding="0%"
-        id="positions"
-        additional="max-w-10xl mx-auto"
-      >
-        <WhatIs />
+      <Container center bgColor="orange" padding="6% 0" id='ambassador'>
+        <div className="w-full ">
+          <div className="text-white text-center text-3xl font-medium mb-8 sm:mb-4">
+            <em>What is Yada Youth Ambassador?</em>
+          </div>
+          <div className="bg-yellow px-8">
+            <div className="max-w-3xl flex flex-col sm:flex-row mx-auto items-center">
+              <div className="sm:mr-8 my-4 sm:my-8">
+                <img
+                  src="/ambassador-pictures/what-is.png"
+                  className="w-80"
+                  alt="what is"
+                />
+              </div>
+              <div className="text-blue-light">
+                <h3 className="mb-2 text-lg">
+                  Yada Youth Ambassador is a program aimed to help Yada Youth to
+                  achieve its main purpose; empowering children of tomorrow.
+                </h3>
+                <p className="text-md mb-8 sm:mb-0">
+                  Ambassadors will be responsible to create and manage their own
+                  project related to the vision and mission of Yada Youth, under
+                  the guidance and supervision of Yada Youth.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </Container>
       <Container padding="0% 7% 6% 7%" additional="max-w-10xl mx-auto">
-        <Requirements />
+        <div>
+          <Title
+            text="General Requirements"
+            bgColor="blue"
+            color="white"
+            borderColor="white"
+            width="96"
+            additional="mt-16 mb-6 mx-auto"
+          />
+          <div className="bg-yellow px-16 py-6 border-4 max-w-4xl mx-auto border-orange rounded-2xl my-8">
+            <ol className="list-disc pl-5">
+              <li>Anyone between the ages of 16 - 23</li>
+              <li>Willing to commit for 6 months</li>
+              <li>Dedicated for contribute towards the youth</li>
+              <li>Adaptable with remote working system</li>
+              <li>Basic English profiency</li>
+              <li>Have a good attitude and communicative</li>
+              <li>
+                Creative, innovative, responsible, and able to work in a team
+              </li>
+              <li>Able to operate </li>
+            </ol>
+          </div>
+        </div>
+        <div>
+          <Title
+            text="Benefits of Being an Ambassador"
+            bgColor="blue"
+            color="white"
+            borderColor="white"
+            width="120"
+            additional="mt-16 mb-6 mx-auto"
+          />
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 max-w-screen-lg mx-auto'>
+            {AMBASSADOR_BENEFITS.map((benefit, i) => (
+              <AmbassadorBenefitCard {...benefit} key={i} index={i}/>
+            ))}
+          </div>
+        </div>
       </Container>
-      <Container center additional="max-w-10xl mx-auto">
+      <Container center bgColor="blue" padding="0% 7%">
         <Title
-          text="Frequently Asked Questions"
-          bgColor="orange"
-          width="104"
-          color="white"
+          text="Timeline"
+          bgColor="white"
+          color="orange"
           borderColor="white"
+          width="96"
+          additional="mt-16 mb-6 mx-auto"
         />
-        <div className="w-full px-4 md:px-20">
-          {FAQ.map((question, idx) => (
-            <Accordion
-              key={idx}
-              question={question.question}
-              answer={question.answer}
-            />
-          ))}
+        <div className='mb-8 sm:mb-0'>
+          <img
+            src="/pictures/artboard.png"
+            className="sm:w-11/12 mx-auto"
+            alt="artboard"
+          />
+        </div>
+      </Container>
+      <Container center additional={classes.register} bgImage="gradient_2.jpg" id='register'>
+        <div className="md:px-16 py-10 rounded-2xl w-10/12 md:w-8/12 border-white border-4 flex flex-col justify-center items-center bg-white text-center">
+          <h2 className="text-2xl font-bold mb-2">
+            <em>So, What Are You Waiting For?</em>
+          </h2>
+          <Button
+            text="REGISTER NOW!"
+            bgColor="blue-light"
+            color="yellow"
+            width="80"
+            url="https://docs.google.com/forms/d/e/1FAIpQLSftXxbffI7xQYIGWgDWasD3OeK32X3-kFJ0eaTJPlAocGbAuA/viewform"
+            rounded="full"
+          />
+          <p className="text-xl font-book mt-4">
+            For further inquiries don't hesitate to contact us through:
+          </p>
+          <p className="font-bold text-xl">
+            <em>yycomdev@gmail.com or dm us!</em>
+          </p>
+          <img
+            src="/shapes/whitediamondshape.png"
+            alt="White Diamond"
+            className={classes.diamondLeft + " hidden md:block"}
+          />
+          <img
+            src="/shapes/whitediamondshape.png"
+            alt="White Diamond"
+            className={classes.diamondRight + " hidden md:block"}
+          />
+          <img
+            src="/shapes/whiteshape.png"
+            alt="White Shape"
+            className={classes.whiteShapeLeft + " hidden md:block"}
+          />
+          <img
+            src="/shapes/whiteshape.png"
+            alt="White Shape"
+            className={classes.whiteShapeRight + " hidden md:block"}
+          />
         </div>
       </Container>
     </div>

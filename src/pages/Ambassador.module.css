@@ -1,0 +1,29 @@
+.register {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 70% 50%;
+}
+
+.diamondLeft {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+  
+.diamondRight {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+  
+.whiteShapeLeft {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+}
+  
+.whiteShapeRight {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}

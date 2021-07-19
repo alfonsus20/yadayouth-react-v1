@@ -9,7 +9,6 @@ const Container = ({
   padding,
   screen,
   bgImage,
-  maxWidth,
 }) => {
   const containerStyle = { padding: padding };
 
