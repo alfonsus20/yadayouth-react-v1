@@ -13,6 +13,7 @@ import AnimatedRoutes from "./components/Animations/AnimatedRoutes";
 import RouteTransition from "./components/Animations/RouteTransitions";
 import Oprec from "./pages/Oprec";
 import ScrollToTop from "./components/ScrollToTop";
+import Ambassador from "./pages/Ambassador";
 
 const App = () => {
   const [menu, toggleMenu] = useState(false);
@@ -43,6 +44,7 @@ const App = () => {
           exact
         />
         <RouteTransition path="/oprec" component={<Oprec />} exact />
+        <RouteTransition path="/ambassador" component={<Ambassador />} exact />
         <RouteTransition path="*" component={<NotFound />} />
       </AnimatedRoutes>
       <Footer menu={menu} toggleMenu={toggleMenu} mobile={width <= 768} />

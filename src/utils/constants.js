@@ -1,7 +1,13 @@
 export const MENUS = [
   { name: "Home", pathname: "/", hash: "", socmed: false },
-  { name: "About", pathname: "/", hash: "about", socmed: false },
-  { name: "Oprec Staff", pathname: "/oprec", hash: "", socmed: false },
+  // { name: "Oprec Staff", pathname: "/oprec", hash: "", socmed: false },
+  {
+    name: "Ambassador",
+    pathname: "/ambassador",
+    hash: "",
+    socmed: false,
+  },
+  { name: "About Us", pathname: "/", hash: "about", socmed: false },
   { name: "Donate", pathname: "/donate", hash: "", socmed: false },
   { name: "Contact", pathname: "/", hash: "contacts", socmed: false },
 ];
@@ -265,5 +271,31 @@ export const FAQ = [
         </li>
       </ol>
     ),
+  },
+];
+
+export const AMBASSADOR_BENEFITS = [
+  {
+    title: "Experience",
+    description: "You will gain lots of experience through this program",
+  },
+  {
+    title: "Networking",
+    description: "You will meet new people with great minds",
+  },
+  {
+    title: "E-certificate",
+    description:
+      "You will gain E-certificate if you successfully finished your project",
+  },
+  {
+    title: "Knowledge",
+    description:
+      "Learning new things from your project can widen your knowledge about others",
+  },
+  {
+    title: "Self Confidence",
+    description:
+      "Doing this project can increase your self confidence. The better you feel about yourself, the more likely you are to increase your self confidence.",
   },
 ];
