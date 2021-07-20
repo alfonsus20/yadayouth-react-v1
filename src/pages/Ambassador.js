@@ -81,7 +81,7 @@ const Ambassador = () => {
           </div>
         </Fade>
       </Container>
-      <Container center bgColor="orange" padding="6% 0" id='ambassador'>
+      <Container center bgColor="orange" padding="6% 0" id="ambassador">
         <div className="w-full ">
           <div className="text-white text-center text-3xl font-medium mb-8 sm:mb-4">
             <em>What is Yada Youth Ambassador?</em>
@@ -144,9 +144,9 @@ const Ambassador = () => {
             width="120"
             additional="mt-16 mb-6 mx-auto"
           />
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 max-w-screen-lg mx-auto'>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 max-w-screen-lg mx-auto">
             {AMBASSADOR_BENEFITS.map((benefit, i) => (
-              <AmbassadorBenefitCard {...benefit} key={i} index={i}/>
+              <AmbassadorBenefitCard {...benefit} key={i} index={i} />
             ))}
           </div>
         </div>
@@ -160,7 +160,7 @@ const Ambassador = () => {
           width="96"
           additional="mt-16 mb-6 mx-auto"
         />
-        <div className='mb-8 sm:mb-0'>
+        <div className="mb-8 sm:mb-0">
           <img
             src="/pictures/artboard.png"
             className="sm:w-11/12 mx-auto"
@@ -168,7 +168,12 @@ const Ambassador = () => {
           />
         </div>
       </Container>
-      <Container center additional={classes.register} bgImage="gradient_2.jpg" id='register'>
+      <Container
+        center
+        additional={classes.register}
+        bgImage="gradient_2.jpg"
+        id="register"
+      >
         <div className="md:px-16 py-10 rounded-2xl w-10/12 md:w-8/12 border-white border-4 flex flex-col justify-center items-center bg-white text-center">
           <h2 className="text-2xl font-bold mb-2">
             <em>So, What Are You Waiting For?</em>

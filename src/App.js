@@ -44,7 +44,11 @@ const App = () => {
           exact
         />
         <RouteTransition path="/oprec" component={<Oprec />} exact />
-        <RouteTransition path="/ambassador" component={<Ambassador />} exact />
+        <RouteTransition
+          path="/ProjectAmbassadorBatch2"
+          component={<Ambassador />}
+          exact
+        />
         <RouteTransition path="*" component={<NotFound />} />
       </AnimatedRoutes>
       <Footer menu={menu} toggleMenu={toggleMenu} mobile={width <= 768} />

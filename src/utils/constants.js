@@ -3,7 +3,7 @@ export const MENUS = [
   // { name: "Oprec Staff", pathname: "/oprec", hash: "", socmed: false },
   {
     name: "Ambassador",
-    pathname: "/ambassador",
+    pathname: "/ProjectAmbassadorBatch2",
     hash: "",
     socmed: false,
   },
