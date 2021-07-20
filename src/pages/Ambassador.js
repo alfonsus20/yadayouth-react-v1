@@ -183,7 +183,7 @@ const Ambassador = () => {
             bgColor="blue-light"
             color="yellow"
             width="80"
-            url="https://docs.google.com/forms/d/e/1FAIpQLSftXxbffI7xQYIGWgDWasD3OeK32X3-kFJ0eaTJPlAocGbAuA/viewform"
+            url="https://tinyurl.com/ProjectAmbassadorsBatch2"
             rounded="full"
           />
           <p className="text-xl font-book mt-4">
