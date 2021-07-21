@@ -9,7 +9,6 @@ import styles from "./Home.module.css";
 import { animateScroll as scroll, scroller } from "react-scroll";
 import Fade from "react-reveal/Fade";
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
 
 const Home = () => {
   useEffect(() => {

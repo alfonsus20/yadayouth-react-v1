@@ -1,7 +1,7 @@
 import React from "react";
 import NavList from "./NavList";
 import NavLogo from "./NavLogo";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Navbar = ({ menu, toggleMenu, mobile }) => {
   const location = useLocation();
