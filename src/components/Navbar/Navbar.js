@@ -8,7 +8,7 @@ const Navbar = ({ menu, toggleMenu, mobile }) => {
 
   return (
     <div className="sticky top-0 z-30">
-      {location.pathname === "/" && (
+      {/* {location.pathname === "/" && (
         <Link to="/oprec">
           <div className="marquee">
             <div className="marquee-inner flex text-blue">
@@ -51,7 +51,7 @@ const Navbar = ({ menu, toggleMenu, mobile }) => {
             </div>
           </div>
         </Link>
-      )}
+      )} */}
       <header
         className={`flex flex-col md:flex-row text-white relative ${
           location.pathname !== "/" && "top-0"

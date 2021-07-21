@@ -131,7 +131,7 @@ const Ambassador = () => {
               <li>
                 Creative, innovative, responsible, and able to work in a team
               </li>
-              <li>Able to operate </li>
+              <li>Able to operate gsuite (docs, sheets, ppt, etc)</li>
             </ol>
           </div>
         </div>

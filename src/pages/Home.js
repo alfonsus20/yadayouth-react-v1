@@ -192,7 +192,7 @@ const Home = () => {
           </Fade>
         </div>
       </Container>
-      <Container bgImage="gradient_5.jpg">
+      {/* <Container bgImage="gradient_5.jpg">
         <img
           src="/pictures/oprec-left.png"
           className="absolute left-0 bottom-0 w-100 hidden md:block"
@@ -223,7 +223,7 @@ const Home = () => {
           className="absolute right-0 bottom-0 w-100 hidden md:block"
           alt="leftOprec"
         />
-      </Container>
+      </Container> */}
       <Container center additional="max-w-10xl mx-auto">
         <Fade bottom>
           <Title
