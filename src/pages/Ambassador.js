@@ -190,7 +190,7 @@ const Ambassador = () => {
             For further inquiries don't hesitate to contact us through:
           </p>
           <p className="font-bold text-xl">
-            <em>yycomdev@gmail.com or dm us!</em>
+            <em>yycommdev@gmail.com or dm us!</em>
           </p>
           <img
             src="/shapes/whitediamondshape.png"
