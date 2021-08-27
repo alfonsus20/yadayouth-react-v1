@@ -2,8 +2,8 @@ export const MENUS = [
   { name: "Home", pathname: "/", hash: "", socmed: false },
   // { name: "Oprec Staff", pathname: "/oprec", hash: "", socmed: false },
   {
-    name: "Ambassador",
-    pathname: "/ProjectAmbassadorBatch2",
+    name: "Article",
+    pathname: "/articles",
     hash: "",
     socmed: false,
   },
