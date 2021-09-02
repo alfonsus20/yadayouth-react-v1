@@ -11,7 +11,8 @@ import Articles from "./pages/Article";
 import ArticleDetail from "./pages/ArticleDetail";
 import AnimatedRoutes from "./components/Animations/AnimatedRoutes";
 import RouteTransition from "./components/Animations/RouteTransitions";
-import Oprec from "./pages/Oprec";
+import Oprec from "./pages/OprecNew";
+// import Oprec from "./pages/Oprec";
 import ScrollToTop from "./components/ScrollToTop";
 import Ambassador from "./pages/Ambassador";
 

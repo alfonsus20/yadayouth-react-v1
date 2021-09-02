@@ -1,6 +1,6 @@
 export const MENUS = [
   { name: "Home", pathname: "/", hash: "", socmed: false },
-  // { name: "Oprec Staff", pathname: "/oprec", hash: "", socmed: false },
+  { name: "Oprec Staff", pathname: "/oprec", hash: "", socmed: false },
   {
     name: "Article",
     pathname: "/articles",
@@ -92,6 +92,44 @@ export const TALKING_POINTS = [
       "Examples of Applicable and Beneficial Social Movements + Tips and Tricks",
       "Tackling Day-to-Day Problems in Social Movements",
     ],
+  },
+];
+
+export const POSITIONS = [
+  {
+    color: "orange",
+    image: "/oprec-pictures/human-resource.png",
+    title: "Human Resource",
+    description:
+      "Responsible for compiling, preparing and executing yadayouth staff recruitment. <br/><br/> Responsible for organizing training and bonding of the internal parties of Yada Youth Indonesia. <br/><br/> Responsible for maintaining the staff relations with good problem solving skills.",
+  },
+  {
+    color: "blue",
+    image: "/oprec-pictures/finance.png",
+    title: "Finance",
+    description:
+      "Responsible for managing funds and coordinating every financial transaction such as financial transactions, financial reports, and sponsorship proposals. <br/><br/> Preferably disciplined, proactive, and fast learner.",
+  },
+  {
+    color: "orange",
+    image: "/oprec-pictures/public-relation.png",
+    title: "Public Relations",
+    description:
+      "Responsible for building good image for Yada Youth Indonesia and searching for cooperation partners to collaborate with. <br/><br/> Preferably experienced in handling sponsorship",
+  },
+  {
+    color: "blue",
+    image: "/oprec-pictures/graphic-designer.png",
+    title: "Graphic Designer",
+    description:
+      "Responsible to deliver information through appealing design to Yada Youth Indonesia audience. <br/><br/> Have good skill at Photoshop or/and Illustrator.",
+  },
+  {
+    color: "orange",
+    image: "/oprec-pictures/web-developer.png",
+    title: "UI/UX Designer",
+    description:
+      "Creating user-centered designs in the form of style guides, design systems, design patterns and attractive user interfaces, <br/><br/> Designing UI elements such as input controls, navigational components and informational components",
   },
 ];
 
@@ -221,18 +259,18 @@ export const DIVISIONS = [
 
 export const OPREC_TIMELINE = [
   {
-    period: "8 - 13",
-    date: "JUNE 2021",
+    period: "5 - 15 September",
+    date: "23.59 PM",
     phase: "REGISTRATION",
   },
   {
-    period: "8 - 13",
-    date: "JUNE 2021",
-    phase: "ADMINISTRATIVE SELECTION AND INTERVIEW",
+    period: "18 - 21",
+    date: "September",
+    phase: "INTERVIEW",
   },
   {
-    period: "15",
-    date: "JUNE 2021",
+    period: "22",
+    date: "September",
     phase: "ANNOUNCEMENT",
   },
 ];
