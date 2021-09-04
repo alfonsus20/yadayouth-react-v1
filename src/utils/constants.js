@@ -1,12 +1,6 @@
 export const MENUS = [
   { name: "Home", pathname: "/", hash: "", socmed: false },
-  { name: "Oprec Staff", pathname: "/OprecStaff", hash: "", socmed: false },
-  {
-    name: "Article",
-    pathname: "/articles",
-    hash: "",
-    socmed: false,
-  },
+  { name: "Open Recruitment", pathname: "/OprecStaff", hash: "", socmed: false },
   { name: "About Us", pathname: "/", hash: "about", socmed: false },
   { name: "Donate", pathname: "/donate", hash: "", socmed: false },
   { name: "Contact", pathname: "/", hash: "contacts", socmed: false },
@@ -292,12 +286,12 @@ export const FAQ = [
     question: "Who can apply?",
     answer: (
       <ol className="list-decimal pl-5">
-        <li>Anyone between the ages of 17 - 27</li>
+        <li>Male and female between the age of 17 - 21</li>
+        <li>Committed for 1 year</li>
         <li>Dedicated to contribute towards the youth</li>
-        <li>Fluent in English</li>
-        <li>Have a good attitude, and communicative</li>
-        <li>Creative, Innovative, and take responsibility seriously</li>
-        <li>Able to operate basic computer program (word, excel, ppt, etc.)</li>
+        <li>Willing to work online</li>
+        <li>Have a good attitude, teamwork, communicative, and proactive</li>
+        <li>Creative, Innovative, initiative, and have a strong desire to learn</li>
       </ol>
     ),
   },
@@ -307,13 +301,7 @@ export const FAQ = [
     answer: (
       <ol className="list-decimal pl-5">
         <li>CV</li>
-        <li>
-          Motivation letter (not mandatory for Graphic Designer and Web
-          Developer applicants)
-        </li>
-        <li>
-          Portofolio (only for Graphic Designer and Web Developer applicants)
-        </li>
+        <li>Portfolio (only for Graphic Designer and UI/UX Designer)</li>
       </ol>
     ),
   },

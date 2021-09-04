@@ -177,6 +177,24 @@ const Oprec = () => {
           />
         </div>
       </Container>
+      <Container center additional="max-w-10xl mx-auto">
+        <Title
+          text="Frequently Asked Questions"
+          bgColor="orange"
+          width="104"
+          color="white"
+          borderColor="white"
+        />
+        <div className="w-full px-4 md:px-20">
+          {FAQ.map((question, idx) => (
+            <Accordion
+              key={idx}
+              question={question.question}
+              answer={question.answer}
+            />
+          ))}
+        </div>
+      </Container>
       <Container
         center
         additional={classes.register}
@@ -190,7 +208,7 @@ const Oprec = () => {
             bgColor="blue-light"
             color="yellow"
             width="80"
-            url="https://docs.google.com/forms/d/e/1FAIpQLSdZsvXfBUBgpg16188lSVWehDkWWP1x5AsXbJXg_LgyVk8h1w/viewform"
+            url="https://docs.google.com/forms/d/e/1FAIpQLSfQx-WVawwv3uR3QaLTsQpbnB1PZlTm4yCxHbqxy7gep5AhAw/viewform"
             rounded="full"
           />
           <img
@@ -215,22 +233,22 @@ const Oprec = () => {
           />
         </div>
       </Container>
-      <Container center additional="max-w-10xl mx-auto">
+      
+      <Container center bgColor="white" padding="0% 7%">
         <Title
-          text="Frequently Asked Questions"
-          bgColor="orange"
-          width="104"
+          text="Supported by"
+          bgColor="blue"
           color="white"
           borderColor="white"
+          width="96"
+          additional="mt-16 mb-6 mx-auto"
         />
-        <div className="w-full px-4 md:px-20">
-          {FAQ.map((question, idx) => (
-            <Accordion
-              key={idx}
-              question={question.question}
-              answer={question.answer}
-            />
-          ))}
+        <div className="max-w-4xl mb-8 sm:mb-0">
+          <img
+            src="/oprec-pictures/medpar.png"
+            className="sm:w-11/12 mx-auto"
+            alt="Media Partner Yada Youth"
+          />
         </div>
       </Container>
     </div>
