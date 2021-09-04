@@ -136,7 +136,7 @@ export const POSITIONS = [
     image: "/oprec-pictures/research-and-expansion.png",
     title: "Research and Expansion",
     description:
-      "Responsible for research everything that related to Yada Youth Indonesia, compile suggestions and evaluations for the development of Yada Youth Indonesia.",
+      "Responsible for research everything that related to Yada Youth Indonesia, compile suggestions and evaluations for the development of Yada Youth Indonesia. <br/><br/> Preferably Attention to detail and have good skill at Research, Academic Writing",
   },
 ];
 
