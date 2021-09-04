@@ -1,6 +1,6 @@
 import React from "react";
 import OprecCard from "./OprecCard";
-import Title from "./Title";
+// import Title from "./Title";
 
 // const Division = ({ name, color, subdivisions }) => {
 const Division = ({ idx, color, image, title, description }) => {
