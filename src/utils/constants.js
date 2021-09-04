@@ -1,6 +1,6 @@
 export const MENUS = [
   { name: "Home", pathname: "/", hash: "", socmed: false },
-  { name: "Oprec Staff", pathname: "/oprec", hash: "", socmed: false },
+  { name: "Oprec Staff", pathname: "/OprecStaff", hash: "", socmed: false },
   {
     name: "Article",
     pathname: "/articles",
