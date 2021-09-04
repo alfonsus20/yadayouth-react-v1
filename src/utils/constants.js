@@ -131,6 +131,13 @@ export const POSITIONS = [
     description:
       "Creating user-centered designs in the form of style guides, design systems, design patterns and attractive user interfaces, <br/><br/> Designing UI elements such as input controls, navigational components and informational components",
   },
+  {
+    color: "blue",
+    image: "/oprec-pictures/research-and-expansion.png",
+    title: "Research and Expansion",
+    description:
+      "Responsible for research everything that related to Yada Youth Indonesia, compile suggestions and evaluations for the development of Yada Youth Indonesia.",
+  },
 ];
 
 export const DIVISIONS = [
