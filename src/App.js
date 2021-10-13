@@ -44,7 +44,7 @@ const App = () => {
           component={<ArticleDetail />}
           exact
         />
-        <RouteTransition path="/OprecStaff" component={<Oprec />} exact />
+        {/* <RouteTransition path="/OprecStaff" component={<Oprec />} exact /> */}
         <RouteTransition
           path="/ProjectAmbassadorBatch2"
           component={<Ambassador />}
