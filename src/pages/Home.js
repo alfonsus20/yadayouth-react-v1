@@ -124,7 +124,6 @@ const Home = () => {
               text="CLICK HERE TO DONATE"
               bgColor="blue-light"
               color="yellow"
-              width="72"
               path="/donate"
             />
           </div>

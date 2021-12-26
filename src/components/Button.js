@@ -1,23 +1,23 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
 import { animateScroll as scroll } from "react-scroll";
+import {
+  getBackgroundColor,
+  getBorderColor,
+  getBorderRadius,
+  getColor,
+} from "../utils/functions";
 
 const Button = ({
   path,
   text,
   bgColor,
-  width,
   color,
   scrollUp,
-  px,
-  py,
   borderColor,
-  borderWidth,
   rounded,
-  additional,
   fontSize,
   url,
-  ...rest
 }) => {
   if (scrollUp) {
     return (
@@ -37,8 +37,11 @@ const Button = ({
     return (
       <a href={url} target="blank">
         <div
-          className={`bg-${bgColor} w-${width} text-center text-${color} text-${fontSize} mt-4 px-${px} py-${py} rounded-${rounded} border-${borderWidth} border-${borderColor} ${additional}`}
-          {...rest}
+          className={`${getBackgroundColor(bgColor)} text-center ${getColor(
+            color
+          )} text-${fontSize} mt-4 px-3 py-2 ${getBorderRadius(rounded)} ${getBorderColor(
+            borderColor
+          )}`}
         >
           {text}
         </div>
@@ -46,10 +49,13 @@ const Button = ({
     );
   } else if (path) {
     return (
-      <HashLink to={`${path}`} smooth>
+      <HashLink to={path} smooth>
         <div
-          className={`bg-${bgColor} w-${width} text-center text-${color} text-${fontSize} mt-4 px-${px} py-${py} rounded-${rounded} border-${borderWidth} border-${borderColor} ${additional}`}
-          {...rest}
+          className={`${getBackgroundColor(bgColor)} text-center ${getColor(
+            color
+          )} text-${fontSize} mt-4 px-3 py-2 ${getBorderRadius(rounded)} ${getBorderColor(
+            borderColor
+          )}`}
         >
           {text}
         </div>
@@ -58,20 +64,18 @@ const Button = ({
   } else {
     return (
       <div
-        className={`bg-${bgColor} w-${width} text-center cursor-pointer text-${color} text-${fontSize} mt-4 px-${px} py-${py} rounded-${rounded} border-${borderWidth} border-${borderColor} ${additional}`}
-        {...rest}
+        className={`${getBackgroundColor(
+          bgColor
+        )} text-center cursor-pointer ${getColor(
+          color
+        )} text-${fontSize} mt-4 px-3 py-2 ${getBorderRadius(rounded)} ${getBorderColor(
+          borderColor
+        )}`}
       >
         {text}
       </div>
     );
   }
-};
-
-Button.defaultProps = {
-  px: 3,
-  py: 2,
-  fontSize: "xl",
-  rounded: "lg",
 };
 
 export default Button;

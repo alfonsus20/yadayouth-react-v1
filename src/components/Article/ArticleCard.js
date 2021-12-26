@@ -24,7 +24,7 @@ const ArticleCard = ({ title, description, publishTime, image, id }) => {
           className="text-md font-book text-justify mt-2"
           dangerouslySetInnerHTML={{ __html: content }}
         ></p>
-        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col lg:flex-row items-center">
           <time className="mt-4 mr-4 font-light w-8/12 text-blue text-sm">
             Published At : {publishTime}
           </time>
@@ -33,10 +33,6 @@ const ArticleCard = ({ title, description, publishTime, image, id }) => {
               color="blue"
               bgColor="white"
               text="Read More"
-              additional="shadow-xl font-book w-40 md:w-52"
-              px={1}
-              py={1}
-              fontSize="md"
               rounded="2xl"
               path={`/articles/${id}`}
             />
