@@ -12,7 +12,8 @@ const Title = ({ text, color, bgColor, borderColor }) => {
         color
       )} text-2xl rounded-2xl ${getBackgroundColor(
         bgColor
-      )} px-5 py-1 ${getBorderColor(borderColor)} border-4 font-bold`}
+      )} px-5 py-1 ${getBorderColor(borderColor)} border-4 font-bold mx-auto mb-6`}
+      style={{ width: "fit-content" }}
     >
       {text}
     </h2>

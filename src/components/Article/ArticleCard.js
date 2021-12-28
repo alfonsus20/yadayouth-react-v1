@@ -34,6 +34,7 @@ const ArticleCard = ({ title, description, publishTime, image, id }) => {
               bgColor="white"
               text="Read More"
               rounded="2xl"
+              fontSize="sm"
               path={`/articles/${id}`}
             />
           </div>

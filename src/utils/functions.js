@@ -68,3 +68,22 @@ export const getBorderRadius = (rounded) => {
       return "rounded-xl";
   }
 };
+
+
+export const getFontSize = (fontSize) => {
+  switch (fontSize) {
+    case "sm":
+      return "text-sm";
+    case "md":
+      return "text-md";
+    case "lg":
+      return "text-lg";
+    case "2xl":
+      return "text-2xl";
+    case "full":
+      return "text-full";
+    case "xl":
+    default:
+      return "text-xl";
+  }
+};

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React, { useRef, useState } from "react";
 
-const Accordion = ({ question, answer }) => {
+const Accordion = ({ title, content }) => {
   const accordionRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -33,7 +33,7 @@ const Accordion = ({ question, answer }) => {
         className="flex flex-row justify-between cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <h3 className="text-xl font-bold">{question}</h3>
+        <h3 className="text-xl font-bold">{title}</h3>
         <motion.img
           src="/shapes/chevron-down.png"
           className="w-8 h-4 my-auto cursor-pointer"
@@ -47,8 +47,9 @@ const Accordion = ({ question, answer }) => {
         variants={contentVariants}
         transition={{ stiffness: 0 }}
         ref={accordionRef}
+        className="font-medium"
       >
-        <div className="my-4 text-lg">{answer}</div>
+        {content}
       </motion.div>
     </div>
   );

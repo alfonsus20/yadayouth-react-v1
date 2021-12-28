@@ -14,6 +14,7 @@ import RouteTransition from "./components/Animations/RouteTransitions";
 
 import ScrollToTop from "./components/ScrollToTop";
 import Ambassador from "./pages/Ambassador";
+import About from "./pages/About";
 
 const App = () => {
   const [menu, toggleMenu] = useState(false);
@@ -36,6 +37,7 @@ const App = () => {
         <RouteTransition path="/" component={<Home />} exact />
         <RouteTransition path="/donate" component={<Donate />} exact />
         <RouteTransition path="/webinar" component={<Webinar />} exact />
+        <RouteTransition path="/about" component={<About />} exact />
         {/* <Route path="/webinar/register" component={RegisterWebinar} exact /> */}
         <RouteTransition path="/articles" component={<Articles />} exact />
         <RouteTransition

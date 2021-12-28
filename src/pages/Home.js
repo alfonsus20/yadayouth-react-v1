@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
 import Button from "../components/Button";
 import PostCarousel from "../components/PostCarousel";
@@ -7,8 +7,26 @@ import { CARD_CONTENTS } from "../utils/constants";
 import { animateScroll as scroll, scroller } from "react-scroll";
 import Fade from "react-reveal/Fade";
 import { Helmet } from "react-helmet";
+import { getInstagramPosts } from "../model";
 
 const Home = () => {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const fetchInstagramPosts = () => {
+    setLoading(true);
+    getInstagramPosts()
+      .then((data) => {
+        setPosts(data.data);
+        setLoading(false);
+      })
+      .catch((e) => console.log(e));
+  };
+
+  useEffect(() => {
+    fetchInstagramPosts();
+  }, []);
+
   return (
     <div className="relative">
       <Helmet>
@@ -75,6 +93,16 @@ const Home = () => {
                 in poverty through a collective effort to minimize the systemic
                 factors which caused poverty
               </p>
+              <div className="flex justify-center">
+                <Button
+                  text="LEARN MORE"
+                  fontSize="lg"
+                  color="blue"
+                  rounded="full"
+                  bgColor="yellow"
+                  path="/about"
+                />
+              </div>
             </div>
             <img
               src="/pictures/yadayouthmainlogo.svg"
@@ -95,7 +123,7 @@ const Home = () => {
             />
           </Fade>
           <Fade bottom>
-            <p className="text-center text-xl w-full md:w-6/12 mt-4 font-book">
+            <p className="text-center text-xl w-full md:w-6/12 font-book">
               Yada Youth provides volunteer opportunities, community services,
               and development programs to help educate, feed, and empower the
               youth.
@@ -150,16 +178,20 @@ const Home = () => {
             color="blue"
             bgColor="white"
             borderColor="orange"
-            width={84}
           />
         </Fade>
         <Fade bottom>
-          <p className="text-center text-xl w-6/12 mt-4 font-book">
+          <p className="text-center text-xl w-6/12 font-book">
             Follow Us at @yadayouth.id
           </p>
         </Fade>
         <div className="px-10 py-10 rounded-2xl w-11/12 border-white border-4">
-          <PostCarousel />
+          <PostCarousel
+            posts={posts}
+            loading={loading}
+            slidesToScroll={3}
+            slidesToShow={3}
+          />
         </div>
       </div>
     </div>

@@ -6,6 +6,7 @@ import {
   getBorderColor,
   getBorderRadius,
   getColor,
+  getFontSize,
 } from "../utils/functions";
 
 const Button = ({
@@ -39,7 +40,7 @@ const Button = ({
         <div
           className={`${getBackgroundColor(bgColor)} text-center ${getColor(
             color
-          )} text-${fontSize} mt-4 px-3 py-2 ${getBorderRadius(rounded)} ${getBorderColor(
+          )} ${getFontSize(fontSize)} mt-4 px-3 py-2 ${getBorderRadius(rounded)} ${getBorderColor(
             borderColor
           )}`}
         >
@@ -53,7 +54,7 @@ const Button = ({
         <div
           className={`${getBackgroundColor(bgColor)} text-center ${getColor(
             color
-          )} text-${fontSize} mt-4 px-3 py-2 ${getBorderRadius(rounded)} ${getBorderColor(
+          )} ${getFontSize(fontSize)} mt-4 px-3 py-2 ${getBorderRadius(rounded)} ${getBorderColor(
             borderColor
           )}`}
         >
@@ -68,7 +69,7 @@ const Button = ({
           bgColor
         )} text-center cursor-pointer ${getColor(
           color
-        )} text-${fontSize} mt-4 px-3 py-2 ${getBorderRadius(rounded)} ${getBorderColor(
+        )} ${getFontSize(fontSize)} mt-4 px-3 py-2 ${getBorderRadius(rounded)} ${getBorderColor(
           borderColor
         )}`}
       >
