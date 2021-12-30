@@ -1,9 +1,10 @@
+import moment from "moment";
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import Accordion from "../components/Accordion";
 import PostCarousel from "../components/PostCarousel";
 import Title from "../components/Title";
-import { getInstagramPosts } from "../model";
+import { getEventList } from "../model/eventList";
 
 const About = () => {
   const [posts, setPosts] = useState([]);
@@ -11,9 +12,9 @@ const About = () => {
 
   const fetchInstagramPosts = () => {
     setLoading(true);
-    getInstagramPosts()
-      .then((data) => {
-        setPosts(data.data);
+    getEventList()
+      .then(({ data }) => {
+        setPosts(data.results);
         setLoading(false);
       })
       .catch((e) => console.log(e));
@@ -156,36 +157,33 @@ const About = () => {
         <h2 className="text-3xl text-blue text-center">
           Take a Peak at What we Are Doing
         </h2>
-        <Accordion
-          title="Yada Talks 1.0"
-          content={
-            <div className="text-center">
-              <h3 className="text-blue text-3xl font-semibold">
-                Yada Talks 1.0
-              </h3>
-              <h4 className="text-white text-xl font-normal mb-4">
-                May 2nd, 2021
-              </h4>
-              <p className="font-book mb-4">
-                Yada Talks is an online mini webinar that aims to educate about
-                and develop the awareness of sustainable development. Yada Talks
-                1.0 focuses on the topic of self-development and social
-                movements, with Yosephine Devina Wijaya (Key Account Manager at
-                P&amp;G, Top 6 HSBC/HKU Asia Pacific Business Case Competition,
-                Hong Kong) and Yacinta Shafira Pradana (Founder and President of
-                Women Beyond Indonesia, YLI Wave 12) as the speakers.
-              </p>
-              <div className="mx-auto max-w-md">
-                <PostCarousel
-                  posts={posts}
-                  loading={loading}
-                  slidesToScroll={1}
-                  slidesToShow={1}
-                />
+        {posts.map((post, idx) => (
+          <Accordion
+            key={idx}
+            title={post.title}
+            content={
+              <div className="text-center">
+                <h3 className="text-blue text-3xl font-semibold">
+                  {post.title}
+                </h3>
+                <h4 className="text-white text-xl font-normal mb-4">
+                  {moment(post.date).format("MMMM Do YYYY")}
+                </h4>
+                <p className="font-book mb-4">{post.text}</p>
+                <div className="mx-auto max-w-md">
+                  <PostCarousel
+                    posts={post.images.map((image) => ({
+                      media_url: image.image,
+                    }))}
+                    loading={loading}
+                    slidesToScroll={1}
+                    slidesToShow={1}
+                  />
+                </div>
               </div>
-            </div>
-          }
-        />
+            }
+          />
+        ))}
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ const Home = () => {
   const fetchInstagramPosts = () => {
     setLoading(true);
     getInstagramPosts()
-      .then((data) => {
+      .then(({ data }) => {
         setPosts(data.data);
         setLoading(false);
       })

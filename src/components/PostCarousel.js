@@ -50,8 +50,8 @@ const PostCarousel = ({ posts, loading, slidesToShow, slidesToScroll }) => {
         </div>
       ) : (
         <Slider {...settings}>
-          {posts.map((post) => (
-            <div key={post.id} className="md:p-2 lg:p-4 outline-none">
+          {posts.map((post, idx) => (
+            <div key={idx} className="md:p-2 lg:p-4 outline-none">
               <a href={post.permalink} target="blank">
                 <img src={post.media_url} alt="feed" />
               </a>
