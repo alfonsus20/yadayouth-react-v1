@@ -40,7 +40,7 @@ const Home = () => {
       </Helmet>
       <Button scrollUp />
       <div
-        className="min-h-screen py-16 px-20 bg-no-repeat bg-cover relative "
+        className="min-h-screen py-16 px-20 bg-no-repeat bg-cover relative"
         id="home"
         style={{ backgroundImage: "url('./backgrounds/landing-page.png')" }}
       >
@@ -70,7 +70,7 @@ const Home = () => {
             <img
               src="/shapes/arrow.png"
               alt="Arrow"
-              className="cursor-pointer mx-auto absolute bottom-12 left-1/2 transform -translate-x-1/2"
+              className="cursor-pointer mx-auto absolute bottom-12 left-0 right-0"
               onClick={() =>
                 scroller.scrollTo("about", {
                   smooth: "easeInOut",
