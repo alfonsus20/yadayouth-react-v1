@@ -1,31 +1,23 @@
 import React from "react";
+import {
+  getBackgroundColor,
+  getBorderColor,
+  getColor,
+} from "../utils/functions";
 
-const Title = ({
-  text,
-  color,
-  bgColor,
-  borderColor,
-  width,
-  px,
-  py,
-  fontSize,
-  additional,
-}) => {
+const Title = ({ text, color, bgColor, borderColor }) => {
   return (
     <h2
-      className={`text-center text-${color} text-${fontSize} rounded-2xl bg-${bgColor} w-${width} px-${px} py-${py} border-${borderColor} border-4 font-bold ${additional}`}
+      className={`text-center ${getColor(
+        color
+      )} text-2xl rounded-2xl ${getBackgroundColor(
+        bgColor
+      )} px-5 py-1 ${getBorderColor(borderColor)} border-4 font-bold mx-auto mb-6`}
+      style={{ width: "fit-content" }}
     >
       {text}
     </h2>
   );
-};
-
-Title.defaultProps = {
-  width: 64,
-  py: 2,
-  px: 0,
-  fontSize: "2xl",
-  additional: "",
 };
 
 export default Title;

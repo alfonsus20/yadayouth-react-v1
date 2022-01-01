@@ -8,50 +8,6 @@ const Navbar = ({ menu, toggleMenu, mobile }) => {
 
   return (
     <div className="sticky top-0 z-30">
-      {/* {location.pathname === "/" && (
-        <Link to="/oprec">
-          <div className="marquee">
-            <div className="marquee-inner flex text-blue">
-              <div className="italic flex flex-row">
-                <span className="flex flex-row justify-center items-center">
-                  We are opening recruitment for staff position!
-                </span>{" "}
-                &nbsp;
-                <span className="flex flex-row justify-center items-center">
-                  We are opening recruitment for staff position!
-                </span>{" "}
-                &nbsp;
-                <span className="flex flex-row justify-center items-center">
-                  We are opening recruitment for staff position!
-                </span>{" "}
-                &nbsp;
-                <span className="flex flex-row justify-center items-center">
-                  We are opening recruitment for staff position!
-                </span>{" "}
-                &nbsp;
-              </div>
-              <div className="italic flex flex-row">
-                <span className="flex flex-row justify-center items-center">
-                  We are opening recruitment for staff position!
-                </span>{" "}
-                &nbsp;
-                <span className="flex flex-row justify-center items-center">
-                  We are opening recruitment for staff position!
-                </span>{" "}
-                &nbsp;
-                <span className="flex flex-row justify-center items-center">
-                  We are opening recruitment for staff position!
-                </span>{" "}
-                &nbsp;
-                <span className="flex flex-row justify-center items-center">
-                  We are opening recruitment for staff position!
-                </span>{" "}
-                &nbsp;
-              </div>
-            </div>
-          </div>
-        </Link>
-      )} */}
       <header
         className={`flex flex-col md:flex-row text-white relative ${
           location.pathname !== "/" && "top-0"

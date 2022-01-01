@@ -1,36 +1,34 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Container from "../components/Container";
 import { DONATION_GOALS } from "../utils/constants";
 import DonationCard from "../components/DonationCard";
 import Button from "../components/Button";
 import Fade from "react-reveal/Fade";
+import { Helmet } from "react-helmet";
 
 const Donate = () => {
-  useEffect(() => {
-    document.title = "Donate";
-  });
-
   return (
     <>
+      <Helmet>
+        <title>Donate</title>
+      </Helmet>
       <Button scrollUp />
-      <Container
-        center
-        additional="text-blue"
-        bgColor="yellow"
+      <div
+        className="min-h-screen p-12 flex flex-col items-center justify-center bg-no-repeat bg-cover"
+        style={{
+          backgroundImage: "url('./backgrounds/donation-page.png')",
+          minHeight: 400,
+        }}
         id="donate"
-        screen
       >
         <Fade bottom>
-          <h1 className="text-4xl font-bold">
+          <h1 className="text-5xl font-bold text-white max-w-2xl text-center">
             We Need YOU to Help The Children Of Tomorrow!
           </h1>
         </Fade>
         <Fade bottom>
-          <div
-            className="flex flex-col-reverse border-yellow md:border-orange border-4 py-8 px-0 md:px-28 rounded-xl sm:rounded-full md:mt-20 "
-            style={{ maxWidth: 900 }}
-          >
-            <p className="text-2xl w-full md:w-7/12 relative">
+          <div className="flex flex-col-reverse md:bg-blue bg-opacity-60 border-yellow md:border-4 py-8 px-0 md:px-28 rounded-xl sm:rounded-full md:mt-20 max-w-4xl">
+            <p className="text-2xl w-full md:w-7/12 relative text-white">
               Through your kind donations, you can make positive impact towards
               children empowerment in Indonesia!
               <img
@@ -46,7 +44,7 @@ const Donate = () => {
             />
           </div>
         </Fade>
-      </Container>
+      </div>
       <Container center bgColor="yellow" id="how">
         <Fade bottom>
           <div className="py-12 px-8 sm:px-16 border-4 border-orange rounded-3xl w-full sm:w-9/12 bg-white text-lg  max-w-5xl mx-auto">

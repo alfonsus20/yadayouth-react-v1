@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link, useHistory } from "react-router-dom";
-import Container from "../components/Container";
 import ArticleMiniCard from "../components/Article/ArticleMiniCard";
 import { animateScroll as scroll } from "react-scroll";
 import Button from "../components/Button";
-import yadayouth from "../api/yadayouth";
 import moment from "moment";
 import { css } from "@emotion/react";
 import PuffLoader from "react-spinners/PuffLoader";
 import { countWords } from "../utils/functions";
+import { getArticleDetail, getArticleList } from "../model";
 
 const ArticleDetail = () => {
   const { id } = useParams();
@@ -49,7 +48,7 @@ const ArticleDetail = () => {
     const fetchArticle = async () => {
       try {
         setArticleLoading(true);
-        const { data } = await yadayouth.get(`/api/article/${id}`);
+        const { data } = await getArticleDetail(id);
         setArticle(data);
         setArticleLoading(false);
         document.title = data.title;
@@ -61,7 +60,7 @@ const ArticleDetail = () => {
     const fetchArticles = async () => {
       try {
         setOtherArticlesLoading(true);
-        const { data } = await yadayouth.get("/api/article/");
+        const { data } = await getArticleList();
         setArticles(data.results);
         setOtherArticlesLoading(false);
       } catch (e) {
@@ -76,11 +75,7 @@ const ArticleDetail = () => {
   const readingTime = Math.round(countWords(article.content || "") / 275);
 
   return (
-    <Container
-      maxWidth={1800}
-      additional="mx-auto"
-      padding={`${articleLoading ? "0%" : "6% 7%"}`}
-    >
+    <div className="max-w-8xl mx-auto p-12">
       {!articleLoading ? (
         <>
           <Button scrollUp />
@@ -188,7 +183,7 @@ const ArticleDetail = () => {
           </div>
         </Link>
       </div>
-    </Container>
+    </div>
   );
 };
 
