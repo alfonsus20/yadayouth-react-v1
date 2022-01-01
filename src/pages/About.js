@@ -35,13 +35,13 @@ const About = () => {
       >
         <div className="min-h-screen flex flex-col md:flex-row max-w-7xl p-12 lg:px-4 mx-auto items-center justify-center">
           <h1
-            className="w-full md:w-1/2 text-8xl font-bold bg-gradient-to-r from-blue via-yellow to-orange bg-clip-text mb-8 md:mb-0"
+            className="w-full md:w-1/2 text-7xl md:text-8xl font-bold bg-gradient-to-r from-blue via-yellow to-orange bg-clip-text mb-8 md:mb-0"
             style={{ WebkitTextFillColor: "transparent" }}
           >
             About <br />
             Yada Youth <br /> Indonesia
           </h1>
-          <div className="text-white w-full md:w-1/2 text-2xl text-justify">
+          <div className="text-white w-full md:w-1/2 text-xl md:text-2xl text-justify">
             <p className="mb-6">
               Yada Youth Indonesia is a non-profit organization that focuses on
               children and youth empowerment through collective efforts to
@@ -94,7 +94,7 @@ const About = () => {
           borderColor="blue"
           bgColor="white"
         />
-        <div className="mt-10 flex flex-col md:flex-row relative items-center justify-center mx-auto max-w-7xl mb-12">
+        <div className="md:mt-10 bottom-10 md:bottom-0 flex flex-col md:flex-row relative items-center justify-center mx-auto max-w-7xl mb-12">
           <div className="w-1/2 md:w-3/12 relative top-16 md:top-0 left-0 md:left-24">
             <img
               src="./pictures/hanif.png"
@@ -121,7 +121,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row relative items-center justify-center mx-auto max-w-7xl">
+        <div className="bottom-20 md:bottom-0 flex flex-col md:flex-row relative items-center justify-center mx-auto max-w-7xl">
           <div className="w-1/2 md:w-3/12 relative top-16 md:top-0 left-0 md:left-24">
             <img
               src="./pictures/stephani.png"
@@ -162,7 +162,7 @@ const About = () => {
             key={idx}
             title={post.title}
             content={
-              <div className="text-center">
+              <div className="text-center py-6">
                 <h3 className="text-blue text-3xl font-semibold">
                   {post.title}
                 </h3>

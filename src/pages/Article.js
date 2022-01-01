@@ -4,7 +4,6 @@ import ArticleCard from "../components/Article/ArticleCard";
 import Pagination from "../components/Article/Pagination";
 import Button from "../components/Button";
 import Container from "../components/Container";
-import classes from "./Article.module.css";
 import yadayouth from "../api/yadayouth";
 import moment from "moment";
 import { css } from "@emotion/react";
@@ -48,7 +47,7 @@ const Article = () => {
     <div>
       <Button scrollUp />
       <div
-        className={`flex flex-col md:flex-row ${classes.hero}`}
+        className={`flex flex-col md:flex-row bg-cover bg-no-repeat p-12`}
         style={{ backgroundImage: "url(/backgrounds/gradient_4.jpg)" }}
       >
         <div className=" w-full md:w-1/2">
