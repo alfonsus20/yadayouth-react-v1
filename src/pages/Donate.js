@@ -15,7 +15,10 @@ const Donate = () => {
       <Button scrollUp />
       <div
         className="min-h-screen p-12 flex flex-col items-center justify-center bg-no-repeat bg-cover"
-        style={{ backgroundImage: "url('./backgrounds/donation-page.png')" }}
+        style={{
+          backgroundImage: "url('./backgrounds/donation-page.png')",
+          minHeight: 400,
+        }}
         id="donate"
       >
         <Fade bottom>
@@ -24,7 +27,7 @@ const Donate = () => {
           </h1>
         </Fade>
         <Fade bottom>
-          <div className="flex flex-col-reverse bg-blue bg-opacity-60 border-yellow border-4 py-8 px-0 md:px-28 rounded-xl sm:rounded-full md:mt-20 max-w-4xl">
+          <div className="flex flex-col-reverse md:bg-blue bg-opacity-60 border-yellow md:border-4 py-8 px-0 md:px-28 rounded-xl sm:rounded-full md:mt-20 max-w-4xl">
             <p className="text-2xl w-full md:w-7/12 relative text-white">
               Through your kind donations, you can make positive impact towards
               children empowerment in Indonesia!
