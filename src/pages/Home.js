@@ -123,7 +123,7 @@ const Home = () => {
             />
           </Fade>
           <Fade bottom>
-            <p className="text-center text-xl w-full md:w-6/12 font-book">
+            <p className="text-center text-xl w-full md:w-6/12 font-book px-4">
               Yada Youth provides volunteer opportunities, community services,
               and development programs to help educate, feed, and empower the
               youth.

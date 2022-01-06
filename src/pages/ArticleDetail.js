@@ -135,7 +135,7 @@ const ArticleDetail = () => {
         </div>
       )}
       <div>
-        <h3 className="text-blue text-center text-xl my-4">
+        <h3 className="text-blue text-center text-xl mt-8 mb-6">
           More From YadaYouth Article
         </h3>
         {!otherArticlesloading ? (

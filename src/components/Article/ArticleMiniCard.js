@@ -5,7 +5,7 @@ const ArticleMiniCard = ({ title, time, image, id }) => {
   return (
     <Link
       to={`/articles/${id}`}
-      className="flex flex-col-reverse sm:flex-row py-8 px-8 rounded-lg mb-4 w-100 mx-auto md:space-x-2"
+      className="flex flex-col-reverse sm:flex-row p-6 sm:p-8 rounded-lg mb-4 w-100 mx-auto md:space-x-2"
       style={{
         background:
           "linear-gradient(118.47deg, #FCC339 36.62%, #FDAE5A 67.58%)",
