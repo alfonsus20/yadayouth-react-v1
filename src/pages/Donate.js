@@ -14,10 +14,9 @@ const Donate = () => {
       </Helmet>
       <Button scrollUp />
       <div
-        className="min-h-screen p-12 flex flex-col items-center justify-center bg-no-repeat bg-cover"
+        className="min-h-screen px-12 py-8 flex flex-col items-center justify-center bg-no-repeat bg-cover"
         style={{
           backgroundImage: "url('./backgrounds/donation-page.png')",
-          minHeight: 400,
         }}
         id="donate"
       >
