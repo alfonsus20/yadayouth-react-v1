@@ -73,7 +73,7 @@ const About = () => {
           className="bg-blue border-4 border-orange w-full md:w-1/2 rounded-lg bg-opacity-80 px-12 py-16 bg-cover"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(34, 42, 239, 0.5), rgba(34, 42, 239, 0.8)),url('./pictures/mission.jpg')",
+              "linear-gradient(rgba(34, 42, 239, 0.5), rgba(34, 42, 239, 0.8)),url('./pictures/mision.jpg')",
           }}
         >
           <h2 className="text-4xl text-center mb-8">Our Mission</h2>
