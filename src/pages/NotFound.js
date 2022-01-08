@@ -1,16 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Button from "../components/Button";
-import Container from "../components/Container";
-import { animateScroll as scroll } from "react-scroll";
+import { Helmet } from "react-helmet";
 
 const NotFound = () => {
-  useEffect(() => {
-    document.title = "Not Found";
-    scroll.scrollToTop({ duration: 500 });
-  });
-
   return (
-    <Container center screen padding="3% 7% 4% 7%" id="not-found">
+    <div className="min-h-screen px-12 py-8" id="not-found">
+      <Helmet>
+        <title>Not Found</title>
+      </Helmet>
       <div className="flex flex-col justify-center items-center text-center">
         <img
           src="/pictures/yadayouthmainlogo.svg"
@@ -47,7 +44,7 @@ const NotFound = () => {
           />
         </div>
       </div>
-    </Container>
+    </div>
   );
 };
 

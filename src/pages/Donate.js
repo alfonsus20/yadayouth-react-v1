@@ -1,5 +1,4 @@
 import React from "react";
-import Container from "../components/Container";
 import { DONATION_GOALS } from "../utils/constants";
 import DonationCard from "../components/DonationCard";
 import Button from "../components/Button";
@@ -44,7 +43,7 @@ const Donate = () => {
           </div>
         </Fade>
       </div>
-      <Container center bgColor="yellow" id="how">
+      <div className="px-12 py-20 flex items-center bg-yellow" id="how">
         <Fade bottom>
           <div className="py-12 px-8 sm:px-16 border-4 border-orange rounded-3xl w-full sm:w-9/12 bg-white text-lg  max-w-5xl mx-auto">
             <h2 className="text-center text-4xl text-blue mb-12 font-bold">
@@ -80,8 +79,8 @@ const Donate = () => {
             </div>
           </div>
         </Fade>
-      </Container>
-      <Container padding="6% 15%" additional="max-w-10xl mx-auto">
+      </div>
+      <div className="p-12 max-w-7xl mx-auto">
         <Fade bottom>
           <h2 className="text-center text-4xl text-blue mb-8 font-bold">
             All the funds raised will be used for:
@@ -94,7 +93,7 @@ const Donate = () => {
             })}
           </div>
         </Fade>
-      </Container>
+      </div>
     </>
   );
 };

@@ -3,11 +3,11 @@ import ArticleAside from "../components/Article/ArticleAside";
 import ArticleCard from "../components/Article/ArticleCard";
 import Pagination from "../components/Article/Pagination";
 import Button from "../components/Button";
-import Container from "../components/Container";
 import yadayouth from "../api/yadayouth";
 import moment from "moment";
 import { css } from "@emotion/react";
 import PuffLoader from "react-spinners/PuffLoader";
+import { Helmet } from "react-helmet";
 
 const Article = () => {
   const [articles, setArticles] = useState([]);
@@ -23,8 +23,6 @@ const Article = () => {
   `;
 
   useEffect(() => {
-    document.title = "Articles";
-
     const fetchArticles = async () => {
       try {
         setLoading(true);
@@ -45,6 +43,9 @@ const Article = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Articles</title>
+      </Helmet>
       <Button scrollUp />
       <div
         className={`flex flex-col md:flex-row bg-cover bg-no-repeat p-12`}
@@ -62,10 +63,7 @@ const Article = () => {
           <h2 className="text-4xl my-2 text-blue font-bold">Yada Youth</h2>
         </div>
       </div>
-      <Container
-        additional="flex flex-col md:flex-row md:space-x-8 mx-auto"
-        maxWidth={1800}
-      >
+      <div className="flex flex-col md:flex-row md:space-x-8 mx-auto max-w-7xl p-12">
         <div className="w-full md:w-8/12">
           {!loading ? (
             articles.map((article) => {
@@ -105,7 +103,7 @@ const Article = () => {
           categories={categories}
           loading={loading}
         />
-      </Container>
+      </div>
     </div>
   );
 };
