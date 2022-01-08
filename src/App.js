@@ -13,8 +13,9 @@ import AnimatedRoutes from "./components/Animations/AnimatedRoutes";
 import RouteTransition from "./components/Animations/RouteTransitions";
 
 import ScrollToTop from "./components/ScrollToTop";
-import Ambassador from "./pages/Ambassador";
+import Oprec from "./pages/Oprec";
 import About from "./pages/About";
+import RegisterWebinar from "./pages/RegisterWebinar";
 
 const App = () => {
   const [menu, toggleMenu] = useState(false);
@@ -38,19 +39,18 @@ const App = () => {
         <RouteTransition path="/donate" component={<Donate />} exact />
         <RouteTransition path="/webinar" component={<Webinar />} exact />
         <RouteTransition path="/about" component={<About />} exact />
-        {/* <Route path="/webinar/register" component={RegisterWebinar} exact /> */}
+        <RouteTransition
+          path="/webinar/register"
+          component={<RegisterWebinar />}
+          exact
+        />
         <RouteTransition path="/articles" component={<Articles />} exact />
         <RouteTransition
           path="/articles/:id"
           component={<ArticleDetail />}
           exact
         />
-        {/* <RouteTransition path="/OprecStaff" component={<Oprec />} exact /> */}
-        <RouteTransition
-          path="/ProjectAmbassadorBatch2"
-          component={<Ambassador />}
-          exact
-        />
+        <RouteTransition path="/oprec" component={<Oprec />} exact />
         <RouteTransition path="*" component={<NotFound />} />
       </AnimatedRoutes>
       <Footer menu={menu} toggleMenu={toggleMenu} mobile={width <= 768} />

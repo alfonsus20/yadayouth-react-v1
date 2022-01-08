@@ -1,18 +1,17 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Button from "../components/Button";
-import classes from "./RegisterWebinar.module.css";
 import Container from "../components/Container";
+import { Helmet } from "react-helmet";
 
 const RegisterWebinar = () => {
-  useEffect(() => {
-    document.title = "Register Webinar";
-  });
-
   return (
     <div>
+      <Helmet>
+        <title>Register Webinar</title>
+      </Helmet>
       <Button scrollUp />
       <div
-        className={`flex flex-col md:flex-row ${classes.hero}`}
+        className="flex flex-col md:flex-row px-12 bg-cover bg-no-repeat"
         style={{ backgroundImage: "url(/backgrounds/gradient_3.jpg)" }}
       >
         <div className="flex flex-col justify-center w-full md:w-1/2 text-center md:text-left">
@@ -20,7 +19,7 @@ const RegisterWebinar = () => {
           <p className="text-2xl text-orange mt-4 text-center md:text-left">
             HOW CAN (YOU)TH MAKE A DIFFERENCE <br /> An Empowerment to Empower
           </p>
-          <h2 className="text-3xl my-2 text-blue font-light">
+          <h2 className="text-xl my-2 text-blue font-light">
             May 2<sup>nd</sup>, 2021
           </h2>
         </div>
