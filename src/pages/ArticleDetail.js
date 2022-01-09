@@ -7,7 +7,7 @@ import moment from "moment";
 import { css } from "@emotion/react";
 import PuffLoader from "react-spinners/PuffLoader";
 import { countWords } from "../utils/functions";
-import { getArticleDetail, getArticleList } from "../model";
+import { getArticleById, getArticleList } from "../model";
 
 const ArticleDetail = () => {
   const { id } = useParams();
@@ -48,7 +48,7 @@ const ArticleDetail = () => {
     const fetchArticle = async () => {
       try {
         setArticleLoading(true);
-        const { data } = await getArticleDetail(id);
+        const { data } = await getArticleById(id);
         setArticle(data);
         setArticleLoading(false);
         document.title = data.title;

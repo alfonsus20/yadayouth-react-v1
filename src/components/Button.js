@@ -22,7 +22,7 @@ const Button = ({
 }) => {
   if (scrollUp) {
     return (
-      <div
+      <button
         className="fixed bottom-12 right-16 w-16 h-16 bg-blue z-30 border-white shadow-2xl cursor-pointer grid place-items-center"
         onClick={() => scroll.scrollToTop({ duration: 500 })}
         style={{ borderWidth: 5, borderRadius: 25 }}
@@ -32,7 +32,7 @@ const Button = ({
           className="w-6 h-6"
           alt="arrow-white"
         />
-      </div>
+      </button>
     );
   } else if (url) {
     return (
@@ -64,7 +64,7 @@ const Button = ({
     );
   } else {
     return (
-      <div
+      <button
         className={`${getBackgroundColor(
           bgColor
         )} text-center cursor-pointer ${getColor(
@@ -74,7 +74,7 @@ const Button = ({
         )}`}
       >
         {text}
-      </div>
+      </button>
     );
   }
 };

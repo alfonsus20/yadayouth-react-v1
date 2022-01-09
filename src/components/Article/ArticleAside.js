@@ -40,18 +40,6 @@ const ArticleAside = ({ articles, categories, loading }) => {
             )}
           </dl>
         </div>
-        {/* <div className="bg-blue w-full my-8" style={{ height: 0.5 }}></div> */}
-        {/* <div>
-          <h3 className="text-2xl text-blue font-bold">Catalouges</h3>
-          <dl>
-            <dd className="my-4 font-book">
-              Child Empowerment In Playing Phase
-            </dd>
-            <dd className="my-4 font-book">
-              Entrepreneurial Youths: Why and How?
-            </dd>
-          </dl>
-        </div> */}
       </div>
     </div>
   );
