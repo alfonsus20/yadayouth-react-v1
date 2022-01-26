@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Gotham Medium";
-  src: url("./assets/fonts/GothamMedium.ttf");
+  src: url("./assets/fonts/GothamMedium.otf");
 }
 
 @font-face {
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "Gotham Book";
-  src: url("./assets/fonts/GothamBook.ttf");
+  src: url("./assets/fonts/GothamBook.otf");
 }
 
 @font-face {
