@@ -1,8 +1,7 @@
 import moment from "moment";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import Accordion from "../components/Accordion";
-import PostCarousel from "../components/PostCarousel";
 import Title from "../components/Title";
 import { getEventList } from "../model/eventList";
 
@@ -10,18 +9,19 @@ const About = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const fetchInstagramPosts = () => {
-    setLoading(true);
-    getEventList()
-      .then(({ data }) => {
-        setPosts(data.results);
-        setLoading(false);
-      })
-      .catch((e) => console.log(e));
-  };
-
   useEffect(() => {
-    fetchInstagramPosts();
+    const fetchPastEvents = async () => {
+      try {
+        setLoading(true);
+        const { data } = await getEventList();
+        setPosts(data.results);
+      } catch (e) {
+        console.log(e);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchPastEvents();
   }, []);
 
   return (
@@ -171,14 +171,7 @@ const About = () => {
                 </h4>
                 <p className="font-book mb-4">{post.text}</p>
                 <div className="mx-auto max-w-md">
-                  <PostCarousel
-                    posts={post.images.map((image) => ({
-                      media_url: image.image,
-                    }))}
-                    loading={loading}
-                    slidesToScroll={1}
-                    slidesToShow={1}
-                  />
+                  <img src={post.image} alt={post.title} />
                 </div>
               </div>
             }

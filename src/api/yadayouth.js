@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const yadayouth = axios.create({
-  baseURL: "https://yadayouth-backend.vercel.app",
+  baseURL: "https://api.yada-youth.id",
 });
 
 export default yadayouth;

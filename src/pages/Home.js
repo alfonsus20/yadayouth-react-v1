@@ -1,29 +1,30 @@
-import React, { useEffect, useState } from "react";
-import Card from "../components/Card";
+import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
+import Fade from "react-reveal/Fade";
+import { animateScroll as scroll, scroller } from "react-scroll";
 import Button from "../components/Button";
+import Card from "../components/Card";
 import PostCarousel from "../components/PostCarousel";
 import Title from "../components/Title";
-import { CARD_CONTENTS } from "../utils/constants";
-import { animateScroll as scroll, scroller } from "react-scroll";
-import Fade from "react-reveal/Fade";
-import { Helmet } from "react-helmet";
 import { getInstagramPosts } from "../model";
+import { CARD_CONTENTS } from "../utils/constants";
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const fetchInstagramPosts = () => {
-    setLoading(true);
-    getInstagramPosts()
-      .then(({ data }) => {
-        setPosts(data.data);
-        setLoading(false);
-      })
-      .catch((e) => console.log(e));
-  };
-
   useEffect(() => {
+    const fetchInstagramPosts = async () => {
+      try {
+        const { data } = await getInstagramPosts();
+        setLoading(true);
+        setPosts(data.results);
+      } catch (e) {
+        console.log(e);
+      } finally {
+        setLoading(false);
+      }
+    };
     fetchInstagramPosts();
   }, []);
 

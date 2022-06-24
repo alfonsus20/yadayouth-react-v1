@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { useParams, Link, useHistory } from "react-router-dom";
-import ArticleMiniCard from "../components/Article/ArticleMiniCard";
-import { animateScroll as scroll } from "react-scroll";
-import Button from "../components/Button";
-import moment from "moment";
 import { css } from "@emotion/react";
+import moment from "moment";
+import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
+import { Link, useHistory, useParams } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 import PuffLoader from "react-spinners/PuffLoader";
-import { countWords } from "../utils/functions";
+import ArticleMiniCard from "../components/Article/ArticleMiniCard";
+import Button from "../components/Button";
 import { getArticleById, getArticleList } from "../model";
+import { countWords } from "../utils/functions";
 
 const ArticleDetail = () => {
   const { id } = useParams();
@@ -49,9 +50,8 @@ const ArticleDetail = () => {
       try {
         setArticleLoading(true);
         const { data } = await getArticleById(id);
-        setArticle(data);
+        setArticle(data.result);
         setArticleLoading(false);
-        document.title = data.title;
       } catch (e) {
         history.push("/not-found");
       }
@@ -76,6 +76,9 @@ const ArticleDetail = () => {
 
   return (
     <div className="max-w-8xl mx-auto p-12">
+      <Helmet>
+        <title>{article.title || "Yada Youth"}</title>
+      </Helmet>
       {!articleLoading ? (
         <>
           <Button scrollUp />
