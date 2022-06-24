@@ -1,5 +1,3 @@
-import React from "react";
-
 const Speaker = ({ image, name, description }) => {
   return (
     <div className="flex flex-col w-full md:w-1/2 my-4 md:my-0 items-center relative">

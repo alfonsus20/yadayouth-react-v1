@@ -1,4 +1,3 @@
-import React from "react";
 import { HashLink } from "react-router-hash-link";
 import { animateScroll as scroll } from "react-scroll";
 import {
@@ -6,7 +5,7 @@ import {
   getBorderColor,
   getBorderRadius,
   getColor,
-  getFontSize,
+  getFontSize
 } from "../utils/functions";
 
 const Button = ({

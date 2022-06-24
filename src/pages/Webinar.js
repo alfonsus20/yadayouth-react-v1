@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
+import Fade from "react-reveal/Fade";
+import { scroller } from "react-scroll";
 import Button from "../components/Button";
 import Container from "../components/Container";
+import FlipCard from "../components/FlipCard/FlipCard";
+import Speaker from "../components/Speaker";
 import Title from "../components/Title";
 import { SPEAKERS, TALKING_POINTS } from "../utils/constants";
-import Speaker from "../components/Speaker";
-import { scroller } from "react-scroll";
 import classes from "./Webinar.module.css";
-import FlipCard from "../components/FlipCard/FlipCard";
-import Fade from "react-reveal/Fade";
 
 const Webinar = () => {
   useEffect(() => {

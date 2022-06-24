@@ -1,7 +1,6 @@
-import React from "react";
+import { css } from "@emotion/react";
 import Slider from "react-slick";
 import PuffLoader from "react-spinners/PuffLoader";
-import { css } from "@emotion/react";
 
 const PostCarousel = ({ posts, loading, slidesToShow, slidesToScroll }) => {
   const override = css`

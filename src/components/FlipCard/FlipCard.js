@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
-import classes from "./FlipCard.module.css";
+import { useEffect, useRef, useState } from "react";
 import useWindowDimension from "../../utils/window-dimension";
+import classes from "./FlipCard.module.css";
 
 const FlipCard = ({ front, back }) => {
   const flipCardRef = useRef(null);

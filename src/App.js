@@ -1,21 +1,20 @@
+import { useEffect, useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import Home from "./pages/Home";
-import Navbar from "./components/Navbar/Navbar";
-import Donate from "./pages/Donate";
-import NotFound from "./pages/NotFound";
-import Footer from "./components/Footer/Footer";
-import useWindowDimensions from "./utils/window-dimension";
-import { useState, useEffect } from "react";
-import Webinar from "./pages/Webinar";
-import Articles from "./pages/Article";
-import ArticleDetail from "./pages/ArticleDetail";
 import AnimatedRoutes from "./components/Animations/AnimatedRoutes";
 import RouteTransition from "./components/Animations/RouteTransitions";
-
+import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
-import Oprec from "./pages/Oprec";
 import About from "./pages/About";
+import Articles from "./pages/Article";
+import ArticleDetail from "./pages/ArticleDetail";
+import Donate from "./pages/Donate";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import Oprec from "./pages/Oprec";
 import RegisterWebinar from "./pages/RegisterWebinar";
+import Webinar from "./pages/Webinar";
+import useWindowDimensions from "./utils/window-dimension";
 
 const App = () => {
   const [menu, toggleMenu] = useState(false);

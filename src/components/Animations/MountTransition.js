@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 const MountTransition = ({ children, slide = 0, slideUp = 0 }) => {

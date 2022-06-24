@@ -1,4 +1,3 @@
-import React from "react";
 import { SOCMED } from "../../utils/constants";
 import FooterLink from "./FooterLink";
 

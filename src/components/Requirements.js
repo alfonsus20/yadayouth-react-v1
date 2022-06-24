@@ -1,7 +1,6 @@
-import React from "react";
 import Title from "./Title";
 
-function Requirements({ name, color, content }) {
+function Requirements() {
   return (
     <div className="w-full">
       <Title

@@ -1,5 +1,3 @@
-import React from "react";
-
 const DonationCard = ({ goal, idx }) => {
   const color = idx % 4 === 0 || idx % 4 === 3 ? "yellow" : "orange";
   const bgColor = idx % 4 === 0 || idx % 4 === 3 ? "orange" : "yellow";

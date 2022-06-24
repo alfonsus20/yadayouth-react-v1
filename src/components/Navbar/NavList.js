@@ -1,7 +1,6 @@
-import React from "react";
-import NavLink from "./NavLink";
-import { MENUS } from "../../utils/constants";
 import { motion } from "framer-motion";
+import { MENUS } from "../../utils/constants";
+import NavLink from "./NavLink";
 
 const NavList = ({ menu, mobile, toggleMenu }) => {
   const variants = {

@@ -1,6 +1,5 @@
-import React from "react";
-import Button from "../Button";
 import { countWords } from "../../utils/functions";
+import Button from "../Button";
 
 const ArticleCard = ({ title, description, publishTime, image, id }) => {
   const content = description

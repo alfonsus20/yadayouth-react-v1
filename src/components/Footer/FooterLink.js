@@ -1,4 +1,3 @@
-import React from "react";
 import { HashLink } from "react-router-hash-link";
 
 const FooterLink = ({ icon, text, pathname, hash, socmed }) => {

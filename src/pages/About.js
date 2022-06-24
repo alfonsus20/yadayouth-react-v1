@@ -7,18 +7,14 @@ import { getEventList } from "../model/eventList";
 
 const About = () => {
   const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchPastEvents = async () => {
       try {
-        setLoading(true);
         const { data } = await getEventList();
         setPosts(data.results);
       } catch (e) {
         console.log(e);
-      } finally {
-        setLoading(false);
       }
     };
     fetchPastEvents();

@@ -1,6 +1,5 @@
-import React from "react";
-import Button from "../components/Button";
 import { Helmet } from "react-helmet";
+import Button from "../components/Button";
 
 const RegisterWebinar = () => {
   return (
