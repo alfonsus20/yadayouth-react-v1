@@ -27,7 +27,7 @@ const About = () => {
       </Helmet>
       <div
         className="bg-cover bg-no-repeat"
-        style={{ backgroundImage: "url('./backgrounds/about-page.png')" }}
+        style={{ backgroundImage: "url('./backgrounds/about-page.jpg')" }}
       >
         <div className="min-h-screen flex flex-col md:flex-row max-w-7xl p-12 lg:px-4 mx-auto items-center justify-center">
           <h1

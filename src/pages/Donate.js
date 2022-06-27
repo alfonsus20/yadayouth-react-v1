@@ -15,7 +15,7 @@ const Donate = () => {
       <div
         className="min-h-screen px-12 py-8 flex flex-col items-center justify-center bg-no-repeat bg-cover"
         style={{
-          backgroundImage: "url('./backgrounds/donation-page.png')",
+          backgroundImage: "url('./backgrounds/donation-page.jpg')",
         }}
         id="donate"
       >

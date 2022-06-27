@@ -43,7 +43,7 @@ const Home = () => {
       <div
         className="min-h-screen py-16 px-20 bg-no-repeat bg-cover relative"
         id="home"
-        style={{ backgroundImage: "url('./backgrounds/landing-page.png')" }}
+        style={{ backgroundImage: "url('./backgrounds/landing-page.jpg')" }}
       >
         <div className="max-w-7xl mx-auto">
           <Fade delay={250}>
