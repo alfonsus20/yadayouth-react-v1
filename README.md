@@ -8,7 +8,7 @@ This is the frontend repository for the first version of yadayouth's official we
 Clone the project
 
 ```bash
-  git clone https://github.com/yadayouthid/yadayouth-react-v1
+  git clone https://github.com/alfonsus20/yadayouth-react-v1
 ```
 
 Go to the project directory
